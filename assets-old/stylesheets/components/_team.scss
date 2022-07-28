@@ -1,0 +1,158 @@
+$component: 'c-team';
+
+// Team
+.#{$component} {
+  background-color: $white;
+  position: relative;
+}
+
+.#{$component}__overlay {
+  background-color: rgba(#1B264F, 0.9);
+  padding: em(90) em(20) em(40);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  overflow: scroll;
+
+  &.is-open {
+    @include transition(left .25s ease-out);
+    left: 0;
+  }
+
+  &.is-closed {
+    @include transition(left .5s ease-out);
+    left: -100%;
+  }
+
+}
+
+.#{$component}__preview {
+  @include border-radius(8px);
+  background-color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+
+  .is-open & {
+    @include transition(left .5s ease-out);
+    left: 0;
+  }
+
+  .is-closed & {
+    @include transition(left .25s ease-out);
+    left: -100%;
+  }
+
+}
+
+.#{$component}__preview-hide {
+  @include border-radius(100%);
+  background-color: $button;
+  color: $white;
+  display: inline-block;
+  font-size: em(20);
+  font-weight: normal;
+  line-height: 44px;
+  height: 44px;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  top: -15px;
+  left: auto;
+  right: -15px;
+  width: 44px;
+  vertical-align: middle;
+  z-index: 10;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $button;
+  }
+
+}
+
+.#{$component}__preview-content {
+
+}
+
+.#{$component}__preview-avatar {
+  position: relative;
+  top: em(-70);
+  margin-bottom: em(-60);
+}
+
+.#{$component}__preview-name {
+  margin-bottom: em(5);
+}
+
+.#{$component}__preview-role {
+  position: relative;
+}
+
+.#{$component}__list {
+  background-color: $white;
+  width: 100%;
+  @include transition(0.5s ease-out);
+  z-index: 1;
+}
+
+.#{$component}__member {
+  @include border-radius(8px);
+  background-color: $white;
+  border: solid 5px $white;
+  display: block;
+  height: 100%;
+  outline: none;
+  padding: em(20);
+  text-align: center;
+  width: 100%;
+  @include transition(background-color 0.5s ease-out);
+  text-decoration: none;
+
+  &:hover {
+    background-color: $panel;
+    cursor: pointer;
+  }
+
+  br {
+    display: none;
+  }
+
+}
+
+.#{$component}__member-avatar {
+  margin-bottom: em(10);
+}
+
+.#{$component}__member-name {
+  border-bottom: solid 2px $brand;
+  display: block;
+  font-size: em(14);
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: em(5);
+  padding-bottom: em(5);
+
+  @include breakpoint('medium-min') {
+    font-size: em(16);
+  }
+
+}
+
+.#{$component}__member-role {
+  display: block;
+  font-size: em(12);
+  font-style: italic;
+  font-weight: normal;
+
+  @include breakpoint('medium-min') {
+    font-size: em(14);
+  }
+
+}

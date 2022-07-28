@@ -1,0 +1,38 @@
+%component {
+    padding: em(30) em(20);
+
+    &.is-not-last {
+        padding-bottom: 0;
+    }
+
+    main & {
+        margin-bottom: em(10);
+
+        &.no-margin {
+            margin-bottom: 0;
+        }
+
+    }
+
+    @include breakpoint('medium-min') {
+        padding: em(40) em(40);
+    }
+
+
+}
+
+%component-highlight {
+    background-color: $panel;
+    padding: em(20) em(20) em(30);
+}
+
+%object {
+    padding: em(20);
+}
+
+%end-margin {
+    &:last-child,
+    &.is-last {
+        margin-bottom: 0;
+    }
+}

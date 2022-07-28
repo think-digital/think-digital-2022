@@ -1,0 +1,144 @@
+$component: 'c-nav';
+
+// Logo
+.#{$component} {
+
+}
+
+.#{$component}__menu {
+  color: $brand;
+  position: relative;
+  font-size: em(28);
+  top: -15px;
+
+  @include breakpoint('medium-min') {
+    font-size: em(36);
+    top: auto;
+  }
+
+  @include breakpoint('large-min') {
+    display: none;
+  }
+
+}
+
+.#{$component}__overlay {
+
+  @include breakpoint('medium-max') {
+
+    background-color: rgba(#1B264F, 0.9);
+    padding: em(20);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    &.is-open {
+      @include transition(top .25s ease-out);
+      top: 0;
+    }
+
+    &.is-closed {
+      @include transition(top .5s ease-out);
+      top: -100%;
+    }
+
+  }
+
+}
+
+.#{$component}__close {
+  @include border-radius(100%);
+  background-color: $brand;
+  color: $white;
+  display: inline-block;
+  font-size: em(24);
+  line-height: 44px;
+  height: 44px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  vertical-align: middle;
+  z-index: 100;
+
+  .is-open & {
+    @include transition(top .62s ease-out);
+    top: 10px;
+  }
+
+  .is-closed & {
+    @include transition(top .12s ease-out);
+    top: -100%;
+  }
+
+}
+
+.#{$component}__panel {
+  @include border-radius(8px);
+  background-color: white;
+  position: relative;
+  top: 0;
+  text-align: center;
+
+  .is-open & {
+    @include transition(top .5s ease-out);
+    top: 0;
+  }
+
+  .is-closed & {
+    @include transition(top .25s ease-out);
+    top: -100%;
+  }
+
+}
+
+.#{$component}__list {
+
+  @include breakpoint('large-min') {
+    text-align: right;
+  }
+
+  li {
+    font-size: em(20);
+    padding: em(8) 0;
+
+    @include breakpoint('medium-min') {
+      font-size: em(28);
+    }
+
+    @include breakpoint('large-min') {
+      display: inline-block;
+      font-size: em(16);
+      margin-right: em(30);
+    }
+
+    a {
+      border-bottom: 2px solid $white;
+      color: #495172;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    &.current_page_item,
+    .single-services &.menu-item-111,
+    .single-team &.menu-item-110,
+    .single-casestudy &.menu-item-112,
+    .single-post &.menu-item-418 {
+
+      a {
+        border-bottom: 2px solid $brand;
+        color: #1B264F;
+        display: inline-block;
+      }
+
+    }
+
+  }
+
+}

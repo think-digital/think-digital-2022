@@ -1,0 +1,41 @@
+$object: 'o-link';
+
+.#{$object} {
+    border-bottom: 2px solid $link;
+    color: currentColor;
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 2px;
+    text-decoration: none;
+
+    &:hover {
+        color: $link;
+    }
+
+    @for $i from 1 through length($client-list) {
+        [data-client=#{nth($client-list, $i)}] & {
+            border-color: nth($client-color, $i);
+
+            &:hover {
+                color: nth($client-color, $i);
+            }
+
+        }
+    }
+
+}
+
+// Color
+.#{$object}--highlight {
+    font-size: 19px;
+    font-style: italic;
+    padding-bottom: 3px;
+}
+
+a:not(.o-button) {
+
+    .o-text & {
+        @extend .o-link;
+    }
+
+}

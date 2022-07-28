@@ -1,0 +1,240 @@
+$object: 'o-button';
+
+// Button
+.#{$object} {
+	position: relative;
+
+	display: inline-block;
+	padding: 0 em(10);
+	text-align: center;
+	vertical-align: middle;
+	width: auto;
+
+	background-color: $button;
+  border: 2px solid $button;
+  color: $button-text;
+
+	font-size: em(14);
+	font-weight: 900;
+	line-height: em(48);
+	text-decoration: none;
+
+	&:hover {
+		background-color: darken($button,5%);
+		border-color: darken($button,5%);
+	}
+
+	&:active {
+		background-color: darken($button,5%);
+		border-color: darken($button,5%);
+	}
+
+	&:not(.o-button--ghost) {
+		text-shadow: 1px 1px 0 rgba(27, 38, 79, 0.3);
+	}
+
+	@include breakpoint('small') {
+		display: block;
+	  padding: 0 0.5em;
+	  width: 100%;
+	}
+
+}
+
+// Sizing
+.#{$object}--extra-small {
+  font-size: em(12);
+}
+.#{$object}--small {
+  font-size: em(13);
+}
+.#{$object}--large {
+  font-size: em(16);
+}
+.#{$object}--extra-large {
+  font-size: em(18);
+}
+
+// Layout
+.#{$object}--full {
+	display: block;
+	padding: 0 0.5em;
+	width: 100%;
+}
+.#{$object}--wide {
+	padding: 0 3em;
+
+	@include breakpoint('medium-max') {
+		display: block;
+		padding: 0 0.5em;
+		width: 100%;
+	}
+
+}
+
+// Shape
+.#{$object}--square {
+  font-size: 20px;
+  height: 48px;
+  line-height: 44px;
+	padding: 0;
+	width: 48px;
+}
+.#{$object}--circle {
+	@extend .#{$object}--square;
+	@include border-radius(100%);
+}
+.#{$object}--rounded {
+	@include border-radius(100px);
+}
+
+// Colour
+.#{$object}--highlight {
+	background-color: $button;
+	border: 2px solid $button;
+	color: $white;
+
+	&:hover {
+		background-color: $button;
+		border: 2px solid $button;
+		color: $white;
+  }
+
+	&:active {
+		background-color: $button;
+		border: 2px solid $button;
+		color: $white;
+  }
+
+}
+.#{$object}--ghost {
+	background-color: transparent;
+	border: 2px solid currentColor;
+	color: currentColor;
+
+	&:hover {
+		background-color: $white;
+		border-color: currentColor;
+		color: $heading;
+  }
+
+  // &:active,
+  // &.is-active {
+	// 	background-color: $button;
+	// 	border: 2px solid $button;
+	// 	color: $white;
+  // }
+
+  // &.is-not-active {
+	// 	background-color: $button;
+	// 	border: 2px solid $button;
+	// 	color: $white;
+  // }
+
+}
+
+%button-push {
+
+	&:active, &:target {
+		top: 1px;
+	}
+}
+
+%button-disabled {
+
+	&:disabled {
+		background-color: $panel-dark;
+		color: darken($panel-dark,30%);
+
+		font-size: em(18);
+		line-height: 66px;
+
+		&:hover {
+			background-color: $panel-dark;
+			color: darken($panel-dark,30%);
+
+			cursor: not-allowed;
+			top: auto;
+		}
+
+		&:active, &:target {
+			top: auto;
+		}
+
+		.fa {
+			margin-right: 5px;
+		}
+
+	}
+}
+
+.#{$object} {
+	@extend .#{$object};
+	@extend %button-push;
+	@extend %button-disabled;
+
+	// Social Media
+
+	$social-list:
+	facebook,
+	linkedin,
+	twitter,
+	whatsapp,
+	;
+	$social-color:
+	$facebook,
+	$linkedin,
+	$twitter,
+	$whatsapp,
+	;
+
+	@for $i from 1 through length($social-list) {
+		&--#{nth($social-list, $i)} {
+			background-color: nth($social-color, $i);
+			border: 2px solid nth($social-color, $i);
+			color: $white;
+
+			&:hover {
+				background-color: darken(nth($social-color, $i),5%);
+				border: 2px solid darken(nth($social-color, $i),5%);
+				color: $white;
+			}
+
+		}
+	}
+
+	@for $i from 1 through length($social-list) {
+		&--#{nth($social-list, $i)}-outline {
+			background-color: transparent;
+			border: 2px solid $heading;
+			color: $heading;
+
+			&:hover {
+				background-color: $white;
+				border-color: nth($social-color, $i);
+				color: nth($social-color, $i);
+			}
+
+		}
+	}
+
+}
+
+.#{$object}--client {
+	background-color: $brand;
+	border-color: $brand;
+
+	@for $i from 1 through length($client-list) {
+		[data-client=#{nth($client-list, $i)}] & {
+			background-color: nth($client-color, $i);
+			border-color: nth($client-color, $i);
+
+			&:hover {
+				background-color: darken(nth($client-color, $i),5%);
+				border-color: darken(nth($client-color, $i),5%);
+			}
+
+		}
+	}
+
+}

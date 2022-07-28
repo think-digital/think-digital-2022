@@ -1,0 +1,96 @@
+// Default
+$black: #000;
+$white: #fff;
+
+// Brand
+$brand: #2dcc70;
+$link: #2dcc70;
+$heading: #1b264f;
+$text: #1b264f;
+$border: #ecf0f1;
+
+// Button
+$button: #2dcc70;
+$button-hover: #2dcc70;
+$button-active: #2dcc70;
+$button-text: $white;
+
+// Field
+$field: $white;
+$field-text: #1b264f;
+$field-border: #ecf0f1;
+
+// Panel
+$panel: #ecf0f1;
+$panel-dark: #1b264f;
+$panel-border: darken($panel,10%);
+
+// Social
+$facebook: #3b5998;
+$linkedin: #0077b5;
+$twitter: #1da1f2;
+$whatsapp: #25d366;
+
+// Alert
+$success: #69b670;
+$error: #e31106;
+$disabled: darken(#ecf0f1,10%);
+
+/* Client Brand Colours */
+
+// $amnesty-international: #fff300;
+$amnesty-international: #ff4ba4;
+$birdlife: #25a937;
+$british-asian-trust: #fb9734;
+$christian-aid: #ed1c24;
+$homeless-world-cup: #ed1c24;
+$ic-lebanon: #549e4c;
+$international-rescue-committee: #fdc513;
+$liberal: #d71920;
+$national-trust: #107786;
+$star-boot-sale: #fdef48;
+$think-digital: $brand;
+$tortonto-general: #00afd8;
+$unhcr: #0072bc;
+$unhcr-mena: #0072bc;
+$unrwa: #00ADEE;
+$wwf: #72bf44;
+
+// Client List
+
+$client-list:
+amnesty-international,
+birdlife,
+british-asian-trust,
+christian-aid,
+homeless-world-cup,
+ic-lebanon,
+international-rescue-committee,
+liberal,
+national-trust,
+star-boot-sale,
+think-digital,
+tortonto-general,
+unhcr,
+unhcr-mena,
+unrwa,
+wwf,
+;
+$client-color:
+$amnesty-international,
+$birdlife,
+$british-asian-trust,
+$christian-aid,
+$homeless-world-cup,
+$ic-lebanon,
+$international-rescue-committee,
+$liberal,
+$national-trust,
+$star-boot-sale,
+$think-digital,
+$tortonto-general,
+$unhcr,
+$unhcr-mena,
+$unrwa,
+$wwf,
+;

@@ -1,0 +1,117 @@
+
+// %tab-hover {
+//     background-color: $tab-hover;
+//     border-color: $tab-hover;
+//     color: $tab-hover-text;
+//     cursor: pointer;
+// }
+
+// %tab-active {
+//     background-color: $tab-active;
+//     border-color: $tab-active;
+//     color: $tab-active-text;
+// }
+
+// %tab-active-hover {
+//     background-color: $tab-hover;
+//     border-color: $tab-hover;
+//     color: $tab-hover-text;
+// }
+
+// %tab-not-active {
+//     background-color: $tab;
+//     border-color: $tab-active;
+//     color: $tab-text;
+// }
+
+// %tabs {
+//   @include border-radius(100px);
+//   background-color: $tab;
+// 	color: $tab-text;
+// 	border: 2px solid $tab-active;
+// 	display: block;
+//   font-weight: 900;
+//   margin: -1px;
+// 	position: relative;
+// 	text-align: center;
+// 	text-decoration: none;
+//   vertical-align: middle;
+//   width: 100%;
+
+//     &:hover {
+//         @extend %tab-hover;
+//     }
+
+//     &.is-active {
+//         @extend %tab-active;
+
+//         &:hover {
+//             @extend %tab-active-hover;
+//         }
+
+//     }
+
+//     &.is-not-active {
+//         @extend %tab-not-active;
+//     }
+
+//     @include breakpoint('small') {
+//         font-size: em(14);
+//         height: em(48);
+//         line-height: em(44);
+//     }
+
+//     @include breakpoint('small-min') {
+//         font-size: em(16);
+//         height: em(56);
+//         line-height: em(52);
+//     }
+
+// }
+
+// .#{$object} {
+//     // text-align: center;
+// }
+
+// .#{$object}__item {
+//     width: 100%;
+
+//     @supports (display:flex) {
+//         width: auto;
+//     }
+// }
+
+// .#{$object}__nav {
+//     @extend %component;
+//     margin-bottom: em(20);
+//     padding-bottom: 0;
+
+//     @include breakpoint('medium-min') {
+//         margin-left: auto;
+//         margin-right: auto;
+//         // max-width: 60%;
+//     }
+
+// }
+
+// .#{$object}__link {
+//     @extend %tabs;
+
+//     &:hover {
+//         @extend %tab-hover;
+//     }
+
+//     &.is-active {
+//         @extend %tab-active;
+
+//         &:hover {
+//             @extend %tab-active-hover;
+//         }
+
+//     }
+
+//     &.is-not-active {
+//         @extend %tab-not-active;
+//     }
+
+// }

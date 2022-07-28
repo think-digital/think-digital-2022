@@ -1,0 +1,198 @@
+$component: 'c-hero';
+
+// Hero
+.#{$component} {
+  margin-bottom: em(-30);
+  overflow: hidden;
+  position: relative;
+  top: em(-40);
+
+  .c-content {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint('medium-min') {
+    margin-bottom: 0;
+    top: auto;
+  }
+
+  &--home {
+    margin-bottom: em(-40);
+
+    @include breakpoint('medium-min') {
+      margin-bottom: em(-30);
+    }
+
+  }
+
+}
+
+.#{$component}--no-image {
+  margin-bottom: em(-35);
+
+  .#{$component}__content {
+    background: $panel-dark;
+    color: $white;
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    height: em(220);
+    width: 180%;
+    margin: 0 -40%;
+    padding: 0 40%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    .o-heading {
+      margin-top: em(40);
+
+      @include breakpoint('medium-min') {
+        margin-top: em(25);
+      }
+
+    }
+
+  }
+
+}
+
+.#{$component}__image {
+  @include border-radius(100% 100% 0 0);
+  width: 180%;
+  margin: 0 -40%;
+  padding: 0 40%;
+  overflow: hidden;
+  position: relative;
+
+  &--desktop-crop {
+
+    @include breakpoint('large-min') {
+      @include border-radius(0 0 80% 0);
+    }
+
+    .no-object-fit & {
+
+      @include breakpoint('large-min') {
+        @include border-radius(0);
+        margin: 0 0 em(20);
+      }
+
+    }
+
+  }
+
+  .no-object-fit & {
+    @include border-radius(0);
+    height: em(240);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    @include breakpoint('medium-min') { height: em(360); }
+    @include breakpoint('large-min') { height: em(480); }
+
+    &.is-object-fit-fallback {
+        background-size: cover;
+
+        &.is-center-left { background-position: center left; }
+        &.is-center-right { background-position: center right; }
+        &.is-center-center { background-position: center center; }
+        &.is-top-left { background-position: top left; }
+        &.is-top-right { background-position: top right; }
+        &.is-top-center { background-position: top center; }
+        &.is-bottom-left { background-position: bottom left; }
+        &.is-bottom-right { background-position: bottom right; }
+        &.is-bottom-center { background-position: bottom center; }
+
+        .#{$component}__img {
+            opacity: 0 !important;
+        }
+
+    }
+
+  }
+
+  .no-object-fit .home & {
+    height: em(180);
+
+    @include breakpoint('small-min') { height: em(240); }
+    @include breakpoint('medium-min') { height: em(360); }
+    @include breakpoint('large-min') { height: em(380); }
+
+  }
+
+}
+
+.#{$component}__image--gradient {
+
+  &:before {
+    background-image: linear-gradient(to bottom, rgba(25, 36, 75, 0), rgba(25, 36, 75, 0.25));
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+}
+
+.#{$component}__image--gradient-dark {
+
+  &:before {
+    background-image: linear-gradient(to bottom, rgba(25, 36, 75, 0), rgba(25, 36, 75, 0.75));
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+}
+
+.#{$component}__img {
+  object-fit: cover;
+  display: block;
+  height: em(240);
+  position: relative;
+  width: 100%;
+
+  &.is-center-left { object-position: center left; }
+  &.is-center-right { object-position: center right; }
+  &.is-center-center { object-position: center center; }
+  &.is-top-left { object-position: top left; }
+  &.is-top-right { object-position: top right; }
+  &.is-top-center { object-position: top center; }
+  &.is-bottom-left { object-position: bottom left; }
+  &.is-bottom-right { object-position: bottom right; }
+  &.is-bottom-center { object-position: bottom center; }
+
+  @include breakpoint('medium-min') {
+    height: em(360);
+  }
+
+  @include breakpoint('large-min') {
+    height: em(480);
+  }
+
+  &--home {
+    height: em(180);
+
+    @include breakpoint('small-min') {
+      height: em(240);
+    }
+
+    @include breakpoint('medium-min') {
+      height: em(360);
+    }
+
+    @include breakpoint('large-min') {
+      height: em(380);
+    }
+
+  }
+
+}

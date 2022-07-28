@@ -1,0 +1,107 @@
+$component: 'c-content';
+
+// Hero
+.#{$component} {
+  @extend %component;
+
+  &--border {
+    background-color: $white;
+    // @include border-radius(5px);
+    border: 2px solid $border;
+  }
+
+  &--light {
+    background-color: $panel;
+  }
+
+  &--dark {
+    background-color: $panel-dark;
+    color: $white;
+  }
+
+  &--overlap {
+
+    @include breakpoint('small-max') {
+      padding-bottom: em(110);
+    }
+
+  }
+
+  &--rounded {
+    @include border-radius(8px);
+
+    &.no-border {
+
+      @include breakpoint('medium-min-max') {
+        @include border-radius(0 0 8px 8px);
+      }
+
+    }
+
+    &.#{$component}:first-of-type {
+
+      .l-band--overlay & {
+
+        @include breakpoint('medium-min-max') {
+          @include border-radius(0 0 8px 8px);
+        }
+
+      }
+
+    }
+
+  }
+
+  &--desktop-dark {
+
+    @include breakpoint('medium-min') {
+      background-color: $panel-dark;
+      color: $white;
+    }
+
+  }
+
+  &--desktop-border {
+
+    @include breakpoint('medium-min') {
+      background-color: $white;
+      border: 2px solid $border;
+    }
+
+  }
+
+  &--fixed {
+
+    @include breakpoint('medium-min') {
+      position: relative;
+      padding-bottom: em(85);
+    }
+
+  }
+
+  &.is-full-height {
+
+    @include breakpoint('medium-min') {
+      height: 100%;
+    }
+
+  }
+
+}
+
+.is-post:not(:first-child) {
+
+  @include breakpoint('medium-max') {
+    display: none;
+  }
+
+}
+
+.c-clients .u-grid__item {
+  @include flex-item-half;
+
+  @include breakpoint('medium-min') {
+    @include flex-item-quatre;
+  }
+
+}

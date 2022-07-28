@@ -1,0 +1,95 @@
+$object: 'o-image';
+
+// Image
+.#{$object} {
+  @include transition(border-color 0.25s ease-out);
+}
+
+// Sizing
+.#{$object}--size-180x180 {
+  display: inline-block;
+  height: 180px;
+  width: 180px;
+}
+.#{$object}--size-140x140 {
+  display: inline-block;
+  height: 140px;
+  width: 140px;
+}
+.#{$object}--size-82x82 {
+  display: inline-block;
+  height: 82px;
+  width: 82px;
+}
+.#{$object}--size-64x64 {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+}
+
+// Styles
+.#{$object}--circle {
+  @include border-radius(100%);
+}
+.#{$object}--border {
+  background-color: $white;
+  border: 10px solid $white;
+}
+.#{$object}--border-small {
+  background-color: $white;
+  border: 5px solid $white;
+}
+.#{$object}--border-dark {
+  background-color: $panel;
+  border-color: $panel;
+}
+.#{$object}--shadow {
+  @include box-shadow(0 4px 8px 0 rgba(0, 0, 0, 0.1));
+  margin-bottom: 12px;
+}
+.#{$object}--overlay {
+  position: relative;
+  top: -10px;
+  margin-bottom: -40px;
+
+  // @include breakpoint('medium-min') {
+  //   top: -10px;
+  //   margin-bottom: -40px;
+  // }
+
+}
+.#{$object}--overlay-post {
+  position: relative;
+  top: -120px;
+  margin-bottom: -100px;
+}
+.#{$object}--avatar {
+  display: inline-block;
+  height: 96px;
+  width: 96px;
+
+  @include breakpoint('medium-min') {
+    height: 128px;
+    width: 128px;
+  }
+
+}
+
+// Modifier
+.#{$object}--logo {
+  background-color: $white;
+  border: 5px solid $panel;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  height: 118px;
+  width: 118px;
+  line-height: 108px;
+  text-align: center;
+  vertical-align: middle;
+
+  img {
+    vertical-align: middle;
+  }
+
+}

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .my-class {
+    @apply text-2xl;
+  }
+  /* ... */
+}
