@@ -10,9 +10,9 @@
 <head>
 
   <?php
-        global $wp;
-        $current_url = home_url(add_query_arg(array(),$wp->request));
-    ?>
+    global $wp;
+    $current_url = home_url(add_query_arg(array(),$wp->request));
+  ?>
 
   <!-- so:meta -->
   <?php if( get_field('meta_title') ): ?>
@@ -63,13 +63,11 @@
   <link rel="canonical" href="<?php esc_url(the_permalink()); ?>" />
   <!-- eo:meta -->
 
-  <script defer>
-  document.querySelector('html').classList.remove('no-js');
-  document.querySelector('html').classList.add('js');
-  </script>
-
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <!-- so:fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- eo:fonts -->
 
   <!-- so:favicon -->
   <link rel="apple-touch-icon" sizes="180x180"
@@ -81,11 +79,14 @@
 
   <!-- so:stylesheets -->
   <link href="<?php echo get_template_directory_uri(); ?>/dist/output.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" type="text/css"
-    href="<?php echo get_template_directory_uri(); ?>/assets/stylesheets/global-min.css" async> -->
-  <!-- <link rel="stylesheet" type="text/css"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <!-- eo:stylesheets -->
+
+  <!-- so:javascripts -->
+  <script defer>
+  document.querySelector('html').classList.remove('no-js');
+  document.querySelector('html').classList.add('js');
+  </script>
+  <!-- eo:javascripts -->
 
   <!-- so:analytics -->
   <script>
@@ -117,50 +118,23 @@
 
   <a href="#main" class="sr-only" title="Skip to main content">Skip to main content</a>
 
-  <div id="page" class="l-page l-page--extra-large">
-
-    <h1 class="my-class text-red-600">Example</h1>
-    <h1 class="my-class text-blue-600">Example</h1>
-    <h1 class="my-class text-green-600">Example</h1>
+  <div id="page">
 
     <!-- so:header -->
-    <header class="l-band">
-      <div class="l-container l-container--extra-large">
-        <div class="u-grid u-grid--gutter-10 u-grid--align-center">
-          <div class="u-grid__item u-grid__item--none">
-            <div class="c-logo">
-              <a class="c-logo__link" href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <img class="c-logo__img js-lazyload"
-                  data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg"
-                  alt="<?php bloginfo( 'name' ); ?>" />
-              </a>
-            </div>
-          </div>
-          <div class="u-grid__item u-grid__item--auto is-right-only">
-            <div class="c-nav c-nav--overlay">
-              <nav>
-                <span class="c-nav__menu js-nav-open">
-                  <i class="c-nav__icon fa fa-bars" aria-hidden="true"></i>
-                </span>
-                <div class="c-nav__overlay is-closed js-nav">
-                  <span class="c-nav__close js-nav-close">
-                    <i class="c-nav__icon fa fa-close" aria-hidden="true"></i>
-                  </span>
-                  <?php wp_nav_menu( array(
-                    'menu' => 'Nav',
-                    'theme_location' => 'primary',
-                    'container' => 'div',
-                    'container_class' => 'c-nav__panel u-grid u-grid--align-center u-grid--justify-center',
-                    'container_id' => '',
-                    'menu_class' => 'c-nav__list u-grid__item u-grid__item--auto',
-                    'menu_id' => ' ' ) );
-                  ?>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+    <header>
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+        title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+        <img class="js-lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg"
+          alt="<?php bloginfo( 'name' ); ?>" />
+      </a>
+      <?php wp_nav_menu( array(
+        'menu' => 'Nav',
+        'theme_location' => 'primary',
+        'container' => 'div',
+        'container_class' => '',
+        'container_id' => '',
+        'menu_class' => '',
+        'menu_id' => ' ',
+      ) ); ?>
     </header>
     <!-- eo:header -->

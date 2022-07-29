@@ -17,13 +17,13 @@ function theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	// Thumbnails
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( '200x200', 200, 200, true );
+	add_image_size( '48x48', 48, 48, true );
+	add_image_size( '64x64', 64, 64, true );
+	add_image_size( '128x128', 128, 128, true );
+	add_image_size( '256x256', 256, 256, true );
 	add_image_size( '512x512', 512, 512, true );
-	add_image_size( '960x640', 960, 640, true );
-	add_image_size( '1200x630', 1200, 630, true );
-	add_image_size( '1000x480', 1000, 480, true );
-	add_image_size( '1400x600', 1400, 600, true );
-	add_image_size( '1400x800', 1400, 800, true );
+	add_image_size( '1080x1080', 1400, 600, true );
+	add_image_size( '1600x900', 1400, 800, true );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
