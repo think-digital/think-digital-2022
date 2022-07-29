@@ -2,6 +2,12 @@ module.exports = {
   content: ["./*.{php,html,js}"],
   theme: {
     extend: {
+      backgroundSize: {
+        '25%': '25%',
+      },
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       colors: {
         current: 'currentColor',
         'emerald': {

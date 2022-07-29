@@ -64,7 +64,7 @@ function custom_post_type() {
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
 		'rewrite' => array(
-			'slug' => 'what-we-do',
+			'slug' => 'services',
 			'with_front' => true
 		)
 	);
@@ -144,7 +144,7 @@ function custom_post_type() {
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
 		'rewrite' => array(
-			'slug' => 'team',
+			'slug' => 'about/team',
 			'with_front' => true
 		)
 	);
