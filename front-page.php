@@ -1,25 +1,10 @@
 <?php /* Template Name: Home */ get_header(); ?>
 
-<!-- <?php if( get_field('') ): ?>
+<?php if( get_field('') ): ?>
 <?php the_field(''); ?>
-<?php endif; ?> -->
+<?php endif; ?>
 
 <main id="main">
-
-  <section id="hero" class="pattern-bg">
-    <div class="max-w-7xl mx-auto px-6 py-24 pt-48 lg:pr-56">
-      <h1 class="text-1xl lg:text-2xl font-bold text-emerald-500 mb-4">THINK Digital</h1>
-      <p class="text-2xl leading-normal lg:text-4xl lg:leading-normal text-white font-bold mb-6">We are a digital agency
-        that helps
-        non-profit
-        organisations
-        around the world to build and grow their digital fundraising and marketing programmes.</p>
-      <p class="text-base lg:text-2xl text-white">Find out <a href="/about" class="link">who we are</a> and <a
-          href="/services" class="link">how
-          we can
-          help</a>.</p>
-    </div>
-  </section>
 
   <section id="services" class="max-w-7xl mx-auto px-6 py-24">
     <div class="relative">
@@ -27,7 +12,7 @@
         // Load 'posts' custom post type
         $posts = get_posts(array(
         'post_type'  => 'services',
-        'posts_per_page'  => 6,
+        'posts_per_page'  => -1,
         'order'   => 'ASC'
         ));
         if( $posts ):
@@ -43,7 +28,7 @@
             $alt = $image['alt'];
             if( !empty($image) ):
           ?>
-          <div class="svg-icon fill-emerald-500 mb-6">
+          <div class="svg-icon-12 fill-emerald-500 mb-6">
             <?php echo file_get_contents($src); ?>
           </div>
           <?php endif; ?>
@@ -118,10 +103,8 @@
       <h2 class="text-2xl lg:text-3xl font-bold text-midnight-500 mb-12">About us</h2>
       <div class="grid md:grid-cols-3">
         <div class="item">
-          <p>THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who
-            has worked in the digital non-profit space for over 20 years. </p>
-          <p>We work with non-profit organisations globally to help them build and grow their digital fundraising and
-            marketing programmes through a mixture of strategic consultancy and project delivery. </p>
+          <p>THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
+          <p>We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
           <ul class="text-l">
             <li>
               <a href="#" class="link">Our story</a>
@@ -156,18 +139,15 @@
         <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
         <div class="pr-6">
           <hr class="w-12	border-2 border-slate-100 mb-4" />
-          <p class="font-bold uppercase mb-4 text-slate-500 contains-link">
-            <?php the_category( ', ' ); ?></p>
+          <p class="font-bold uppercase mb-4 text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
           <?php
             $image = get_field('hero_image');
             $src = $image['sizes']['512x512'];
             $alt = $image['alt'];
             if( !empty($image) ):
           ?>
-          <a href="<?php the_permalink(); ?>"
-            class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-1 hover:outline-emerald-500 overflow-hidden">
-            <img class="js-lazyload aspect-video object-cover w-64" src="<?php echo $src; ?>"
-              data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="256" width="256" />
+          <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-1 hover:outline-emerald-500 overflow-hidden">
+            <img class="js-lazyload aspect-video object-cover w-64" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="256" width="256" />
           </a>
           <?php endif; ?>
           <h3 class="text-xl leading-relaxed">

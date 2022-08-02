@@ -9,25 +9,57 @@
 }
 
 @layer components {
+  /* Avatar */
   .avatar img {
     @apply rounded-full w-12 h-12;
   }
+  /* Links */
   .link {
     @apply font-bold box-decoration-clone border-b-2 border-solid border-emerald-500 hover:text-emerald-500;
   }
   .contains-link {
     @apply hover:text-emerald-500;
   }
+  /* Pattern */
   .pattern-bg {
     @apply bg-repeat bg-midnight-500 bg-fixed;
     background-size: 411px;
     background-image: url('../assets/pattern.png');
   }
-  .svg-icon svg {
+  /* SVG */
+  .svg-icon-6 svg {
+    @apply w-6;
+  }
+  .svg-icon-12 svg {
     @apply w-12 lg:w-16;
   }
+  /* Content */
   .content p {
     @apply mb-4;
   }
-  /* ... */
+  /* Nav */
+  ul.parent-list li {
+    @apply relative;
+  }
+  ul.parent-list > li:hover > a {
+    @apply text-emerald-500 border-b-2 border-solid border-emerald-500;
+  }
+  ul.parent-list > li > ul.child-list {
+    @apply hidden z-0 absolute pt-12 top-0 right-0 w-80;
+  }
+  ul.parent-list > li:hover > ul.child-list {
+    @apply block;
+  }
+  .parent-link {
+    @apply font-bold text-2xl hover:text-emerald-500 z-10 relative;
+  }
+  .parent-link.current-page {
+    @apply inline-block text-emerald-700 border-b-2 border-solid border-emerald-200 hover:text-emerald-500;
+  }
+  ul.child-list > li {
+    @apply mb-2;
+  }
+  .child-link {
+    @apply font-medium hover:text-emerald-500;
+  }
 }

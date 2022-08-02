@@ -16,12 +16,12 @@
 
   <!-- so:meta -->
   <?php if( get_field('meta_title') ): ?>
-  <title><?php the_field('meta_title'); ?></title>
+  <title><?php the_field('meta_title'); ?> | THINK Digital</title>
   <meta itemprop="name" content="<?php the_field('meta_title'); ?>">
   <meta property="twitter:title" content="<?php the_field('meta_title'); ?>" />
   <meta property="og:title" content="<?php the_field('meta_title'); ?>" />
   <?php else: ?>
-  <title><?php the_title(); ?> - <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></title>
+  <title><?php the_title(); ?> | THINK Digital</title>
   <?php endif; ?>
 
   <?php if( get_field('meta_description') ): ?>
@@ -120,21 +120,4 @@
 
   <div id="page">
 
-    <!-- so:header -->
-    <header>
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-        title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-        <img class="js-lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg"
-          alt="<?php bloginfo( 'name' ); ?>" />
-      </a>
-      <?php wp_nav_menu( array(
-        'menu' => 'Nav',
-        'theme_location' => 'primary',
-        'container' => 'div',
-        'container_class' => '',
-        'container_id' => '',
-        'menu_class' => '',
-        'menu_id' => ' ',
-      ) ); ?>
-    </header>
-    <!-- eo:header -->
+    <?php include('nav.php'); ?>
