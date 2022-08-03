@@ -77,7 +77,7 @@
           src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
         <div
           class="rounded-b-2xl rounded-t-none md:rounded-r-none md:rounded-l-2xl md:order-1  bg-midnight-500 text-white flex justify-center items-center">
-          <div class="max-w-md p-12">
+          <div class="max-w-md px-12 py-24">
             <h3 class="text-2xl font-bold mb-2 leading-relaxed"><?php the_title(); ?></h3>
             <h4 class="text-l text-emerald-500 uppercase font-medium mb-8"><?php the_field('client'); ?></h4>
             <div class="content mb-6">
@@ -112,7 +112,7 @@
         </div>
         <div class="item max-w-lg text-midnight-500 text-xl pb-9">
           <p class="font-medium mb-6">THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
-          <p class="mb-6">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
+          <p class="mb-6 text-midnight-400">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
           <ul class="flex space-x-6">
             <li>
               <a href="#" class="link">Our story</a>
@@ -181,6 +181,43 @@
       </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
+    </div>
+  </section>
+
+  <section id="contact" class="max-w-7xl mx-auto py-16 px-32 mb-24 rounded-2xl bg-emerald-200 text-center">
+    <div class="relative">
+      <h2 class="text-2xl lg:text-3xl font-bold text-emerald-900 mb-6">Contact us</h2>
+      <p class="text-2xl max-w-3xl mx-auto text-emerald-900 mb-12">If you’d like to find out more about what we do and how we might be able to help your organisation, please contact us at:</p>
+      <div class="grid gap-6 grid-cols-4">
+        <!-- Email -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
+            <?php include('assets/twitter.svg'); ?><span>Email</span>
+          </div>
+          <a href="#" class="link text-lg">contact@thinkds.org</a>
+        </div>
+        <!-- Phone -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
+            <?php include('assets/whatsapp.svg'); ?><span>Phone</span>
+          </div>
+          <a href="#" class="link text-lg">+44 (0)1234 567890</a>
+        </div>
+        <!-- Twitter -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
+            <?php include('assets/twitter.svg'); ?><span>Tweet</span>
+          </div>
+          <a href="#" class="link text-lg">@ThinkDigSol</a>
+        </div>
+        <!-- LinkedIn -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
+            <?php include('assets/linkedin.svg'); ?><span>Connect</span>
+          </div>
+          <a href="#" class="link text-lg">Think Digital</a>
+        </div>
+      </div>
     </div>
   </section>
 
