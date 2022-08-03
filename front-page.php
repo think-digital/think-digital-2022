@@ -6,7 +6,7 @@
 
 <main id="main">
 
-  <section id="services" class="max-w-7xl mx-auto px-6 py-24">
+  <section id="services" class="max-w-7xl mx-auto px-6 pt-24 pb-12">
     <div class="relative">
       <?php
         // Load 'posts' custom post type
@@ -51,7 +51,7 @@
     </div>
   </section>
 
-  <section id="projects" class="max-w-7xl mx-auto px-6 py-24">
+  <section id="projects" class="max-w-7xl mx-auto px-6 pt-12 pb-24">
     <div class="relative">
       <?php
         // Load 'posts' custom post type
@@ -97,15 +97,23 @@
     </div>
   </section>
 
-  <section id="about" class="max-w-7xl mx-auto px-6 py-24">
+  <section id="about" class="max-w-7xl mx-auto px-6 pt-12 pb-24">
     <div class="relative">
       <hr class="w-24	border-4 border-emerald-200 mb-4" />
       <h2 class="text-2xl lg:text-3xl font-bold text-midnight-500 mb-12">About us</h2>
-      <div class="grid md:grid-cols-3">
+      <div class="flex space-x-24 items-center">
         <div class="item">
-          <p>THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
-          <p>We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
-          <ul class="text-l">
+          <video class="aspect-video rounded-2xl w-full object-cover" width="320" height="240" poster="<?php echo get_template_directory_uri(); ?>/assets/about-jason.jpeg" controls>
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4">
+            <?php include('assets/comment.svg'); ?> <span>Jason Potts outlines how we can help your organisation.</span></p>
+        </div>
+        <div class="item max-w-lg text-midnight-500 text-xl pb-9">
+          <p class="font-medium mb-6">THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
+          <p class="mb-6">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
+          <ul class="flex space-x-6">
             <li>
               <a href="#" class="link">Our story</a>
             </li>
@@ -114,15 +122,11 @@
             </li>
           </ul>
         </div>
-        <div class="item">
-          <!-- Add video here -->
-          <p>Jason Potts outlines how we can help your organisation.</p>
-        </div>
       </div>
     </div>
   </section>
 
-  <section id="blog" class="max-w-7xl mx-auto px-6 py-24">
+  <section id="blog" class="max-w-7xl mx-auto px-6 pt-12 pb-24">
     <div class="relative">
       <?php
         // Load 'posts' custom post type
