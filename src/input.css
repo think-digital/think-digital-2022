@@ -13,6 +13,12 @@
   .avatar img {
     @apply rounded-full w-12 h-12;
   }
+  .avatar a:hover img {
+    @apply outline outline-2 outline-emerald-500;
+  }
+  .logo a:hover img {
+    @apply outline outline-2 outline-white;
+  }
   /* Links */
   .link {
     @apply font-bold box-decoration-clone border-b-2 border-solid border-emerald-500 hover:text-emerald-500;
@@ -27,6 +33,9 @@
     background-image: url('../assets/pattern.png');
   }
   /* SVG */
+  .svg-icon-4 svg {
+    @apply w-4;
+  }
   .svg-icon-6 svg {
     @apply w-6;
   }
@@ -42,16 +51,22 @@
     @apply relative;
   }
   ul.parent-list > li:hover > a {
-    @apply text-emerald-500 border-b-2 border-solid border-emerald-500;
+    @apply text-emerald-500;
   }
   ul.parent-list > li > ul.child-list {
-    @apply hidden z-0 absolute pt-12 top-0 right-0 w-80;
+    @apply hidden z-0 absolute pt-12 top-0 left-0 w-80;
   }
   ul.parent-list > li:hover > ul.child-list {
     @apply block;
   }
   .parent-link {
     @apply font-bold text-2xl hover:text-emerald-500 z-10 relative;
+  }
+  ul.parent-list > li svg {
+    @apply transition-transform duration-700 fill-white stroke-white stroke-2 relative top-0.5;
+  }
+  ul.parent-list > li:hover svg {
+    @apply rotate-180 stroke-emerald-500;
   }
   .parent-link.current-page {
     @apply inline-block text-emerald-700 border-b-2 border-solid border-emerald-200 hover:text-emerald-500;

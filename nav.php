@@ -3,9 +3,11 @@
 
   <div class="max-w-7xl mx-auto px-6 py-9 flex content-end items-end">
     <!-- Logo -->
-    <a href="/" title="THINK Digital homepage" rel="home">
-      <img class="js-lazyload" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="64" width="64" />
-    </a>
+    <div class="logo">
+      <a href="/" class="inline-block" title="THINK Digital homepage" rel="home">
+        <img class="js-lazyload rounded-full w-16 h-16" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="64" width="64" />
+      </a>
+    </div>
     <div class="navigation grow">
       <!-- Secondary Nav -->
       <nav class="secondary text-right font-medium mb-4 <?php if( is_front_page() && ! is_home() ) { ?>text-slate-300<?php } else { ?>text-slate-500<?php } ?>">
@@ -29,15 +31,15 @@
         </ul>
       </nav>
       <!-- Primary Nav -->
-      <nav class="primary text-right <?php if( is_front_page() && ! is_home() ) { ?>text-white<?php } else { ?>text-midnight-500<?php } ?>">
-        <ul class="parent-list flex space-x-9 text-right justify-end">
+      <nav class="primary <?php if( is_front_page() && ! is_home() ) { ?>text-white<?php } else { ?>text-midnight-500<?php } ?>">
+        <ul class="parent-list flex space-x-9 justify-end">
           <?php if( is_front_page() && ! is_home() ) { } else { ?>
             <li>
               <a href="/" class="parent-link<?php if (is_page('home')) echo ' current-page'; ?>" title="Home">Home</a>
             </li>
           <?php } ?>
           <li>
-            <a href="/services" class="parent-link<?php if (is_page('services') || 'services' == get_post_type() ) echo ' current-page'; ?>" title="Services">Services</a>
+            <a href="/services" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('services') || 'services' == get_post_type() ) echo ' current-page'; ?>" title="Services"><span>Services</span><?php include('assets/arrow-down.svg'); ?></a>
             <?php
               // Load 'posts' custom post type
               $posts = get_posts(array(
@@ -58,7 +60,7 @@
             <?php endif; ?>
           </li>
           <li>
-            <a href="/case-studies" class="parent-link<?php if (is_page('case-studies') || 'casestudy' == get_post_type() ) echo ' current-page'; ?>" title="Case studies">Case studies</a>
+            <a href="/case-studies" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('case-studies') || 'casestudy' == get_post_type() ) echo ' current-page'; ?>" title="Case studies"><span>Case studies</span><?php include('assets/arrow-down.svg'); ?></a>
             <?php
               // Load 'posts' custom post type
               $posts = get_posts(array(
@@ -79,7 +81,7 @@
             <?php endif; ?>
           </li>
           <li>
-            <a href="/about" class="parent-link<?php if (is_page('about') || is_page('team') || 'team' == get_post_type() ) echo ' current-page'; ?>" title="About">About</a>
+            <a href="/about" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('about') || is_page('team') || 'team' == get_post_type() ) echo ' current-page'; ?>" title="About"><span>About</span><?php include('assets/arrow-down.svg'); ?></a>
             <ul class="child-list">
               <li>
                 <a href="/about/team" class="child-link" title="Our team">Our team</a>
@@ -87,7 +89,7 @@
             </ul>
           </li>
           <li>
-            <a href="/blog" class="parent-link<?php if (is_page('blog') || 'post' == get_post_type() ) echo ' current-page'; ?>" title="Blog">Blog</a>
+            <a href="/blog" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('blog') || 'post' == get_post_type() ) echo ' current-page'; ?>" title="Blog"><span>Blog</span><?php include('assets/arrow-down.svg'); ?></a>
             <?php
               // Load 'posts' custom post type
               $posts = get_posts(array(

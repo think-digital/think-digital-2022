@@ -146,7 +146,7 @@
             $alt = $image['alt'];
             if( !empty($image) ):
           ?>
-          <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-1 hover:outline-emerald-500 overflow-hidden">
+          <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
             <img class="js-lazyload aspect-video object-cover w-64" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="256" width="256" />
           </a>
           <?php endif; ?>
@@ -158,12 +158,13 @@
           </p>
           <div class="flex items-center mt-6">
             <div class="avatar mr-4">
-              <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
+              <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>">
+                <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
+              </a>
             </div>
             <div class="text text-sm">
               <h4 class="font-bold text-midnight-500 contains-link">
-                <a href="<?php the_author_url(); ?>"
-                  title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
+                <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
               </h4>
               <p class="font-medium text-slate-500"><?php the_date(); ?></p>
             </div>
