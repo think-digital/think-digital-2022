@@ -120,4 +120,4 @@
 
   <div id="page">
 
-    <?php include('nav.php'); ?>
+    <?php include get_template_directory() . '/nav.php'; ?>

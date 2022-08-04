@@ -1,120 +1,101 @@
 <?php /* Template Name: Blog */ get_header(); ?>
 
-<main id="main" role="main">
+<main id="main">
 
-  <section id="hero" class="l-band">
-    <div class="l-container l-container--extra-large">
-      <div class="c-hero">
-        <?php
-					$image = get_field('hero_image');
-					if( !empty($image) ):
-					$thumb = $image['sizes']['1400x800'];
-				?>
-        <div
-          class="c-hero__image c-hero__image--gradient c-hero__image--desktop-crop <?php if( get_field('hero_image_position') ): ?><?php the_field('hero_image_position'); ?><?php endif; ?> js-object-fit">
-          <img
-            class="c-hero__img <?php if( get_field('hero_image_position') ): ?><?php the_field('hero_image_position'); ?><?php endif; ?> js-lazyload"
-            data-src="<?php echo $thumb; ?>" alt="<?php the_title(); ?>" />
-        </div>
-        <?php endif; ?>
-      </div>
-    </div>
-  </section>
-
-  <?php
-				// Load 'services' custom post type
-				$posts = get_posts(array(
-				'post_type'  => 'post',
-				'posts_per_page'  => 1,
-				'order'   => 'ASC'
-				));
-				if( $posts ):
-			?>
-  <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-
-  <section class="l-band l-band--overlay u-padding-bottom--20">
-    <div class="l-container l-container--medium l-container--medium-full">
-      <div class="c-content c-content--rounded c-content--dark is-center">
-        <h1 class="o-heading o-heading--extra-large o-heading--inherit">Latest thinking</h1>
-      </div>
-      <div class="c-content c-content--rounded c-content--border">
-        <h4 class="o-heading o-heading--label o-heading--label-client"><?php the_date(); ?></h4>
-        <h2 class="o-heading o-heading--large o-heading--inherit o-heading--reduce-margin"><?php the_title(); ?></h2>
-        <h3 class="o-heading o-heading--small o-heading--inherit o-heading--link o-heading--increase-margin"><em>by</em>
-          <?php the_author_link(); ?></h3>
-        <div class="o-text">
-          <p><?php echo wp_trim_words( get_the_content(), 50, '...' ); ?></p>
-          <div class="l-buttons">
-            <div class="u-grid u-grid--gutter-5">
-              <div class="u-grid__item">
-                <a class="o-button o-button--full o-button--rounded" href="<?php the_permalink(); ?>"
-                  title="Read more">Read
-                  more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <?php endforeach; ?>
-  <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
-
-  <section id="content" class="l-band u-padding-bottom--20">
-    <div class="l-container l-container--large">
-
+<section id="blog" class="max-w-5xl mx-auto px-6 pt-12 pb-24">
+    <div class="relative">
       <?php
-		// Load 'services' custom post type
-		$posts = get_posts(array(
-		'post_type'  => 'post',
-		'posts_per_page'  => -1,
-		'order'   => 'ASC'
-		));
-		if( $posts ):
-	?>
-
-      <div class="c-accordian">
-        <div class="c-accordian__list c-accordian__list--posts">
-          <div class="u-grid u-grid--wrap u-grid--collapse u-grid--gutter-20">
-            <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-            <div class="u-grid__item u-grid__item--half">
-              <div class="c-accordian__item c-accordian__item--rounded c-accordian__item--fixed">
-                <div class="c-accordian__heading c-accordian__heading--post js-accordian">
-                  <h4
-                    class="o-heading o-heading--label o-heading--label-post o-heading--label-client o-heading--reduce-margin">
-                    <?php the_date(); ?></h4>
-                  <h2 class="o-heading o-heading--post o-heading--inherit"><?php the_title(); ?></h2>
-                </div>
-                <div class="c-accordian__panel c-accordian__panel--fixed">
-                  <div class="c-accordian__content c-accordian__content--post">
-                    <div class="u-grid u-grid--wrap u-grid--align-center u-grid--justify-center">
-                      <div class="u-grid__item">
-                        <h3
-                          class="o-heading o-heading--small o-heading--inherit o-heading--link o-heading--increase-margin">
-                          <em>by</em> <?php the_author_link(); ?></h3>
-                        <div class="o-text o-text--small">
-                          <p><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="l-buttons l-buttons--fixed">
-                    <p><a class="o-button o-button--full o-button--rounded" href="<?php the_permalink(); ?>"
-                        title="Read more">Read more</a></p>
-                  </div>
-                </div>
+        // Load 'posts' custom post type
+        $posts = get_posts(array(
+        'post_type'  => 'post',
+        'posts_per_page'  => 5,
+        'order'   => 'ASC'
+        ));
+        if( $posts ):
+      ?>
+      <hr class="w-24	border-4 border-emerald-200 mb-4" />
+      <h2 class="text-3xl font-bold text-midnight-500 mb-12">Recent blog posts</h2>
+      <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
+        <hr class="w-12	border-2 border-slate-100 mb-4" />
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="content">
+            <p class="font-bold uppercase mb-4 text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
+            <h3 class="text-xl leading-relaxed">
+              <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h3>
+            <p class="mt-4 text-midnight-400 leading-relaxed">
+              <?php the_field('excerpt'); ?>
+            </p>
+            <div class="flex items-center mt-6">
+              <div class="avatar mr-4">
+                <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>">
+                  <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
+                </a>
+              </div>
+              <div class="text text-sm">
+                <h4 class="font-bold text-midnight-500 contains-link">
+                  <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
+                </h4>
+                <p class="font-medium text-slate-500"><?php the_date(); ?></p>
               </div>
             </div>
-            <?php endforeach; ?>
           </div>
+          <?php
+              $image = get_field('hero_image');
+              $src = $image['sizes']['512x512'];
+              $alt = $image['alt'];
+              if( !empty($image) ):
+            ?>
+          <div class="image place-self-center">
+            <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
+              <img class="js-lazyload aspect-video object-cover w-80" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
+            </a>
+          </div>
+          <?php endif; ?>
         </div>
-      </div>
-
+      <?php endforeach; ?>
+      <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
+        <a href="#" class="link text-l">View all blog posts</a>
+      </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
+    </div>
+  </section>
 
+  <section id="contact" class="max-w-7xl mx-auto py-16 px-32 mb-24 rounded-2xl bg-emerald-200 text-center">
+    <div class="relative">
+      <h2 class="text-2xl lg:text-3xl font-bold text-emerald-900 mb-6">Contact us</h2>
+      <p class="text-2xl max-w-3xl mx-auto text-emerald-900 mb-12">If you’d like to find out more about what we do and how we might be able to help your organisation, please contact us at:</p>
+      <div class="grid gap-6 grid-cols-4">
+        <!-- Email -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4 stroke-svg">
+            <?php include get_template_directory() . '/assets/email.svg'; ?><span>Email</span>
+          </div>
+          <a href="#" class="link text-lg">contact@thinkds.org</a>
+        </div>
+        <!-- Phone -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4 stroke-svg">
+          <?php include get_template_directory() . '/assets/mobile.svg'; ?><span>Phone</span>
+          </div>
+          <a href="#" class="link text-lg">+44 (0)1234 567890</a>
+        </div>
+        <!-- Twitter -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
+          <?php include get_template_directory() . '/assets/twitter.svg'; ?><span>Tweet</span>
+          </div>
+          <a href="#" class="link text-lg">@ThinkDigSol</a>
+        </div>
+        <!-- LinkedIn -->
+        <div class="rounded-xl p-6 bg-white">
+          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
+          <?php include get_template_directory() . '/assets/linkedin.svg'; ?><span>Connect</span>
+          </div>
+          <a href="#" class="link text-lg">Think Digital</a>
+        </div>
+      </div>
     </div>
   </section>
 

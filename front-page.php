@@ -83,7 +83,7 @@
             <div class="content mb-6">
               <?php the_field('excerpt'); ?>
             </div>
-            <a class="link" href="<?php the_permalink(); ?>">Read this case study</a>
+            <a class="link" href="<?php the_permalink(); ?>" title='Read "<?php the_title(); ?>" case study'>Read this case study</a>
           </div>
         </div>
         <?php endif; ?>
@@ -107,8 +107,8 @@
             <source src="<?php echo get_template_directory_uri(); ?>/assets/movie.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4">
-            <?php include('assets/comment.svg'); ?> <span>Jason Potts outlines how we can help your organisation.</span></p>
+          <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600">
+            <?php include get_template_directory() . '/assets/comment.svg'; ?><span>Jason Potts outlines how we can help your organisation.</span></p>
         </div>
         <div class="item max-w-lg text-midnight-500 text-xl pb-9">
           <p class="font-medium mb-6">THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
@@ -184,42 +184,7 @@
     </div>
   </section>
 
-  <section id="contact" class="max-w-7xl mx-auto py-16 px-32 mb-24 rounded-2xl bg-emerald-200 text-center">
-    <div class="relative">
-      <h2 class="text-2xl lg:text-3xl font-bold text-emerald-900 mb-6">Contact us</h2>
-      <p class="text-2xl max-w-3xl mx-auto text-emerald-900 mb-12">If you’d like to find out more about what we do and how we might be able to help your organisation, please contact us at:</p>
-      <div class="grid gap-6 grid-cols-4">
-        <!-- Email -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
-            <?php include('assets/twitter.svg'); ?><span>Email</span>
-          </div>
-          <a href="#" class="link text-lg">contact@thinkds.org</a>
-        </div>
-        <!-- Phone -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
-            <?php include('assets/whatsapp.svg'); ?><span>Phone</span>
-          </div>
-          <a href="#" class="link text-lg">+44 (0)1234 567890</a>
-        </div>
-        <!-- Twitter -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
-            <?php include('assets/twitter.svg'); ?><span>Tweet</span>
-          </div>
-          <a href="#" class="link text-lg">@ThinkDigSol</a>
-        </div>
-        <!-- LinkedIn -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
-            <?php include('assets/linkedin.svg'); ?><span>Connect</span>
-          </div>
-          <a href="#" class="link text-lg">Think Digital</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <?php include get_template_directory() . '/contact.php'; ?>
 
 </main>
 

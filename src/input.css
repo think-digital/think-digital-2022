@@ -42,6 +42,9 @@
   .svg-icon-12 svg {
     @apply w-12 lg:w-16;
   }
+  .stroke-svg svg {
+    @apply stroke-current stroke-1;
+  }
   /* Content */
   .content p {
     @apply mb-4;
@@ -63,13 +66,19 @@
     @apply font-bold text-2xl hover:text-emerald-500 z-10 relative;
   }
   ul.parent-list > li svg {
-    @apply transition-transform duration-700 fill-white stroke-white stroke-2 relative top-0.5;
+    @apply transition-transform duration-700 stroke-midnight-500 stroke-2 relative top-0.5;
+  }
+  .home ul.parent-list > li svg {
+    @apply stroke-white;
   }
   ul.parent-list > li:hover svg {
-    @apply rotate-180 stroke-emerald-500;
+    @apply rotate-[-90deg] stroke-emerald-500;
   }
   .parent-link.current-page {
-    @apply inline-block text-emerald-700 border-b-2 border-solid border-emerald-200 hover:text-emerald-500;
+    @apply text-emerald-700 border-b-2 border-solid fill-emerald-700 border-emerald-200 hover:text-emerald-500;
+  }
+  .parent-link.current-page svg {
+    @apply stroke-emerald-700;
   }
   ul.child-list > li {
     @apply mb-2;

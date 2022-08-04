@@ -124,7 +124,7 @@
           <p>Registered Address: Investment House, 22-26 Celtic Court, Ballmoor, Buckingham, MK18 1RQ</p>
         </div>
         <p class="text-right">
-          <a href="#" class="svg-icon-4 font-bold flex fill-white space-x-2 hover:text-emerald-500 hover:fill-emerald-500" title="Back to top"><span>Back to top</span> <?php include('assets/arrow-up-circle.svg'); ?></a>
+          <a href="#" class="svg-icon-4 font-bold flex fill-white space-x-2 hover:text-emerald-500 hover:fill-emerald-500" title="Back to top"><span>Back to top</span> <?php include get_template_directory() . '/assets/arrow-up-circle.svg'; ?></a>
         </p>
       </div>
     </div>

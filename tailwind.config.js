@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./*.{php,html,js}"],
+  content: [
+    './*.{php,html,js}',
+    './templates/*.{php,html,js}',
+  ],
   theme: {
     extend: {
       backgroundSize: {
