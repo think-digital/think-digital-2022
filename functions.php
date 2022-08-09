@@ -30,8 +30,8 @@ function theme_setup() {
 	add_image_size( '128x128', 128, 128, true );
 	add_image_size( '256x256', 256, 256, true );
 	add_image_size( '512x512', 512, 512, true );
-	add_image_size( '1080x1080', 1400, 600, true );
-	add_image_size( '1600x900', 1400, 800, true );
+	add_image_size( '1080x1080', 1080, 1080, true );
+	add_image_size( '1600x900', 1600, 900, true );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 

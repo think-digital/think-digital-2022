@@ -2,25 +2,35 @@
 
 <main id="main">
 
-<section id="blog" class="max-w-5xl mx-auto px-6 pt-12 pb-24">
+  <section id="intro" class="content-intro">
+    <ul class="breadcrumbs">
+      <li class="parent"><a href="/">Home</a></li>
+      <li><?php echo the_title(); ?></li>
+    </ul>
+    <h1>Blog posts</h1>
+    <?php the_content(); ?>
+  </section>
+
+  <section id="blog" class="max-w-5xl mx-auto px-6">
     <div class="relative">
       <?php
-        // Load 'posts' custom post type
-        $posts = get_posts(array(
-        'post_type'  => 'post',
-        'posts_per_page'  => 5,
-        'order'   => 'ASC'
-        ));
-        if( $posts ):
+        $btpgid=get_queried_object_id();
+        $btmetanm=get_post_meta( $btpgid, 'WP_Catid','true' );
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array(
+          'posts_per_page' => 5,
+          'category_name' => $btmetanm,
+          'paged' => $paged,
+          'post_type' => 'post'
+        );
+        $postslist = new WP_Query( $args );
+        if ( $postslist->have_posts() ) : while ( $postslist->have_posts() ) : $postslist->the_post();
       ?>
-      <hr class="w-24	border-4 border-emerald-200 mb-4" />
-      <h2 class="text-3xl font-bold text-midnight-500 mb-12">Recent blog posts</h2>
-      <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-        <hr class="w-12	border-2 border-slate-100 mb-4" />
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="content">
-            <p class="font-bold uppercase mb-4 text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
-            <h3 class="text-xl leading-relaxed">
+      <hr class="w-24	border-4 border-emerald-200 mb-9" />
+        <p class="font-bold uppercase mb-4 text-lg text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
+        <div class="grid md:grid-cols-5 gap-16 mb-24">
+          <div class="content col-span-3">
+            <h3 class="text-2xl leading-relaxed">
               <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
             <p class="mt-4 text-midnight-400 leading-relaxed">
@@ -46,58 +56,21 @@
               $alt = $image['alt'];
               if( !empty($image) ):
             ?>
-          <div class="image place-self-center">
+          <div class="image place-self-start col-span-2">
             <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
-              <img class="js-lazyload aspect-video object-cover w-80" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
+              <img class="js-lazyload aspect-video object-cover w-full" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
             </a>
           </div>
           <?php endif; ?>
         </div>
-      <?php endforeach; ?>
-      <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
-        <a href="#" class="link text-l">View all blog posts</a>
-      </p>
+      <?php endwhile; ?>
+      <?php include get_template_directory() . '/pagination.php'; ?>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
     </div>
   </section>
 
-  <section id="contact" class="max-w-7xl mx-auto py-16 px-32 mb-24 rounded-2xl bg-emerald-200 text-center">
-    <div class="relative">
-      <h2 class="text-2xl lg:text-3xl font-bold text-emerald-900 mb-6">Contact us</h2>
-      <p class="text-2xl max-w-3xl mx-auto text-emerald-900 mb-12">If you’d like to find out more about what we do and how we might be able to help your organisation, please contact us at:</p>
-      <div class="grid gap-6 grid-cols-4">
-        <!-- Email -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4 stroke-svg">
-            <?php include get_template_directory() . '/assets/email.svg'; ?><span>Email</span>
-          </div>
-          <a href="#" class="link text-lg">contact@thinkds.org</a>
-        </div>
-        <!-- Phone -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4 stroke-svg">
-          <?php include get_template_directory() . '/assets/mobile.svg'; ?><span>Phone</span>
-          </div>
-          <a href="#" class="link text-lg">+44 (0)1234 567890</a>
-        </div>
-        <!-- Twitter -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
-          <?php include get_template_directory() . '/assets/twitter.svg'; ?><span>Tweet</span>
-          </div>
-          <a href="#" class="link text-lg">@ThinkDigSol</a>
-        </div>
-        <!-- LinkedIn -->
-        <div class="rounded-xl p-6 bg-white">
-          <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
-          <?php include get_template_directory() . '/assets/linkedin.svg'; ?><span>Connect</span>
-          </div>
-          <a href="#" class="link text-lg">Think Digital</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <?php include get_template_directory() . '/contact.php'; ?>
 
 </main>
 

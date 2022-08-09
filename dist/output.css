@@ -635,7 +635,7 @@ html {
 
 /* Content */
 
-.content p {
+.content-post p {
   margin-bottom: 1rem;
 }
 
@@ -729,6 +729,120 @@ ul.child-list > li {
   color: rgb(45 204 112 / var(--tw-text-opacity));
 }
 
+/* Intro */
+
+.content-intro {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 6rem;
+  padding-top: 8rem;
+}
+
+.content-intro h1 {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.375;
+  --tw-text-opacity: 1;
+  color: rgb(27 38 79 / var(--tw-text-opacity));
+}
+
+.content-intro p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  line-height: 1.625;
+  --tw-text-opacity: 1;
+  color: rgb(95 103 132 / var(--tw-text-opacity));
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  margin-bottom: 1rem;
+  display: flex;
+  --tw-text-opacity: 1;
+  color: rgb(27 38 79 / var(--tw-text-opacity));
+}
+
+.breadcrumbs li {
+  display: inline-block;
+}
+
+.breadcrumbs a {
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(34 153 84 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.breadcrumbs a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(45 204 112 / var(--tw-text-opacity));
+}
+
+.breadcrumbs li.parent:after {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+  content: "/";
+}
+
+.breadcrumbs .truncate-text {
+  display: inline-block;
+  max-width: 256px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Pagination */
+
+.pagination {
+  margin-bottom: 6rem;
+  display: flex;
+}
+
+.pagination > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.pagination a {
+  display: inline-block;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  fill: #1b264f;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(27 38 79 / var(--tw-text-opacity));
+}
+
+.pagination a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 204 112 / var(--tw-bg-opacity));
+  fill: #fff;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.pagination svg {
+  display: inline-block;
+  width: 1rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -743,6 +857,14 @@ ul.child-list > li {
 
 .relative {
   position: relative;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .mx-auto {
@@ -798,6 +920,14 @@ ul.child-list > li {
   margin-right: 1rem;
 }
 
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -850,10 +980,6 @@ ul.child-list > li {
   width: 4rem;
 }
 
-.w-80 {
-  width: 20rem;
-}
-
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -872,6 +998,14 @@ ul.child-list > li {
 
 .max-w-5xl {
   max-width: 64rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .grow {
@@ -914,6 +1048,10 @@ ul.child-list > li {
   gap: 3rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -944,8 +1082,8 @@ ul.child-list > li {
   margin-left: calc(2.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.place-self-center {
-  place-self: center;
+.place-self-start {
+  place-self: start;
 }
 
 .overflow-hidden {
@@ -962,6 +1100,10 @@ ul.child-list > li {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-t-2xl {
@@ -1233,6 +1375,11 @@ ul.child-list > li {
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
 
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
 .opacity-20 {
   opacity: 0.2;
 }
@@ -1318,6 +1465,10 @@ ul.child-list > li {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .md\:rounded-l-none {

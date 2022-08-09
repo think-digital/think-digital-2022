@@ -80,7 +80,7 @@
           <div class="max-w-md px-12 py-24">
             <h3 class="text-2xl font-bold mb-2 leading-relaxed"><?php the_title(); ?></h3>
             <h4 class="text-l text-emerald-500 uppercase font-medium mb-8"><?php the_field('client'); ?></h4>
-            <div class="content mb-6">
+            <div class="content-post mb-6">
               <?php the_field('excerpt'); ?>
             </div>
             <a class="link" href="<?php the_permalink(); ?>" title='Read "<?php the_title(); ?>" case study'>Read this case study</a>
