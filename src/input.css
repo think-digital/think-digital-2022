@@ -13,6 +13,9 @@
   .avatar img {
     @apply rounded-full w-12 h-12;
   }
+  .avatar-featured img {
+    @apply rounded-full w-16 h-16;
+  }
   .avatar a:hover img {
     @apply outline outline-2 outline-emerald-500;
   }
@@ -111,7 +114,7 @@
     content: "/";
   }
   .breadcrumbs .truncate-text {
-    @apply inline-block truncate max-w-[256px];
+    @apply inline-block truncate max-w-[512px];
   }
   /* Pagination */
   .pagination {
@@ -122,5 +125,81 @@
   }
   .pagination svg {
     @apply inline-block w-4;
+  }
+  /* Share */
+  .share-link svg {
+    @apply w-6;
+  }
+  .share-link {
+   @apply hover:opacity-80;
+  }
+  .facebook {
+    @apply fill-facebook;
+  }
+  .twitter {
+    @apply fill-twitter;
+  }
+  .linkedin {
+    @apply fill-linkedin;
+  }
+  .whatsapp {
+    @apply fill-whatsapp;
+  }
+  /* CMS */
+  .content-cms {
+    @apply max-w-4xl mx-auto pt-8 pb-24 px-6;
+  }
+  .content-cms h1 {
+    @apply font-bold text-4xl text-midnight-500 leading-relaxed mb-4 mt-12;
+  }
+  .content-cms h2 {
+    @apply font-bold text-3xl text-midnight-500 leading-relaxed mb-4 mt-12;
+  }
+  .content-cms h3 {
+    @apply font-bold text-2xl text-midnight-500 leading-relaxed mb-4 mt-8;
+  }
+  .content-cms h4 {
+    @apply font-bold text-xl text-midnight-500 leading-relaxed mb-4 mt-8;
+  }
+  .content-cms p {
+    @apply text-xl text-midnight-400 leading-relaxed mb-4;
+  }
+  .content-cms a {
+    @apply font-bold text-midnight-500 box-decoration-clone border-b-2 border-solid border-emerald-500 hover:text-emerald-500;
+  }
+  .content-cms strong {
+    @apply text-midnight-500;
+  }
+  .content-cms ol,
+  .content-cms ul {
+    @apply text-xl text-midnight-400 leading-relaxed mb-4;
+  }
+  .content-cms ol {
+    @apply mt-8 mb-8;
+    counter-reset: items;
+  }
+  .content-cms ol li {
+    @apply relative pl-20 mb-6 min-h-[48px];
+    counter-increment: items;
+  }
+  .content-cms ol li:before {
+    @apply block bg-slate-200 w-12 h-12 absolute top-0 left-0 text-midnight-500 font-bold rounded-full text-2xl flex justify-center items-center;
+    content: counter(items);
+  }
+  .content-cms ul li {
+    @apply relative pl-10 mb-4;
+  }
+  .content-cms ul li:before {
+    @apply block bg-slate-200 w-4 h-4 absolute top-2 left-0 rounded;
+    content:'';
+  }
+  .content-cms figure {
+    @apply my-12;
+  }
+  .content-cms figure img {
+    @apply rounded-2xl;
+  }
+  .content-cms figure figcaption {
+    @apply text-sm opacity-80 mt-4 text-slate-600;
   }
 }
