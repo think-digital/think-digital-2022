@@ -9,6 +9,11 @@
 }
 
 @layer components {
+  /* body {
+    @apply bg-repeat bg-white bg-fixed;
+    background-size: 411px;
+    background-image: url('../assets/pattern-alt.png');
+  } */
   /* Avatar */
   .avatar img {
     @apply rounded-full w-12 h-12;

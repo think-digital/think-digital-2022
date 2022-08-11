@@ -2,100 +2,122 @@
 
 <main id="main" role="main">
 
-  <?php while ( have_posts() ) : the_post(); ?>
-
-  <section id="hero" class="l-band">
-    <div class="l-container l-container--extra-large">
-      <div class="c-hero">
-        <?php
-					$image = get_field('hero_image');
-					if( !empty($image) ):
-					$thumb = $image['sizes']['1400x800'];
-				?>
-        <div
-          class="c-hero__image c-hero__image--gradient c-hero__image--desktop-crop <?php if( get_field('hero_image_position') ): ?><?php the_field('hero_image_position'); ?><?php endif; ?> js-object-fit">
-          <img
-            class="c-hero__img <?php if( get_field('hero_image_position') ): ?><?php the_field('hero_image_position'); ?><?php endif; ?> js-lazyload"
-            data-src="<?php echo $thumb; ?>" alt="<?php the_title(); ?>" />
-        </div>
-        <?php endif; ?>
-      </div>
-    </div>
+  <section id="intro" class="content-intro pb-9">
+    <ul class="breadcrumbs">
+      <li class="parent"><a href="/">Home</a></li>
+      <li class="parent"><a href="/services">Services</a></li>
+      <li class="truncate-text"><?php echo the_title(); ?></li>
+    </ul>
+    <h1><?php the_title(); ?></h1>
+    <p><?php the_field('excerpt'); ?></p>
   </section>
 
-  <section class="l-band l-band--overlay u-padding-bottom--20">
-    <div class="l-container l-container--medium l-container--medium-full">
-      <div class="c-content c-content--rounded c-content--border">
-        <h1 class="o-heading o-heading--large o-heading--inherit"><?php the_title(); ?></h1>
-        <div class="o-text">
-          <?php the_content(); ?>
-        </div>
-      </div>
-    </div>
+  <section id="image" class="max-w-6xl mx-auto px-6 mb-16">
+    <?php
+			$image = get_field('hero_image');
+			if( !empty($image) ):
+			$src = $image['sizes']['1600x900'];
+      $alt = $image['alt'];
+		?>
+    <img class="aspect-video object-cover w-full rounded-3xl" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
+    <?php endif; ?>
+    <?php if (!empty($alt)) { ?>
+    <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></p>
+    <?php } ?>
   </section>
 
-  <?php endwhile; ?>
+  <section id="content" class="content-cms">
+    <?php the_content(); ?>
+  </section>
 
-  <section id="supporting" class="l-band u-padding-bottom--20">
-    <div class="l-container l-container--large">
-
+  <section id="projects" class="max-w-7xl mx-auto px-6 pt-12 pb-24">
+    <div class="relative">
       <?php
-				// Load 'services' custom post type
-				$posts = get_posts(array(
-				'post_type'  => 'services',
-				'posts_per_page'  => -1,
-				'order'   => 'ASC'
-				));
-				if( $posts ):
-			?>
-
-      <div class="c-content is-center">
-        <h2 class="o-heading">Other ways we can help</h2>
-      </div>
-
-      <div class="c-accordian">
-        <div class="c-accordian__list">
-          <div class="u-grid u-grid--wrap u-grid--collapse u-grid--gutter-20 u-grid--justify-center">
-            <?php $page_id = get_the_ID(); ?>
-            <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-            <?php $post_id = get_the_ID(); ?>
-            <?php if ($post_id === $page_id): ?>
-            <?php else: ?>
-            <div class="u-grid__item u-grid__item--half">
-              <div class="c-accordian__item c-accordian__item--rounded c-accordian__item--fixed is-center">
-                <div class="c-accordian__heading js-accordian">
-                  <h3 class="o-heading o-heading--small o-heading--inherit"><?php the_title(); ?></h3>
-                </div>
-                <?php if( get_field('excerpt') ): ?>
-                <div class="c-accordian__panel c-accordian__panel--fixed">
-                  <div class="c-accordian__content">
-                    <div class="u-grid u-grid--wrap u-grid--align-center u-grid--justify-center">
-                      <div class="u-grid__item">
-                        <div class="o-text o-text--small">
-                          <p><?php the_field('excerpt'); ?></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="l-buttons l-buttons--fixed">
-                    <p><a class="o-button o-button--wide o-button--rounded" href="<?php the_permalink(); ?>"
-                        title="Read more">Read more</a></p>
-                  </div>
-                </div>
-              </div>
+        // Load 'posts' custom post type
+        $posts = get_posts(array(
+        'post_type'  => 'casestudy',
+        'posts_per_page'  => 1,
+        'order'   => 'ASC',
+        'orderby' => 'rand',
+        ));
+        if( $posts ):
+      ?>
+      <hr class="w-24	border-4 border-emerald-200 mb-4" />
+      <h2 class="text-2xl lg:text-3xl font-bold text-midnight-500 mb-12">Featured case study</h2>
+      <div class="grid md:grid-cols-2 text-white">
+        <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
+        <?php
+            $image = get_field('hero');
+            $src = $image['sizes']['512x512'];
+            $alt = $image['alt'];
+            if( !empty($image) ):
+          ?>
+        <img
+          class="js-lazyload w-full h-full aspect-video object-cover rounded-t-2xl rounded-b-none md:rounded-l-none md:rounded-r-2xl md:order-2 md:aspect-4/3"
+          src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
+        <div
+          class="rounded-b-2xl rounded-t-none md:rounded-r-none md:rounded-l-2xl md:order-1  bg-midnight-500 text-white flex justify-center items-center">
+          <div class="max-w-md px-12 py-24">
+            <h3 class="text-2xl font-bold mb-2 leading-relaxed"><?php the_title(); ?></h3>
+            <h4 class="text-l text-emerald-500 uppercase font-medium mb-8"><?php the_field('client'); ?></h4>
+            <div class="content-post mb-6">
+              <?php the_field('excerpt'); ?>
             </div>
-            <?php endif; ?>
-            <?php endif; ?>
-            <?php endforeach; ?>
+            <a class="link" href="<?php the_permalink(); ?>" title='Read "<?php the_title(); ?>" case study'>Read this case study</a>
           </div>
         </div>
+        <?php endif; ?>
+        <?php endforeach; ?>
       </div>
-
+      <p class="text-l mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
+        <a href="#" class="link">View all case studies</a>
+      </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
-
     </div>
   </section>
+
+  <section id="services" class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+    <div class="relative">
+      <?php
+        // Load 'posts' custom post type
+        $posts = get_posts(array(
+        'post_type'  => 'services',
+        'posts_per_page'  => -1,
+        'order'   => 'ASC',
+        ));
+        if( $posts ):
+      ?>
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-20">
+        <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
+        <div class="item">
+          <?php
+            $image = get_field('icon');
+            $src = $image['sizes']['64x64'];
+            $alt = $image['alt'];
+            if( !empty($image) ):
+          ?>
+          <div class="svg-icon-12 fill-emerald-500 mb-6">
+            <?php echo file_get_contents($src); ?>
+          </div>
+          <?php endif; ?>
+          <div class="pr-6">
+            <h3 class="text-2xl leading-relaxed text-midnight-500">
+              <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h3>
+            <p class="text-xl leading-relaxed mt-4 text-midnight-400">
+              <?php the_field('excerpt'); ?>
+            </p>
+          </div>
+        </div>
+        <?php endforeach; ?>
+      </div>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+    </div>
+  </section>
+
+  <?php include get_template_directory() . '/contact.php'; ?>
 
 </main>
 
