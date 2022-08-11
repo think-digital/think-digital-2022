@@ -50,7 +50,7 @@
     <?php } ?>
   </section>
 
-  <section id="content" class="content-cms">
+  <section id="content" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
     <?php the_content(); ?>
   </section>
 

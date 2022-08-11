@@ -151,9 +151,6 @@
     @apply fill-whatsapp;
   }
   /* CMS */
-  .content-cms {
-    @apply max-w-4xl mx-auto pt-4 pb-24 px-6;
-  }
   .content-cms h1 {
     @apply font-bold text-4xl text-midnight-500 leading-relaxed mb-4 mt-12;
   }
@@ -177,7 +174,10 @@
   }
   .content-cms ol,
   .content-cms ul {
-    @apply text-xl text-midnight-400 leading-relaxed mb-4;
+    @apply text-xl text-midnight-400 leading-relaxed;
+  }
+  .content-cms ul {
+    @apply mt-8 mb-8;
   }
   .content-cms ol {
     @apply mt-8 mb-8;
@@ -195,7 +195,7 @@
     @apply relative pl-10 mb-4;
   }
   .content-cms ul li:before {
-    @apply block bg-slate-200 w-4 h-4 absolute top-4 left-0 rounded;
+    @apply block bg-slate-200 w-4 h-4 absolute top-2 left-0 rounded;
     content:'';
   }
   .content-cms figure {
