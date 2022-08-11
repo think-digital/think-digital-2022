@@ -800,7 +800,7 @@ ul.child-list > li {
 
 .breadcrumbs .truncate-text {
   display: inline-block;
-  max-width: 512px;
+  max-width: 320px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -883,7 +883,7 @@ ul.child-list > li {
   max-width: 56rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 6rem;
 }
 
@@ -1015,7 +1015,7 @@ ul.child-list > li {
 
 .content-cms ul li:before {
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   left: 0px;
   display: block;
   height: 1rem;
@@ -1042,6 +1042,41 @@ ul.child-list > li {
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
   opacity: 0.8;
+}
+
+.content-cms blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-cms blockquote p {
+  display: inline;
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 242 219 / var(--tw-bg-opacity));
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.625;
+  --tw-text-opacity: 1;
+  color: rgb(22 100 55 / var(--tw-text-opacity));
+}
+
+.content-cms blockquote cite {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 500;
+  font-style: normal;
+  --tw-text-opacity: 1;
+  color: rgb(27 38 79 / var(--tw-text-opacity));
+}
+
+.content-cms blockquote cite:before {
+  content: "- ";
 }
 
 .sr-only {
