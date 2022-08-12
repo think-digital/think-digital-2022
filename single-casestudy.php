@@ -1,14 +1,45 @@
-<?php /* Template Name: Projects */ get_header(); ?>
+<?php get_header(); ?>
 
 <main id="main" role="main">
 
   <section id="intro" class="content-intro">
     <ul class="breadcrumbs">
       <li class="parent"><a href="/">Home</a></li>
-      <li><?php echo the_title(); ?></li>
+      <li class="parent"><a href="/case-studies">Case studies</a></li>
+      <li class="truncate-text"><?php echo the_title(); ?></li>
     </ul>
-    <h1><?php echo the_title(); ?></h1>
-    <?php the_content(); ?>
+    <h1><?php the_title(); ?></h1>
+    <h2 class="text-2xl text-emerald-500 uppercase font-bold mb-8"><?php the_field('client'); ?></h2>
+    <p><?php the_content(); ?></p>
+  </section>
+
+  <section id="image" class="max-w-6xl mx-auto px-6 mb-16">
+    <?php
+			$image = get_field('hero_image');
+			if( !empty($image) ):
+			$src = $image['sizes']['1600x900'];
+      $alt = $image['alt'];
+		?>
+    <img class="aspect-video object-cover w-full rounded-3xl" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
+    <?php endif; ?>
+    <?php if (!empty($alt)) { ?>
+    <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></p>
+    <?php } ?>
+  </section>
+
+  <section id="content" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
+    <?php if( get_field('the_aim') ): ?>
+      <h2>The aim</h2>
+      <?php the_field('the_aim'); ?>
+    <?php endif; ?>
+    <?php if( get_field('what_we_delivered') ): ?>
+      <h2>What we delivered</h2>
+      <?php the_field('what_we_delivered'); ?>
+    <?php endif; ?>
+    <?php if( get_field('the_results') ): ?>
+      <h2>The results</h2>
+      <?php the_field('the_results'); ?>
+    <?php endif; ?>
   </section>
 
   <section id="featured" class="max-w-7xl mx-auto px-6 pb-24">
@@ -19,9 +50,12 @@
         'post_type'  => 'casestudy',
         'posts_per_page'  => 1,
         'order'   => 'ASC',
+        'exclude' => get_the_ID(),
         ));
         if( $posts ):
       ?>
+      <hr class="w-24	border-4 border-emerald-200 mb-4" />
+      <h2 class="text-2xl lg:text-3xl font-bold text-midnight-500 mb-12">Next case study</h2>
       <div class="grid md:grid-cols-2 text-white">
         <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
         <?php
@@ -47,6 +81,9 @@
         <?php endif; ?>
         <?php endforeach; ?>
       </div>
+      <p class="text-l mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
+        <a href="#" class="link">View all case studies</a>
+      </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
     </div>
@@ -60,6 +97,7 @@
         'post_type'  => 'casestudy',
         'order'   => 'ASC',
         'offset' => 1,
+        'exclude' => get_the_ID(),
         ));
         if( $posts ):
       ?>
@@ -91,24 +129,6 @@
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
     </div>
-  </section>
-
-  <section id="content" class="max-w-6xl mx-auto px-6 mb-16">
-    <div class="grid md:grid-cols-3 gap-12">
-      <div class="panel">
-        <?php the_field('panel_one'); ?>
-      </div>
-      <div class="panel">
-        <?php the_field('panel_two'); ?>
-      </div>
-      <div class="panel">
-        <?php the_field('panel_three'); ?>
-      </div>
-    </div>
-  </section>
-
-  <section id="clients" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
-    <?php the_field('footnote'); ?>
   </section>
 
   <?php include get_template_directory() . '/inc/contact.php'; ?>

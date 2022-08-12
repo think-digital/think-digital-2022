@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     './*.{php,html,js}',
+    './inc/*.{php,html,js}',
     './templates/*.{php,html,js}',
   ],
   theme: {

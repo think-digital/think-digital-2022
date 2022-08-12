@@ -31,13 +31,13 @@
 
   <section id="content" class="max-w-6xl mx-auto px-6 mb-16">
     <div class="grid md:grid-cols-3 gap-12">
-      <div class="panel content-cms">
+      <div class="panel">
         <?php the_field('panel_one'); ?>
       </div>
-      <div class="panel content-cms">
+      <div class="panel">
         <?php the_field('panel_two'); ?>
       </div>
-      <div class="panel content-cms">
+      <div class="panel">
         <?php the_field('panel_three'); ?>
       </div>
     </div>
