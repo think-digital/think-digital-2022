@@ -64,13 +64,13 @@
           <?php endif; ?>
         </div>
       <?php endwhile; ?>
-      <?php include get_template_directory() . '/pagination.php'; ?>
+      <?php include get_template_directory() . '/inc/pagination.php'; ?>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
     </div>
   </section>
 
-  <?php include get_template_directory() . '/contact.php'; ?>
+  <?php include get_template_directory() . '/inc/contact.php'; ?>
 
 </main>
 

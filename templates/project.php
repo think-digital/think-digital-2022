@@ -1,4 +1,4 @@
-<?php /* Template Name: Who we work with */ get_header(); ?>
+<?php /* Template Name: Projects */ get_header(); ?>
 
 <main id="main" role="main">
 

@@ -1,4 +1,4 @@
-<?php /* Template Name: About */ get_header(); ?>
+<?php /* Template Name: General */ get_header(); ?>
 
 <main id="main">
 
@@ -7,7 +7,7 @@
       <li class="parent"><a href="/">Home</a></li>
       <li><?php echo the_title(); ?></li>
     </ul>
-    <h1>About us</h1>
+    <h1><?php echo the_title(); ?></h1>
     <p><?php the_field('excerpt'); ?></p>
   </section>
 
@@ -27,24 +27,6 @@
 
   <section id="content" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
     <?php the_content(); ?>
-  </section>
-
-  <section id="content" class="max-w-6xl mx-auto px-6 mb-16">
-    <div class="grid md:grid-cols-3 gap-12">
-      <div class="panel content-cms">
-        <?php the_field('panel_one'); ?>
-      </div>
-      <div class="panel content-cms">
-        <?php the_field('panel_two'); ?>
-      </div>
-      <div class="panel content-cms">
-        <?php the_field('panel_three'); ?>
-      </div>
-    </div>
-  </section>
-
-  <section id="clients" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
-    <?php the_field('footnote'); ?>
   </section>
 
   <?php include get_template_directory() . '/inc/contact.php'; ?>

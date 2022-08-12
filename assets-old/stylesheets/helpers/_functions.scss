@@ -1,7 +1,0 @@
-// All functions for the project
-
-// EM Calculator
-@function em($target) {
-    @if $target == 0 { @return 0 }
-    @return $target / 16 + 0em;
-}

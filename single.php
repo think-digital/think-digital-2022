@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="share justify-self-end">
-        <?php include get_template_directory() . '/share.php'; ?>
+        <?php include get_template_directory() . '/inc/share.php'; ?>
       </div>
     </div>
   </section>
@@ -114,7 +114,7 @@
     </div>
   </section>
 
-  <?php include get_template_directory() . '/contact.php'; ?>
+  <?php include get_template_directory() . '/inc/contact.php'; ?>
 
 </main>
 

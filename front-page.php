@@ -184,7 +184,7 @@
     </div>
   </section>
 
-  <?php include get_template_directory() . '/contact.php'; ?>
+  <?php include get_template_directory() . '/inc/contact.php'; ?>
 
 </main>
 

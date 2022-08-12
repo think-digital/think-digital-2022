@@ -1,4 +1,4 @@
-<?php /* Template Name: Contact us */ get_header(); ?>
+<?php /* Template Name: Contact */ get_header(); ?>
 
 <main id="main" role="main">
 
