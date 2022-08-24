@@ -2,113 +2,109 @@
 
 <main id="main" role="main">
 
-  <?php while ( have_posts() ) : the_post(); ?>
-
-  <section id="hero" class="l-band">
-    <div class="l-container l-container--extra-large">
-      <div class="c-hero">
-        <?php
-					$image = get_field('hero_image');
-					if( !empty($image) ):
-					$thumb = $image['sizes']['1400x800'];
-				?>
-        <div
-          class="c-hero__image c-hero__image--gradient c-hero__image--desktop-crop <?php if( get_field('hero_image_position') ): ?><?php the_field('hero_image_position'); ?><?php endif; ?> js-object-fit">
-          <img
-            class="c-hero__img <?php if( get_field('hero_image_position') ): ?><?php the_field('hero_image_position'); ?><?php endif; ?> js-lazyload"
-            data-src="<?php echo $thumb; ?>" alt="<?php the_title(); ?>" />
-        </div>
-        <?php endif; ?>
-      </div>
-    </div>
+  <section id="intro" class="content-intro pb-9">
+    <ul class="breadcrumbs">
+      <li class="parent"><a href="/">Home</a></li>
+      <li class="parent"><a href="/about">About</a></li>
+      <li class="parent"><a href="/about/team">Our team</a></li>
+      <li class="truncate-text"><?php echo the_title(); ?></li>
+    </ul>
+    <h1><?php the_title(); ?></h1>
+    <p class="strapline"><?php the_field('role'); ?></p>
+    <p><?php the_field('excerpt'); ?></p>
   </section>
 
-  <section class="l-band l-band--overlay u-padding-bottom--20">
-    <div class="l-container l-container--medium l-container--medium-full">
-      <div class="c-content c-content--rounded c-content--border">
-        <h1 class="o-heading o-heading--large o-heading--inherit o-heading--reduce-margin"><?php the_title(); ?></h1>
-        <?php if( get_field('role') ): ?>
-        <h2 class="o-heading o-heading--small o-heading--highlight o-heading--increase-margin">
-          <?php the_field('role'); ?></h2>
-        <?php endif; ?>
-        <?php if( get_field('bio') ): ?>
-        <div class="o-text">
-          <?php the_field('bio'); ?>
-        </div>
-        <?php endif; ?>
-      </div>
-    </div>
+  <section id="image" class="max-w-6xl mx-auto px-6 pt-16 pb-16">
+    <?php
+			$image = get_field('hero_image');
+			if( !empty($image) ):
+			$src = $image['sizes']['1600x900'];
+      $alt = $image['alt'];
+		?>
+    <img class="aspect-video object-cover w-full rounded-3xl" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
+    <?php endif; ?>
+    <?php if (!empty($alt)) { ?>
+    <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></p>
+    <?php } ?>
   </section>
 
-  <?php endwhile; ?>
+  <section id="content" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
+    <?php the_content(); ?>
+  </section>
 
-  <?php while ( have_posts() ) : the_post(); ?>
-
-  <section id="supporting" class="l-band u-padding-bottom--20">
-    <div class="l-container l-container--large">
-
+  <section id="blog" class="max-w-5xl mx-auto px-6">
+    <div class="relative">
       <?php
-			$author_name = get_field('related_post');
-			// Load 'services' custom post type
-			$posts = get_posts(array(
-			'post_type' => 'post',
-			'posts_per_page' => 2,
-			'order' => 'ASC',
-			'author_name' => $author_name,
-			'post_parent'   => 'blog'
-			));
-			if( $posts ):
-    ?>
-
-      <div class="c-content is-center">
-        <h2 class="o-heading">Latest thoughts <?php if( get_field('first_name') ): ?>from
-          <?php the_field('first_name') ?><?php endif; ?></h2>
-      </div>
-
-      <div class="c-accordian">
-        <div class="c-accordian__list">
-          <div class="u-grid u-grid--wrap u-grid--collapse u-grid--gutter-20">
-            <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-            <div class="u-grid__item u-grid__item--half">
-              <div class="c-accordian__item c-accordian__item--rounded c-accordian__item--fixed">
-                <div class="c-accordian__heading c-accordian__heading--post js-accordian">
-                  <h3
-                    class="o-heading o-heading--label o-heading--label-post o-heading--label-client o-heading--reduce-margin">
-                    <?php the_date(); ?></h3>
-                  <h4 class="o-heading o-heading--post o-heading--inherit"><?php the_title(); ?></h4>
-                </div>
-                <div class="c-accordian__panel c-accordian__panel--fixed">
-                  <div class="c-accordian__content c-accordian__content--post">
-                    <div class="u-grid u-grid--wrap u-grid--align-center u-grid--justify-center">
-                      <div class="u-grid__item">
-                        <h5
-                          class="o-heading o-heading--small o-heading--inherit o-heading--link o-heading--increase-margin">
-                          <em>by</em> <?php the_author_link(); ?></h5>
-                        <div class="o-text o-text--small">
-                          <p><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="l-buttons l-buttons--fixed">
-                    <p><a class="o-button o-button--full o-button--rounded" href="<?php the_permalink(); ?>"
-                        title="Read more">Read more</a></p>
-                  </div>
-                </div>
+        $authorID = get_field('related_post');
+        $authorFirstName = get_field('first_name');
+        if( $authorID != 0):
+      ?>
+      <?php
+        // Load 'posts' custom post type
+        $posts = get_posts(array(
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+        'order' => 'ASC',
+        'exclude' => get_the_ID(),
+        'author'  =>  $authorID,
+			  'post_parent' => 'blog'
+        ));
+        if( $posts ):
+      ?>
+      <hr class="w-24	border-4 border-emerald-200 mb-4" />
+      <h2 class="text-3xl font-bold text-midnight-500 mb-12">Recent blog posts</h2>
+      <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
+        <?php if ( get_the_date( 'U' ) < strtotime( '-1 year' ) ): ?>
+         <p class="text-lg text-slate-500 mb-24">No recent posts from <?php echo $authorFirstName; ?></p>
+        <?php else: ?>
+        <p class="font-bold uppercase mb-4 text-lg text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
+        <div class="grid md:grid-cols-5 gap-16 mb-24">
+          <div class="content col-span-3">
+            <h3 class="text-2xl leading-relaxed">
+              <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h3>
+            <p class="mt-4 text-midnight-400 leading-relaxed">
+              <?php the_field('excerpt'); ?>
+            </p>
+            <div class="flex items-center mt-6">
+              <div class="avatar mr-4">
+                <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>">
+                  <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
+                </a>
+              </div>
+              <div class="text text-sm">
+                <h4 class="font-bold text-midnight-500 contains-link">
+                  <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
+                </h4>
+                <p class="font-medium text-slate-500"><?php the_date(); ?></p>
               </div>
             </div>
-            <?php endforeach; ?>
           </div>
+          <?php
+              $image = get_field('hero_image');
+              $src = $image['sizes']['512x512'];
+              $alt = $image['alt'];
+              if( !empty($image) ):
+            ?>
+          <div class="image place-self-start col-span-2">
+            <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
+              <img class="js-lazyload aspect-video object-cover w-full" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
+            </a>
+          </div>
+          <?php endif; ?>
         </div>
-      </div>
-
+        <?php endif; ?>
+      <?php endforeach; ?>
+      <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
+        <a href="#" class="link text-l">View all blog posts</a>
+      </p>
+      <?php endif; ?>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
-
     </div>
   </section>
 
-  <?php endwhile; wp_reset_postdata(); ?>
+  <?php include get_template_directory() . '/inc/contact.php'; ?>
 
 </main>
 

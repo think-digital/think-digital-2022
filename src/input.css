@@ -21,7 +21,8 @@
   .avatar-featured img {
     @apply rounded-full w-16 h-16;
   }
-  .avatar a:hover img {
+  .avatar a:hover img,
+  .team-avatar a:hover img {
     @apply outline outline-2 outline-emerald-500;
   }
   .logo a:hover img {
@@ -99,14 +100,17 @@
     @apply max-w-4xl mx-auto pb-24 pt-32 px-6;
   }
   .content-intro h1 {
-    @apply text-5xl font-bold text-midnight-500 mb-6 leading-snug;
+    @apply text-5xl font-bold text-midnight-500 mb-4 leading-snug;
   }
   .content-intro p {
-    @apply text-2xl text-midnight-400 leading-relaxed;
+    @apply text-2xl text-midnight-400 mt-2 leading-relaxed;
+  }
+  .content-intro .strapline {
+    @apply text-2xl leading-relaxed mb-4 text-slate-500 uppercase font-bold;
   }
   /* Breadcrumbs */
   .breadcrumbs {
-    @apply text-midnight-500 mb-4 flex;
+    @apply text-midnight-500 mb-6 flex;
   }
   .breadcrumbs li {
     @apply inline-block;
@@ -149,6 +153,12 @@
   }
   .whatsapp {
     @apply fill-whatsapp;
+  }
+  .email {
+    @apply fill-google;
+  }
+  .share-link.email svg {
+    @apply w-8;
   }
   /* CMS */
   .content-cms h1 {

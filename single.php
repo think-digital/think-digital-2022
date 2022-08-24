@@ -9,6 +9,7 @@
       <li class="parent"><?php the_category( ', ' ); ?></li>
       <li class="truncate-text"><?php echo the_title(); ?></li>
     </ul>
+    <p class="strapline"><?php the_category( ', ' ); ?></p>
     <h1><?php the_title(); ?></h1>
     <p><?php the_field('excerpt'); ?></p>
   </section>

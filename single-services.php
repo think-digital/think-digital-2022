@@ -12,7 +12,7 @@
     <p><?php the_field('excerpt'); ?></p>
   </section>
 
-  <section id="image" class="max-w-6xl mx-auto px-6 mb-16">
+  <section id="image" class="max-w-6xl mx-auto px-6 mt-16 mb-16">
     <?php
 			$image = get_field('hero_image');
 			if( !empty($image) ):
@@ -77,7 +77,7 @@
     </div>
   </section>
 
-  <section id="services" class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+  <section id="services" class="max-w-6xl mx-auto px-6 pt-16 pb-24">
     <div class="relative">
       <?php
         // Load 'posts' custom post type
