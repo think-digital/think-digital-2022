@@ -245,4 +245,38 @@
   .panel p:not(:last-child) {
     @apply mb-4;
   }
+  /* Form */
+  .wpforms-container {
+
+  }
+  .wpforms-form {
+
+  }
+  .wpforms-field-container {
+
+  }
+  .wpforms-field {
+
+  }
+  .wpforms-field-label {
+    @apply block font-bold mb-2;
+  }
+  .wpforms-required-label {
+    @apply hidden	;
+  }
+  .wpforms-field-medium {
+    @apply w-full border-2 border-slate-400 border-solid bg-white rounded-lg px-3 mb-8;
+  }
+  input.wpforms-field-medium {
+    @apply h-12;
+  }
+  textarea.wpforms-field-medium {
+    @apply h-40 py-3;
+  }
+  .wpforms-submit-container {
+
+  }
+  .wpforms-submit {
+    @apply inline-block text-lg bg-emerald-500 rounded-lg fill-white text-white font-bold py-4 px-8 hover:bg-emerald-600;
+  }
 }

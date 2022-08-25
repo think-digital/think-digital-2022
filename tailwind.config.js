@@ -4,6 +4,19 @@ module.exports = {
     './inc/*.{php,html,js}',
     './templates/*.{php,html,js}',
   ],
+  safelist: [
+    '.wpforms-container',
+    '.wpforms-form',
+    '.wpforms-field-container',
+    '.wpforms-field',
+    '.wpforms-field-label',
+    '.wpforms-required-label',
+    '.wpforms-field-medium',
+    'input.wpforms-field-medium',
+    'textarea.wpforms-field-medium',
+    '.wpforms-submit-container',
+    '.wpforms-submit',
+  ],
   theme: {
     extend: {
       backgroundSize: {
