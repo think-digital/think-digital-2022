@@ -12,6 +12,7 @@
     <h1><?php the_title(); ?></h1>
     <p class="strapline"><?php the_field('role'); ?></p>
     <p><?php the_field('excerpt'); ?></p>
+    <?php include get_template_directory() . '/inc/team-social.php'; ?>
   </section>
 
   <section id="image" class="max-w-6xl mx-auto px-6 pt-16 pb-16">
@@ -51,16 +52,14 @@
         ));
         if( $posts ):
       ?>
-      <hr class="w-24	border-4 border-emerald-200 mb-4" />
-      <h2 class="text-3xl font-bold text-midnight-500 mb-12">Recent blog posts</h2>
       <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-        <?php if ( get_the_date( 'U' ) < strtotime( '-1 year' ) ): ?>
-         <p class="text-lg text-slate-500 mb-24">No recent posts from <?php echo $authorFirstName; ?></p>
-        <?php else: ?>
+        <?php if ( get_the_date( 'U' ) > strtotime( '-1 year' ) ): ?>
+        <hr class="w-24	border-4 border-emerald-200 mb-4" />
+        <h2 class="text-3xl font-bold text-midnight-500 mb-12">Recent blog posts</h2>
         <p class="font-bold uppercase mb-4 text-lg text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
         <div class="grid md:grid-cols-5 gap-16 mb-24">
           <div class="content col-span-3">
-            <h3 class="text-2xl leading-relaxed">
+            <h3 class="text-2xl leading-relaxed text-midnight-500">
               <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
             <p class="mt-4 text-midnight-400 leading-relaxed">
@@ -93,11 +92,11 @@
           </div>
           <?php endif; ?>
         </div>
+        <p class="text-midnight-500 mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
+          <a href="#" class="link text-l">View all blog posts</a>
+        </p>
         <?php endif; ?>
       <?php endforeach; ?>
-      <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
-        <a href="#" class="link text-l">View all blog posts</a>
-      </p>
       <?php endif; ?>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>

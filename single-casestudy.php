@@ -75,7 +75,7 @@
             <div class="content-post mb-6">
               <?php the_field('excerpt'); ?>
             </div>
-            <a class="link text-lg" href="<?php the_permalink(); ?>" title='Read "<?php the_title(); ?>" case study'>Read this case study</a>
+            <a class="link text-lg text-midnight-500" href="<?php the_permalink(); ?>" title='Read "<?php the_title(); ?>" case study'>Read this case study</a>
           </div>
         </div>
         <?php endif; ?>

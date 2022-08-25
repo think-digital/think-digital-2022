@@ -33,7 +33,7 @@
           <p class="font-bold uppercase mb-4 text-lg text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
           <div class="grid md:grid-cols-5 gap-16 mb-24">
             <div class="content col-span-3">
-              <h3 class="text-2xl leading-relaxed">
+              <h3 class="text-2xl leading-relaxed text-midnight-500">
                 <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
               </h3>
               <p class="mt-4 text-midnight-400 leading-relaxed">

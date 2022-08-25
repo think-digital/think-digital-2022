@@ -21,7 +21,16 @@
   <meta property="twitter:title" content="<?php the_field('meta_title'); ?>" />
   <meta property="og:title" content="<?php the_field('meta_title'); ?>" />
   <?php else: ?>
-  <title><?php the_title(); ?> | THINK Digital</title>
+  <title>
+    <?php global $page, $paged;
+      if ( is_404() ) {
+        echo __('Page not Found | THINK Digital','mytheme');
+      }
+      else {
+        wp_title(' | THINK Digital', true, 'right' );
+      }
+    ?>
+  </title>
   <?php endif; ?>
 
   <?php if( get_field('meta_description') ): ?>

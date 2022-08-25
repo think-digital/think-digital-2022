@@ -71,7 +71,7 @@
         <p class="font-bold uppercase mb-4 text-lg text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
         <div class="grid md:grid-cols-5 gap-16 mb-24">
           <div class="content col-span-3">
-            <h3 class="text-2xl leading-relaxed">
+            <h3 class="text-2xl leading-relaxed text-midnight-500">
               <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
             <p class="mt-4 text-midnight-400 leading-relaxed">
@@ -105,7 +105,7 @@
           <?php endif; ?>
         </div>
       <?php endforeach; ?>
-      <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
+      <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0 text-midnight-500">
         <a href="#" class="link text-l">View all blog posts</a>
       </p>
       <?php wp_reset_postdata(); ?>
