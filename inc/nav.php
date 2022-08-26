@@ -19,12 +19,12 @@
             <a href="tel:+441234567890" class="hover:text-emerald-500">+44 (0) 1234 567890</a>
           </li>
           <li>
-            <a href="#" class="svg-icon-6 <?php if( is_front_page() && ! is_home() ) { ?>fill-slate-300 hover:fill-twitter<?php } else { ?>fill-twitter hover:opacity-80<?php } ?>">
+            <a href="https://twitter.com/ThinkDigSol" target="_blank" class="svg-icon-6 <?php if( is_front_page() && ! is_home() ) { ?>fill-slate-300 hover:fill-twitter<?php } else { ?>fill-twitter hover:opacity-80<?php } ?>">
               <?php include get_template_directory() . '/assets/twitter.svg'; ?>
             </a>
           </li>
           <li>
-            <a href="#" class="svg-icon-6 <?php if( is_front_page() && ! is_home() ) { ?>fill-slate-300 hover:fill-linkedin<?php } else { ?>fill-linkedin hover:opacity-80<?php } ?>">
+            <a href="https://www.linkedin.com/company-beta/9240190/" target="_blank" class="svg-icon-6 <?php if( is_front_page() && ! is_home() ) { ?>fill-slate-300 hover:fill-linkedin<?php } else { ?>fill-linkedin hover:opacity-80<?php } ?>">
               <?php include get_template_directory() . '/assets/linkedin.svg'; ?>
             </a>
           </li>

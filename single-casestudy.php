@@ -82,7 +82,7 @@
         <?php endforeach; ?>
       </div>
       <p class="text-l mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
-        <a href="#" class="link">View all case studies</a>
+        <a href="/case-studies" class="link">View all case studies</a>
       </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>

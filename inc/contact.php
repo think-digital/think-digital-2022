@@ -8,28 +8,28 @@
         <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4 stroke-svg">
           <?php include get_template_directory() . '/assets/email.svg'; ?><span>Email</span>
         </div>
-        <a href="#" class="link text-lg" title="Email THINK Digital at contact@thinkds.org">contact@thinkds.org</a>
+        <a href="mailto:contact@thinkds.org" class="link text-lg" title="Email THINK Digital at contact@thinkds.org">contact@thinkds.org</a>
       </div>
       <!-- Phone -->
       <div class="rounded-xl p-6 bg-white">
         <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4 stroke-svg">
         <?php include get_template_directory() . '/assets/mobile.svg'; ?><span>Phone</span>
         </div>
-        <a href="#" class="link text-lg" title="Call or Text THINK Digital on +44 (0)1234 567890">+44 (0)1234 567890</a>
+        <a href="tel:+44(0)1234567890" class="link text-lg" title="Call or Text THINK Digital on +44 (0)1234 567890">+44 (0)1234 567890</a>
       </div>
       <!-- Twitter -->
       <div class="rounded-xl p-6 bg-white">
         <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
         <?php include get_template_directory() . '/assets/twitter.svg'; ?><span>Tweet</span>
         </div>
-        <a href="#" class="link text-lg" title="Tweet or Follow @ThinkDigSol on Twitter">@ThinkDigSol</a>
+        <a href="https://twitter.com/ThinkDigSol" target="_blank" class="link text-lg" title="Tweet or Follow @ThinkDigSol on Twitter">@ThinkDigSol</a>
       </div>
       <!-- LinkedIn -->
       <div class="rounded-xl p-6 bg-white">
         <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4">
         <?php include get_template_directory() . '/assets/linkedin.svg'; ?><span>Connect</span>
         </div>
-        <a href="#" class="link text-lg" title="Connect with Think Digital on LinkedIn">Think Digital</a>
+        <a href="https://www.linkedin.com/company-beta/9240190/" target="_blank" class="link text-lg" title="Connect with Think Digital on LinkedIn">Think Digital</a>
       </div>
     </div>
   </div>

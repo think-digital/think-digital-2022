@@ -44,7 +44,7 @@
               </div>
               <div class="text text-sm">
                 <h4 class="font-bold text-midnight-500 contains-link">
-                  <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
+                  <a href="/about/team/<?php the_author_meta('nickname'); ?>" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
                 </h4>
                 <p class="font-medium text-slate-500"><?php the_date(); ?></p>
               </div>

@@ -44,7 +44,7 @@
         <?php endforeach; ?>
       </div>
       <p class="text-l mt-12 md:absolute md:mt-9 md:top-0 md:right-0 text-midnight-500">
-        <a href="#" class="link">View all services</a>
+        <a href="/services" class="link">View all services</a>
       </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
@@ -90,7 +90,7 @@
         <?php endforeach; ?>
       </div>
       <p class="text-l mt-12 md:absolute md:mt-9 md:top-0 md:right-0 text-midnight-500">
-        <a href="#" class="link">View all case studies</a>
+        <a href="/case-studies" class="link">View all case studies</a>
       </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
@@ -115,10 +115,10 @@
           <p class="mb-6 text-midnight-400">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
           <ul class="flex space-x-6 text-midnight-500">
             <li>
-              <a href="#" class="link">Our story</a>
+              <a href="/about" class="link">Our story</a>
             </li>
             <li>
-              <a href="#" class="link">Meet the team</a>
+              <a href="/about/team" class="link">Meet the team</a>
             </li>
           </ul>
         </div>
@@ -168,7 +168,7 @@
             </div>
             <div class="text text-sm">
               <h4 class="font-bold text-midnight-500 contains-link">
-                <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
+                <a href="/about/team/<?php the_author_meta('nickname'); ?>" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
               </h4>
               <p class="font-medium text-slate-500"><?php the_date(); ?></p>
             </div>
@@ -177,7 +177,7 @@
         <?php endforeach; ?>
       </div>
       <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0 text-midnight-500">
-        <a href="#" class="link text-l">View all blog posts</a>
+        <a href="/blog" class="link text-l">View all blog posts</a>
       </p>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>
