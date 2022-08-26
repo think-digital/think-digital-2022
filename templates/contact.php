@@ -43,7 +43,7 @@
           <div class="flex	space-x-4 svg-icon-6 font-bold text-midnight-400 fill-midnight-400 uppercase mb-4">
           <?php include get_template_directory() . '/assets/linkedin.svg'; ?><span>Connect</span>
           </div>
-          <a href="https://www.linkedin.com/company-beta/9240190/" target="_blank" class="link text-lg" title="Connect with Think Digital on LinkedIn">Think Digital</a>
+          <a href="https://www.linkedin.com/company/think-digital---consultancy/" target="_blank" class="link text-lg" title="Connect with Think Digital on LinkedIn">Think Digital</a>
         </div>
       </div>
     </div>
