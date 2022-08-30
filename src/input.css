@@ -59,8 +59,19 @@
     @apply mb-4;
   }
   /* Nav */
+  ul.parent-list {
+    @apply max-h-0 lg:max-h-full lg:flex lg:space-x-9;
+    overflow:hidden;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  [data-active=true] ul.parent-list {
+    @apply max-h-96;
+  }
   ul.parent-list li {
-    @apply relative;
+    @apply relative mb-2;
   }
   ul.parent-list > li:hover > a {
     @apply text-emerald-500;
@@ -89,6 +100,11 @@
   .parent-link.current-page svg {
     @apply stroke-emerald-700;
   }
+  ul.child-list,
+  ul.parent-list > li svg,
+  ul.parent-list > li:hover > ul.child-list {
+    @apply hidden lg:inline-block;
+  }
   ul.child-list > li {
     @apply mb-2;
   }
@@ -97,7 +113,7 @@
   }
   /* Intro */
   .content-intro {
-    @apply max-w-4xl mx-auto pb-24 pt-32 px-6;
+    @apply max-w-4xl mx-auto pb-24 pt-16 lg:pt-32 px-6;
   }
   .content-intro h1 {
     @apply text-5xl font-bold text-midnight-500 mb-4 leading-snug;
@@ -281,10 +297,13 @@
   }
   /* Menu */
   .menu {
-    @apply flex justify-end items-center;
+    @apply lg:flex lg:justify-end lg:items-center;
   }
   .menu-button {
-    @apply inline-block rounded-lg border-2 border-slate-400 border-solid fill-white text-white font-bold py-2 px-4;
+    @apply inline-block rounded-lg border-2 border-slate-400 hover:border-midnight-500 border-solid fill-midnight-500 text-midnight-500 font-bold py-2 px-4;
+  }
+  .home .menu-button {
+    @apply hover:border-white fill-white text-white;
   }
   /* [data-active=true] .menu-button {
     @apply bg-white text-midnight-500;
@@ -306,7 +325,7 @@
     cursor: pointer;
   }
   .menu-icon span {
-    @apply bg-white;
+    @apply bg-midnight-500;
     display: block;
     position: absolute;
     height: 2.5px;
@@ -323,6 +342,9 @@
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
   }
+  .home .menu-icon span {
+    @apply bg-white;
+  }
   [data-active=true] .menu-icon span {
     /* @apply bg-midnight-500; */
   }
@@ -338,9 +360,10 @@
     width: 50%;
   }
   [data-active=true] .menu-icon span:nth-child(1) {
-    top: 18px;
+    /* top: 18px;
     width: 0%;
-    left: 50%;
+    left: 50%; */
+    opacity: 0;
   }
   [data-active=true] .menu-icon span:nth-child(2) {
     -webkit-transform: rotate(45deg);
@@ -355,8 +378,9 @@
     transform: rotate(-45deg);
   }
   [data-active=true] .menu-icon span:nth-child(4) {
-    top: 18px;
+    /* top: 18px;
     width: 0%;
-    left: 50%;
+    left: 50%; */
+    opacity: 0;
   }
 }

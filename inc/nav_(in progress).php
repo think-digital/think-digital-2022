@@ -23,7 +23,7 @@
     </div>
     <div class="navigation grow lg:h-14">
       <!-- Secondary Nav -->
-      <nav class="secondary absolute top-0 left-0 w-full px-6 py-4 bg-white text-right lg:relative lg:bg-transparent lg:px-0 lg:py-0 font-medium mb-4 text-sm <?php if( is_front_page() && ! is_home() ) { ?>text-midnight-500 lg:text-slate-300<?php } else { ?>text-slate-500<?php } ?>">
+      <nav class="secondary absolute top-0 left-0 w-full px-4 py-4 bg-white text-right lg:relative lg:bg-transparent lg:px-0 lg:py-0 font-medium mb-4 text-sm <?php if( is_front_page() && ! is_home() ) { ?>text-midnight-500 lg:text-slate-300<?php } else { ?>text-slate-500<?php } ?>">
         <ul class="flex justify-between space-x-4 md:justify-end md:space-x-6">
           <li>
             <a href="mailto:contact@thinkds.org" class="hover:text-emerald-500">contact@thinkds.org</a>
@@ -52,16 +52,75 @@
             </li>
           <?php } ?>
           <li>
-            <a href="/services" class="parent-link<?php if (is_page('services') || 'services' == get_post_type() ) echo ' current-page'; ?>" title="Services"><span>Services</span></a>
+            <a href="/services" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('services') || 'services' == get_post_type() ) echo ' current-page'; ?>" title="Services"><span>Services</span><?php include get_template_directory() . '/assets/arrow-down.svg'; ?></a>
+            <?php
+              // Load 'posts' custom post type
+              $posts = get_posts(array(
+              'post_type'  => 'services',
+              'posts_per_page'  => -1,
+              'order'   => 'ASC'
+              ));
+              if( $posts ):
+            ?>
+            <ul class="child-list">
+              <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
+              <li>
+                <a href="<?php the_permalink(); ?>" class="child-link" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+            <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
           </li>
           <li>
-            <a href="/case-studies" class="parent-link<?php if (is_page('case-studies') || 'casestudy' == get_post_type() ) echo ' current-page'; ?>" title="Case studies"><span>Case studies</span></a>
+            <a href="/case-studies" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('case-studies') || 'casestudy' == get_post_type() ) echo ' current-page'; ?>" title="Case studies"><span>Case studies</span><?php include get_template_directory() . '/assets/arrow-down.svg'; ?></a>
+            <?php
+              // Load 'posts' custom post type
+              $posts = get_posts(array(
+              'post_type'  => 'casestudy',
+              'posts_per_page'  => 5,
+              'order'   => 'ASC'
+              ));
+              if( $posts ):
+            ?>
+            <ul class="child-list">
+              <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
+              <li>
+                <a href="<?php the_permalink(); ?>" class="child-link" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+            <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
           </li>
           <li>
-            <a href="/about" class="parent-link<?php if (is_page('about') || is_page('team') || 'team' == get_post_type() ) echo ' current-page'; ?>" title="About"><span>About</span></a>
+            <a href="/about" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('about') || is_page('team') || 'team' == get_post_type() ) echo ' current-page'; ?>" title="About"><span>About</span><?php include get_template_directory() . '/assets/arrow-down.svg'; ?></a>
+            <ul class="child-list">
+              <li>
+                <a href="/about/team" class="child-link" title="Our team">Our team</a>
+              </li>
+            </ul>
           </li>
           <li>
-            <a href="/blog" class="parent-link<?php if (is_page('blog') || 'post' == get_post_type() ) echo ' current-page'; ?>" title="Blog"><span>Blog</span></a>
+            <a href="/blog" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('blog') || 'post' == get_post_type() ) echo ' current-page'; ?>" title="Blog"><span>Blog</span><?php include get_template_directory() . '/assets/arrow-down.svg'; ?></a>
+            <?php
+              // Load 'posts' custom post type
+              $posts = get_posts(array(
+              'post_type'  => 'post',
+              'posts_per_page'  => 3,
+              'order'   => 'ASC'
+              ));
+              if( $posts ):
+            ?>
+            <ul class="child-list">
+              <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
+              <li>
+                <a href="<?php the_permalink(); ?>" class="child-link" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+            <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
           </li>
           <li>
             <a href="/contact" class="parent-link<?php if (is_page('contact')) echo ' current-page'; ?>" title="Contact">Contact</a>
