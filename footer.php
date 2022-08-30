@@ -10,7 +10,7 @@
         <li>
           <a href="/" class="link text-xl" title="Home">Home</a>
         </li>
-        <li class="mt-6">
+        <li class="mt-8 lg:mt-6">
           <a href="/about" class="link text-xl" title="About">About</a>
           <ul class="">
             <li class="mt-6">
@@ -18,15 +18,15 @@
             </li>
           </ul>
         </li>
-        <li class="mt-6">
+        <li class="mt-8 lg:mt-6">
           <a href="/contact" class="link text-xl" title="Contact">Contact</a>
         </li>
       </ul>
     </nav>
     <!-- Services -->
     <nav class="footer-nav">
-      <ul class="">
-        <li>
+      <ul>
+        <li class="mt-8 lg:mt-6">
           <a href="/services" class="link text-xl" title="Services">Services</a>
           <?php
             // Load 'posts' custom post type
@@ -52,7 +52,7 @@
     <!-- Case studies -->
     <nav class="footer-nav">
       <ul class="">
-        <li>
+        <li class="mt-8 lg:mt-6">
           <a href="/case-studies" class="link text-xl" title="Case studies">Case studies</a>
           <?php
             // Load 'posts' custom post type
@@ -79,7 +79,7 @@
     <!-- Blog -->
     <nav class="footer-nav">
       <ul class="">
-        <li>
+        <li class="mt-8 lg:mt-6">
           <a href="/blog" class="link text-xl" title="Blog">Blog</a>
           <?php
             // Load 'posts' custom post type
@@ -118,12 +118,12 @@
     </div>
     <div class="text-sm mt-4">
       <p>© 2022 THINK Digital. All Rights Reserved</p>
-      <div class="flex space-x-4 mt-4 justify-between">
-        <div class="flex space-x-4">
-          <p>Company Number: 08098477</p>
-          <p>Registered Address: Investment House, 22-26 Celtic Court, Ballmoor, Buckingham, MK18 1RQ</p>
+      <div class="lg:flex lg:space-x-4 mt-4 justify-between">
+        <div class="lg:flex lg:space-x-4">
+          <p class="mt-4 lg:mt-0">Company Number: 08098477</p>
+          <p class="mt-4 lg:mt-0">Registered Address: Investment House, 22-26 Celtic Court, Ballmoor, Buckingham, MK18 1RQ</p>
         </div>
-        <p class="text-right">
+        <p class="text-right mt-4 lg:mt-0">
           <a href="#page" class="svg-icon-4 font-bold flex fill-white space-x-2 hover:text-emerald-500 hover:fill-emerald-500" title="Back to top"><span>Back to top</span> <?php include get_template_directory() . '/assets/arrow-up-circle.svg'; ?></a>
         </p>
       </div>

@@ -77,7 +77,7 @@
           src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
         <div
           class="rounded-b-2xl rounded-t-none md:rounded-r-none md:rounded-l-2xl md:order-1  bg-midnight-500 text-white flex justify-center items-center">
-          <div class="max-w-md px-12 py-24">
+          <div class="max-w-md px-6 py-12 lg:px-12 lg:py-24">
             <h3 class="text-2xl font-bold mb-2 leading-relaxed"><?php the_title(); ?></h3>
             <h4 class="text-l text-emerald-500 uppercase font-medium mb-8"><?php the_field('client'); ?></h4>
             <div class="content-post mb-6">
@@ -101,16 +101,16 @@
     <div class="relative">
       <hr class="w-24	border-4 border-emerald-200 mb-4" />
       <h2 class="text-2xl lg:text-3xl font-bold text-midnight-500 mb-12">About us</h2>
-      <div class="flex space-x-24 items-center">
-        <div class="item">
+      <div class="lg:flex lg:space-x-24 lg:items-center">
+        <div class="item mb-8 lg:mb-0">
           <video class="aspect-video rounded-2xl w-full object-cover" width="320" height="240" poster="<?php echo get_template_directory_uri(); ?>/assets/about-jason.jpeg" controls>
             <source src="<?php echo get_template_directory_uri(); ?>/assets/movie.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600">
+          <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600 items-start">
             <?php include get_template_directory() . '/assets/comment.svg'; ?><span>Jason Potts outlines how we can help your organisation.</span></p>
         </div>
-        <div class="item max-w-lg text-midnight-500 text-xl pb-9">
+        <div class="item max-w-lg text-midnight-500 text-lg lg:text-xl pb-9">
           <p class="font-medium mb-6">THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
           <p class="mb-6 text-midnight-400">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
           <ul class="flex space-x-6 text-midnight-500">

@@ -22,7 +22,7 @@
         ));
         if( $posts ):
       ?>
-      <div class="grid md:grid-cols-2 gap-x-16 gap-y-20">
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-16 lg:gap-y-20">
         <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
         <div class="item">
           <?php
@@ -36,10 +36,10 @@
           </div>
           <?php endif; ?>
           <div class="pr-6">
-            <h3 class="text-2xl leading-relaxed text-midnight-500">
+            <h3 class="text-xl lg:text-2xl leading-relaxed text-midnight-500">
               <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
-            <p class="text-xl leading-relaxed mt-4 text-midnight-400">
+            <p class="text-base lg:text-xl leading-relaxed mt-4 text-midnight-400">
               <?php the_field('excerpt'); ?>
             </p>
           </div>
@@ -78,7 +78,7 @@
           src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
         <div
           class="rounded-b-2xl rounded-t-none md:rounded-r-none md:rounded-l-2xl md:order-1  bg-midnight-500 text-white flex justify-center items-center">
-          <div class="max-w-md px-12 py-24">
+          <div class="max-w-md px-6 py-12 lg:px-12 lg:py-24">
             <h3 class="text-2xl font-bold mb-2 leading-relaxed"><?php the_title(); ?></h3>
             <h4 class="text-l text-emerald-500 uppercase font-medium mb-8"><?php the_field('client'); ?></h4>
             <div class="content-post mb-6">
