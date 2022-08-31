@@ -12,7 +12,7 @@
     <?php the_content(); ?>
   </section>
 
-  <section id="team" class="max-w-6xl mx-auto px-6 pt-16 pb-16">
+  <section id="team" class="max-w-6xl mx-auto px-6 lg:pt-16 pb-12">
     <div class="relative">
       <?php
         // Load 'posts' custom post type
@@ -23,7 +23,7 @@
         ));
         if( $posts ):
       ?>
-      <div class="grid md:grid-cols-2 gap-x-16 gap-y-20">
+      <div class="grid md:grid-cols-2 gap-16 lg:gap-20">
         <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
         <div class="item">
           <?php
@@ -34,16 +34,16 @@
           ?>
           <div class="team-avatar mb-6">
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-              <img class="js-lazyload w-64 object-cover rounded-2xl aspect-square" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
+              <img class="js-lazyload w-36 lg:w-64 object-cover rounded-2xl aspect-square" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
             </a>
           </div>
           <?php endif; ?>
           <div class="pr-6">
-            <h3 class="text-2xl leading-relaxed text-midnight-500">
+            <h3 class="text-xl lg:text-2xl leading-relaxed lg:leading-relaxed text-midnight-500">
               <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
-            <h4 class="text-lg leading-relaxed mt-4 text-slate-500 uppercase font-bold"><?php the_field('role'); ?></h4>
-            <p class="text-lg leading-relaxed mt-4 text-midnight-400">
+            <h4 class="lg:text-lg leading-relaxed lg:leading-relaxed mt-2 lg:mt-4 text-slate-500 uppercase font-bold"><?php the_field('role'); ?></h4>
+            <p class="lg:text-lg leading-relaxed lg:leading-relaxed mt-4 text-midnight-400">
               <?php the_field('excerpt'); ?>
             </p>
             <?php include get_template_directory() . '/inc/team-social.php'; ?>

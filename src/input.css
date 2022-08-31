@@ -195,18 +195,6 @@
   .content-cms h4 {
     @apply font-bold text-lg lg:text-xl text-midnight-500 leading-relaxed lg:leading-relaxed mb-4;
   }
-  .content-cms h1:not(:first-child) {
-    @apply mt-12;
-  }
-  .content-cms h2:not(:first-child) {
-    @apply mt-12;
-  }
-  .content-cms h3:not(:first-child) {
-    @apply mt-8;
-  }
-  .content-cms h4:not(:first-child) {
-    @apply mt-8;
-  }
   .content-cms p {
     @apply text-base lg:text-xl text-midnight-400 leading-relaxed lg:leading-relaxed mb-6;
   }
