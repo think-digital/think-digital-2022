@@ -822,7 +822,7 @@ ul.child-list > li {
 @media (min-width: 1024px) {
   .content-intro h1 {
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.375;
   }
 }
 
@@ -839,6 +839,7 @@ ul.child-list > li {
   .content-intro p {
     font-size: 1.5rem;
     line-height: 2rem;
+    line-height: 1.625;
   }
 }
 
@@ -1006,6 +1007,7 @@ ul.child-list > li {
   .content-cms h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
+    line-height: 1.625;
   }
 }
 
@@ -1023,6 +1025,7 @@ ul.child-list > li {
   .content-cms h2 {
     font-size: 1.875rem;
     line-height: 2.25rem;
+    line-height: 1.625;
   }
 }
 
@@ -1040,6 +1043,7 @@ ul.child-list > li {
   .content-cms h3 {
     font-size: 1.5rem;
     line-height: 2rem;
+    line-height: 1.625;
   }
 }
 
@@ -1057,6 +1061,7 @@ ul.child-list > li {
   .content-cms h4 {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    line-height: 1.625;
   }
 }
 
@@ -1089,6 +1094,7 @@ ul.child-list > li {
   .content-cms p {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    line-height: 1.625;
   }
 }
 
@@ -1128,6 +1134,7 @@ ul.child-list > li {
   .content-cms ul {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    line-height: 1.625;
   }
 }
 
@@ -1250,7 +1257,7 @@ ul.child-list > li {
   border-width: 1px;
   border-style: solid;
   border-color: rgb(27 38 79 / 0.1);
-  padding: 2.25rem;
+  padding: 2rem;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1258,14 +1265,27 @@ ul.child-list > li {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+@media (min-width: 1024px) {
+  .panel {
+    padding: 2.25rem;
+  }
+}
+
 .panel h3 {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 700;
   line-height: 1.625;
   --tw-text-opacity: 1;
   color: rgb(27 38 79 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .panel h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .panel a {
@@ -1726,6 +1746,10 @@ textarea.wpforms-field-medium {
   gap: 3rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .gap-x-16 {
   -moz-column-gap: 4rem;
        column-gap: 4rem;
@@ -1990,6 +2014,10 @@ textarea.wpforms-field-medium {
   padding-top: 6rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2246,10 +2274,6 @@ textarea.wpforms-field-medium {
     margin-bottom: 0px;
   }
 
-  .lg\:mt-16 {
-    margin-top: 4rem;
-  }
-
   .lg\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -2294,10 +2318,6 @@ textarea.wpforms-field-medium {
     height: 3.5rem;
   }
 
-  .lg\:max-w-md {
-    max-width: 28rem;
-  }
-
   .lg\:max-w-lg {
     max-width: 32rem;
   }
@@ -2320,6 +2340,10 @@ textarea.wpforms-field-medium {
 
   .lg\:gap-20 {
     gap: 5rem;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2376,11 +2400,6 @@ textarea.wpforms-field-medium {
     padding-bottom: 0px;
   }
 
-  .lg\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -2416,6 +2435,10 @@ textarea.wpforms-field-medium {
 
   .lg\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .lg\:text-center {

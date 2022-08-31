@@ -11,26 +11,26 @@
     <p><?php the_field('excerpt'); ?></p>
   </section>
 
-  <section id="image" class="max-w-6xl mx-auto px-6 mb-16">
+  <section id="image" class="max-w-6xl mx-auto lg:px-6 lg:mb-16">
     <?php
 			$image = get_field('hero_image');
 			if( !empty($image) ):
 			$src = $image['sizes']['1600x900'];
       $alt = $image['alt'];
 		?>
-    <img class="aspect-video object-cover w-full rounded-3xl" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
+    <img class="aspect-video object-cover w-full lg:rounded-3xl" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
     <?php endif; ?>
     <?php if (!empty($alt)) { ?>
-    <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></p>
+    <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 px-6 lg:px-0 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></p>
     <?php } ?>
   </section>
 
-  <section id="content" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
+  <section id="content" class="content-cms max-w-4xl mx-auto pt-8 lg:pt-4 pb-4 lg:pb-16 px-6">
     <?php the_content(); ?>
   </section>
 
-  <section id="content" class="max-w-6xl mx-auto px-6 mb-16">
-    <div class="grid md:grid-cols-3 gap-12">
+  <section id="content" class="max-w-6xl mx-auto px-6 mb-8 lg:mb-16">
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
       <div class="panel">
         <?php the_field('panel_one'); ?>
       </div>
@@ -43,7 +43,7 @@
     </div>
   </section>
 
-  <section id="clients" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
+  <section id="clients" class="content-cms max-w-4xl mx-auto pt-4 pb-12 lg:pb-24 px-6">
     <?php the_field('footnote'); ?>
   </section>
 

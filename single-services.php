@@ -2,7 +2,7 @@
 
 <main id="main" role="main">
 
-  <section id="intro" class="content-intro pb-9">
+  <section id="intro" class="content-intro">
     <ul class="breadcrumbs">
       <li class="parent"><a href="/">Home</a></li>
       <li class="parent"><a href="/services">Services</a></li>
@@ -12,7 +12,7 @@
     <p><?php the_field('excerpt'); ?></p>
   </section>
 
-  <section id="image" class="max-w-6xl mx-auto lg:px-6 lg:mt-16 lg:mb-16">
+  <section id="image" class="max-w-6xl mx-auto lg:px-6 lg:mb-16">
     <?php
 			$image = get_field('hero_image');
 			if( !empty($image) ):
