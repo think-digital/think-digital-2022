@@ -12,11 +12,8 @@
   </section>
 
   <section id="content" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
-    <div class="grid gap-12 grid-cols-3">
-      <div class="col-span-2">
-        <?php the_content(); ?>
-      </div>
-      <div class="">
+    <div class="grid lg:gap-12 lg:grid-cols-3">
+      <div class="lg:order-2 mb-12 lg:mb-0">
         <!-- Email -->
         <div class="rounded-xl p-6 bg-slate-100 mb-6">
           <div class="flex space-x-4 svg-icon-6 font-bold text-midnight-400 fill-midnight-400 uppercase mb-4 stroke-svg">
@@ -45,6 +42,9 @@
           </div>
           <a href="https://www.linkedin.com/company/think-digital---consultancy/" target="_blank" class="link text-lg" title="Connect with Think Digital on LinkedIn">Think Digital</a>
         </div>
+      </div>
+      <div class="lg:order-1 lg:col-span-2">
+        <?php the_content(); ?>
       </div>
     </div>
   </section>

@@ -30,7 +30,7 @@
     <?php the_content(); ?>
   </section>
 
-  <?php include get_template_directory() . '/inc/projects.php'; ?>
+  <?php include get_template_directory() . '/inc/project-random.php'; ?>
 
   <?php include get_template_directory() . '/inc/services.php'; ?>
 

@@ -227,7 +227,7 @@
     @apply relative pl-10 mb-4;
   }
   .content-cms ul li:before {
-    @apply block bg-slate-200 w-4 h-4 absolute top-2 left-0 rounded;
+    @apply block bg-slate-200 w-4 h-4 absolute top-1 lg:top-2 left-0 rounded;
     content:'';
   }
   .content-cms figure {

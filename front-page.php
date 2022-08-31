@@ -8,7 +8,7 @@
 
   <?php include get_template_directory() . '/inc/services.php'; ?>
 
-  <?php include get_template_directory() . '/inc/projects.php'; ?>
+  <?php include get_template_directory() . '/inc/project-random.php'; ?>
 
   <section id="about" class="max-w-7xl mx-auto px-6 pt-12 pb-24">
     <div class="relative">
