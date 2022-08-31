@@ -685,6 +685,14 @@ ul.parent-list li {
   margin-bottom: 0.5rem;
 }
 
+ul.parent-list > li:last-child {
+  margin-bottom: 4rem;
+}
+
+.home ul.parent-list > li:last-child {
+  margin-bottom: 0px;
+}
+
 ul.parent-list > li:hover > a {
   --tw-text-opacity: 1;
   color: rgb(45 204 112 / var(--tw-text-opacity));
@@ -792,12 +800,11 @@ ul.child-list > li {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-bottom: 3rem;
-  padding-top: 4rem;
 }
 
 @media (min-width: 1024px) {
   .content-intro {
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
     padding-top: 8rem;
   }
 }
@@ -858,6 +865,8 @@ ul.child-list > li {
 .breadcrumbs {
   margin-bottom: 1.5rem;
   display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
@@ -984,8 +993,7 @@ ul.child-list > li {
 /* CMS */
 
 .content-cms h1 {
-  margin-bottom: 1rem;
-  margin-top: 3rem;
+  margin-bottom: 10rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -1003,7 +1011,6 @@ ul.child-list > li {
 
 .content-cms h2 {
   margin-bottom: 1rem;
-  margin-top: 3rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -1021,7 +1028,6 @@ ul.child-list > li {
 
 .content-cms h3 {
   margin-bottom: 1rem;
-  margin-top: 2rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -1039,7 +1045,6 @@ ul.child-list > li {
 
 .content-cms h4 {
   margin-bottom: 1rem;
-  margin-top: 2rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -1053,6 +1058,22 @@ ul.child-list > li {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+}
+
+.content-cms h1:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.content-cms h2:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.content-cms h3:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.content-cms h4:not(:first-child) {
+  margin-top: 2rem;
 }
 
 .content-cms p {
@@ -1557,12 +1578,12 @@ textarea.wpforms-field-medium {
   margin-top: 3rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .block {
@@ -1633,10 +1654,6 @@ textarea.wpforms-field-medium {
   max-width: 80rem;
 }
 
-.max-w-md {
-  max-width: 28rem;
-}
-
 .max-w-lg {
   max-width: 32rem;
 }
@@ -1647,6 +1664,10 @@ textarea.wpforms-field-medium {
 
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .max-w-3xl {
@@ -1712,10 +1733,6 @@ textarea.wpforms-field-medium {
 
 .gap-y-24 {
   row-gap: 6rem;
-}
-
-.gap-y-16 {
-  row-gap: 4rem;
 }
 
 .gap-y-20 {
@@ -1852,10 +1869,6 @@ textarea.wpforms-field-medium {
   fill: #fff;
 }
 
-.fill-emerald-500 {
-  fill: #2dcc70;
-}
-
 .fill-emerald-800 {
   fill: #1b7a43;
 }
@@ -1870,6 +1883,10 @@ textarea.wpforms-field-medium {
 
 .fill-linkedin {
   fill: #0077B5;
+}
+
+.fill-emerald-500 {
+  fill: #2dcc70;
 }
 
 .fill-midnight-400 {
@@ -1893,11 +1910,6 @@ textarea.wpforms-field-medium {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .px-12 {
@@ -1925,20 +1937,13 @@ textarea.wpforms-field-medium {
   padding-right: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
 }
 
 .pt-12 {
@@ -1953,8 +1958,20 @@ textarea.wpforms-field-medium {
   padding-bottom: 2.25rem;
 }
 
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pt-16 {
@@ -1969,8 +1986,8 @@ textarea.wpforms-field-medium {
   padding-bottom: 2rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .text-center {
@@ -2056,14 +2073,14 @@ textarea.wpforms-field-medium {
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
-.text-emerald-500 {
-  --tw-text-opacity: 1;
-  color: rgb(45 204 112 / var(--tw-text-opacity));
-}
-
 .text-slate-600 {
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
+.text-emerald-500 {
+  --tw-text-opacity: 1;
+  color: rgb(45 204 112 / var(--tw-text-opacity));
 }
 
 .text-emerald-900 {
@@ -2147,12 +2164,12 @@ textarea.wpforms-field-medium {
     margin-top: 2.25rem;
   }
 
-  .md\:aspect-4\/3 {
-    aspect-ratio: 4 / 3;
-  }
-
   .md\:aspect-\[4\/3\] {
     aspect-ratio: 4/3;
+  }
+
+  .md\:aspect-4\/3 {
+    aspect-ratio: 4 / 3;
   }
 
   .md\:grid-cols-5 {
@@ -2163,12 +2180,12 @@ textarea.wpforms-field-medium {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:justify-end {
@@ -2199,6 +2216,16 @@ textarea.wpforms-field-medium {
   .md\:rounded-l-2xl {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -2231,6 +2258,22 @@ textarea.wpforms-field-medium {
     margin-bottom: 6rem;
   }
 
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .lg\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .lg\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -2251,12 +2294,20 @@ textarea.wpforms-field-medium {
     height: 3.5rem;
   }
 
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:max-w-md {
+    max-width: 28rem;
+  }
+
+  .lg\:max-w-lg {
+    max-width: 32rem;
   }
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:items-center {
@@ -2267,8 +2318,8 @@ textarea.wpforms-field-medium {
     gap: 1.5rem;
   }
 
-  .lg\:gap-y-20 {
-    row-gap: 5rem;
+  .lg\:gap-20 {
+    gap: 5rem;
   }
 
   .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2283,6 +2334,10 @@ textarea.wpforms-field-medium {
     margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:rounded-3xl {
+    border-radius: 1.5rem;
+  }
+
   .lg\:rounded-2xl {
     border-radius: 1rem;
   }
@@ -2291,14 +2346,9 @@ textarea.wpforms-field-medium {
     background-color: transparent;
   }
 
-  .lg\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .lg\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  .lg\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .lg\:py-16 {
@@ -2326,8 +2376,26 @@ textarea.wpforms-field-medium {
     padding-bottom: 0px;
   }
 
-  .lg\:pt-0 {
-    padding-top: 0px;
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .lg\:pt-4 {
+    padding-top: 1rem;
+  }
+
+  .lg\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:pt-48 {
@@ -2338,8 +2406,12 @@ textarea.wpforms-field-medium {
     padding-right: 14rem;
   }
 
-  .lg\:pb-24 {
-    padding-bottom: 6rem;
+  .lg\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .lg\:pt-12 {
+    padding-top: 3rem;
   }
 
   .lg\:pt-16 {
@@ -2377,5 +2449,10 @@ textarea.wpforms-field-medium {
   .lg\:text-slate-300 {
     --tw-text-opacity: 1;
     color: rgb(203 213 225 / var(--tw-text-opacity));
+  }
+
+  .lg\:text-slate-500 {
+    --tw-text-opacity: 1;
+    color: rgb(100 116 139 / var(--tw-text-opacity));
   }
 }

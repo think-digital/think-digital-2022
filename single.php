@@ -2,7 +2,7 @@
 
 <main id="main" role="main">
 
-  <section id="intro" class="content-intro pb-9">
+  <section id="intro" class="content-intro pb-9 overflow-hidden">
     <ul class="breadcrumbs">
       <li class="parent"><a href="/">Home</a></li>
       <li class="parent"><a href="/blog">Blog</a></li>
