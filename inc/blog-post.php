@@ -1,28 +1,20 @@
 <section id="blog" class="max-w-5xl mx-auto px-6 pb-12">
   <div class="relative">
     <?php
-      $authorID = get_field('related_post');
-      $authorFirstName = get_field('first_name');
-      if( $authorID != 0):
-    ?>
-    <?php
       // Load 'posts' custom post type
       $posts = get_posts(array(
-      'post_type' => 'post',
-      'posts_per_page' => 1,
-      'order' => 'ASC',
-      'exclude' => get_the_ID(),
-      'author'  =>  $authorID,
-		  'post_parent' => 'blog'
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+        'order' => 'ASC',
+        'exclude' => get_the_ID(),
       ));
       if( $posts ):
     ?>
     <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-      <?php if ( get_the_date( 'U' ) > strtotime( '-1 year' ) ): ?>
       <hr class="w-24	border-4 border-emerald-200 mb-4 lg:mb-8" />
       <h2 class="text-2xl lg:text-3xl font-bold text-midnight-500 mb-12">Recent blog posts</h2>
       <p class="font-bold uppercase mb-4 lg:text-lg text-slate-500 contains-link"><?php the_category( ', ' ); ?></p>
-      <div class="md:grid md:grid-cols-5 md:gap-16 mb-24">
+      <div class="md:grid md:grid-cols-5 md:gap-16 lg:mb-24">
         <?php
             $image = get_field('hero_image');
             $src = $image['sizes']['512x512'];
@@ -60,9 +52,7 @@
       <p class="text-midnight-500 mt-12 md:absolute md:mt-9 md:top-0 md:right-0">
         <a href="/blog" class="link text-l">View all blog posts</a>
       </p>
-      <?php endif; ?>
     <?php endforeach; ?>
-    <?php endif; ?>
     <?php wp_reset_postdata(); ?>
     <?php endif; ?>
   </div>

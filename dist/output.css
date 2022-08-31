@@ -1526,6 +1526,14 @@ textarea.wpforms-field-medium {
   left: 0px;
 }
 
+.order-2 {
+  order: 2;
+}
+
+.order-1 {
+  order: 1;
+}
+
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
@@ -1601,6 +1609,10 @@ textarea.wpforms-field-medium {
 
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .block {
@@ -2316,6 +2328,12 @@ textarea.wpforms-field-medium {
 }
 
 @media (min-width: 1024px) {
+  .lg\:avatar-featured img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 9999px;
+  }
+
   .lg\:relative {
     position: relative;
   }
@@ -2444,6 +2462,10 @@ textarea.wpforms-field-medium {
     margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:justify-self-end {
+    justify-self: end;
+  }
+
   .lg\:rounded-3xl {
     border-radius: 1.5rem;
   }
@@ -2558,6 +2580,11 @@ textarea.wpforms-field-medium {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:leading-normal {

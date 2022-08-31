@@ -75,7 +75,7 @@
           </p>
           <div class="flex items-center mt-6">
             <div class="avatar mr-4">
-              <a href="<?php the_author_url(); ?>" title="Find out more about <?php the_author(); ?>">
+              <a href="/about/team/<?php the_author_meta('nickname'); ?>" title="Find out more about <?php the_author(); ?>">
                 <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
               </a>
             </div>
