@@ -22,7 +22,7 @@
         ?>
       <img
         class="js-lazyload w-full h-full aspect-video object-cover rounded-t-2xl rounded-b-none md:rounded-l-none md:rounded-r-2xl md:order-2 md:aspect-4/3"
-        src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
+        data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
       <div
         class="rounded-b-2xl rounded-t-none md:rounded-r-none md:rounded-l-2xl md:order-1 bg-midnight-500 text-white flex justify-center items-center">
         <div class="lg:max-w-lg px-6 py-6 pb-8 md:px-12 md:py-12 lg:py-24">

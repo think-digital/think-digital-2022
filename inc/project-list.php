@@ -22,7 +22,7 @@
           <div class="image place-self-center col-span-5 md:col-span-2">
           <hr class="w-24	border-4 border-emerald-200 mb-9 md:hidden" />
             <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
-              <img class="js-lazyload aspect-video object-cover w-full md:aspect-[4/3]" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
+              <img class="js-lazyload aspect-video object-cover w-full md:aspect-[4/3]" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
             </a>
           </div>
         <?php endif; ?>

@@ -113,7 +113,7 @@
     <!-- Logo -->
     <div class="logo">
       <a href="/" class="inline-block" title="THINK Digital homepage" rel="home">
-        <img class="js-lazyload rounded-full w-12 h-12" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="48" width="48" />
+        <img class="js-lazyload rounded-full w-12 h-12" data-src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="48" width="48" />
       </a>
     </div>
     <div class="text-sm mt-4">
@@ -135,6 +135,8 @@
 </div>
 
 <!-- so:javascripts -->
+<script src="<?php echo get_template_directory_uri(); ?>/dist/lazy-load/lazyload-min.js" defer></script>
+<script src="<?php echo get_template_directory_uri(); ?>/dist/output.js" defer></script>
 <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/vendor/modernizer/modernizer-min.js" defer>
 </script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/vendor/lazy-load/lazyload-min.js" defer>

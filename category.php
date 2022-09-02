@@ -61,7 +61,7 @@
               ?>
             <div class="image place-self-start col-span-2">
               <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
-                <img class="js-lazyload aspect-video object-cover w-full" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
+                <img class="js-lazyload aspect-video object-cover w-full" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
               </a>
             </div>
             <?php endif; ?>

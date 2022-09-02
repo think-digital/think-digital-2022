@@ -72,12 +72,6 @@
   <link rel="canonical" href="<?php esc_url(the_permalink()); ?>" />
   <!-- eo:meta -->
 
-  <!-- so:fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=optional" rel="stylesheet">
-  <!-- eo:fonts -->
-
   <!-- so:favicon -->
   <link rel="apple-touch-icon" sizes="180x180"
     href="<?php echo get_template_directory_uri(); ?>/assets/favicons/apple-icon-180x180.png" defer>
@@ -121,8 +115,7 @@
 <body <?php body_class(); ?>>
 
   <!-- so:analytics -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ7SZG6" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ7SZG6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- eo:analytics -->
 
   <a href="#main" class="sr-only" title="Skip to main content">Skip to main content</a>

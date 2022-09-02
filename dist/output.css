@@ -410,8 +410,57 @@ video {
   height: auto;
 }
 
-html {
+/* poppins-regular - latin */
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: local(''),
+        url('./fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/poppins-v20-latin-regular.woff') format('woff');
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-500 - latin */
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  src: local(''),
+        url('./fonts/poppins-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/poppins-v20-latin-500.woff') format('woff');
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-700 - latin */
+
+@font-face {
+  font-family: 'Poppins';
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src: local(''),
+        url('./fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/poppins-v20-latin-700.woff') format('woff');
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
   font-family: 'Poppins', system-ui, sans-serif;
+  font-display: optional;
 }
 
 *, ::before, ::after {
@@ -566,12 +615,6 @@ html {
 .avatar img {
   height: 3rem;
   width: 3rem;
-  border-radius: 9999px;
-}
-
-.avatar-featured img {
-  height: 4rem;
-  width: 4rem;
   border-radius: 9999px;
 }
 
@@ -1526,14 +1569,6 @@ textarea.wpforms-field-medium {
   left: 0px;
 }
 
-.order-2 {
-  order: 2;
-}
-
-.order-1 {
-  order: 1;
-}
-
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
@@ -1611,10 +1646,6 @@ textarea.wpforms-field-medium {
   margin-bottom: 4rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .block {
   display: block;
 }
@@ -1647,12 +1678,12 @@ textarea.wpforms-field-medium {
   height: 3rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-16 {
   height: 4rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-24 {
@@ -1699,10 +1730,6 @@ textarea.wpforms-field-medium {
   max-width: 56rem;
 }
 
-.max-w-md {
-  max-width: 28rem;
-}
-
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1713,10 +1740,6 @@ textarea.wpforms-field-medium {
 
 .basis-1\/2 {
   flex-basis: 50%;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .content-end {
@@ -1763,25 +1786,12 @@ textarea.wpforms-field-medium {
   gap: 2rem;
 }
 
-.gap-x-16 {
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-}
-
-.gap-y-24 {
-  row-gap: 6rem;
-}
-
-.gap-y-4 {
-  row-gap: 1rem;
-}
-
 .gap-y-16 {
   row-gap: 4rem;
 }
 
-.gap-y-8 {
-  row-gap: 2rem;
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1810,10 +1820,6 @@ textarea.wpforms-field-medium {
   place-self: center;
 }
 
-.justify-self-end {
-  justify-self: end;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1826,12 +1832,12 @@ textarea.wpforms-field-medium {
   border-radius: 9999px;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-t-2xl {
@@ -1957,16 +1963,6 @@ textarea.wpforms-field-medium {
   padding-bottom: 4rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -2015,8 +2011,8 @@ textarea.wpforms-field-medium {
   padding-bottom: 3rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pt-20 {
@@ -2031,8 +2027,8 @@ textarea.wpforms-field-medium {
   padding-top: 6rem;
 }
 
-.pr-4 {
-  padding-right: 1rem;
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pb-4 {
@@ -2221,10 +2217,6 @@ textarea.wpforms-field-medium {
     margin-top: 2.25rem;
   }
 
-  .md\:mb-24 {
-    margin-bottom: 6rem;
-  }
-
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -2235,6 +2227,10 @@ textarea.wpforms-field-medium {
 
   .md\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .md\:mb-24 {
+    margin-bottom: 6rem;
   }
 
   .md\:block {
@@ -2249,12 +2245,12 @@ textarea.wpforms-field-medium {
     display: none;
   }
 
-  .md\:aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
-  }
-
   .md\:aspect-4\/3 {
     aspect-ratio: 4 / 3;
+  }
+
+  .md\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
   }
 
   .md\:grid-cols-5 {
@@ -2281,13 +2277,13 @@ textarea.wpforms-field-medium {
     gap: 4rem;
   }
 
+  .md\:gap-y-24 {
+    row-gap: 6rem;
+  }
+
   .md\:gap-x-16 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
-  }
-
-  .md\:gap-y-24 {
-    row-gap: 6rem;
   }
 
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -2366,16 +2362,16 @@ textarea.wpforms-field-medium {
     margin-bottom: 4rem;
   }
 
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .lg\:mb-24 {
     margin-bottom: 6rem;
   }
 
   .lg\:mb-12 {
     margin-bottom: 3rem;
-  }
-
-  .lg\:mb-8 {
-    margin-bottom: 2rem;
   }
 
   .lg\:mt-12 {
@@ -2444,10 +2440,6 @@ textarea.wpforms-field-medium {
 
   .lg\:gap-12 {
     gap: 3rem;
-  }
-
-  .lg\:gap-y-24 {
-    row-gap: 6rem;
   }
 
   .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2521,6 +2513,10 @@ textarea.wpforms-field-medium {
     padding-bottom: 6rem;
   }
 
+  .lg\:pr-0 {
+    padding-right: 0px;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -2543,10 +2539,6 @@ textarea.wpforms-field-medium {
 
   .lg\:pt-16 {
     padding-top: 4rem;
-  }
-
-  .lg\:pr-0 {
-    padding-right: 0px;
   }
 
   .lg\:pb-16 {
@@ -2572,9 +2564,9 @@ textarea.wpforms-field-medium {
     line-height: 2rem;
   }
 
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:text-lg {
@@ -2582,9 +2574,9 @@ textarea.wpforms-field-medium {
     line-height: 1.75rem;
   }
 
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:leading-normal {

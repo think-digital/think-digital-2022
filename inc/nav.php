@@ -6,7 +6,7 @@
     <div class="logo flex lg:block items-center pb-8 lg:pb-0">
       <div class="basis-1/2">
         <a href="/" class="inline-block" title="THINK Digital homepage" rel="home">
-          <img class="js-lazyload rounded-full w-16 h-16" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="64" width="64" />
+          <img class="js-lazyload rounded-full w-16 h-16" data-src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="64" width="64" />
         </a>
       </div>
       <div class="lg:hidden basis-1/2 flex justify-end">
@@ -95,21 +95,3 @@
 
 </header>
 <!-- eo:header -->
-
-<script>
-  function menuToggle() {
-    const toggles = document.querySelectorAll('[data-toggle]');
-    toggles.forEach((toggle) => {
-      const button = toggle.querySelector('[data-toggle-button]');
-      button.addEventListener('click', () => {
-        event.preventDefault();
-        if (toggle.getAttribute('data-active')) {
-          toggle.removeAttribute('data-active');
-        } else {
-          toggle.setAttribute('data-active', true);
-        }
-      });
-    });
-  }
-  menuToggle();
-</script>

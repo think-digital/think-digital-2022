@@ -34,7 +34,7 @@
           ?>
           <div class="team-avatar mb-6">
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-              <img class="js-lazyload w-36 lg:w-64 object-cover rounded-2xl aspect-square" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
+              <img class="js-lazyload w-36 lg:w-64 object-cover rounded-2xl aspect-square" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
             </a>
           </div>
           <?php endif; ?>

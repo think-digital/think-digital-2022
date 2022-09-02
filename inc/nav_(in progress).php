@@ -6,7 +6,7 @@
     <div class="logo flex lg:block items-center">
       <div class="basis-1/2">
         <a href="/" class="inline-block" title="THINK Digital homepage" rel="home">
-          <img class="js-lazyload rounded-full w-16 h-16" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="64" width="64" />
+          <img class="js-lazyload rounded-full w-16 h-16" data-src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="THINK Digital" height="64" width="64" />
         </a>
       </div>
       <div class="lg:hidden basis-1/2 flex justify-end">

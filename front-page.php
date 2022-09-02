@@ -16,10 +16,11 @@
       <h2 class="text-2xl lg:text-3xl font-bold text-midnight-500 mb-12">About us</h2>
       <div class="lg:flex lg:space-x-24 lg:items-center">
         <div class="item mb-8 lg:mb-0">
-          <video class="aspect-video rounded-2xl w-full object-cover" width="320" height="240" poster="<?php echo get_template_directory_uri(); ?>/assets/about-jason.jpeg" controls>
+          <!-- <video class="aspect-video rounded-2xl w-full object-cover" width="320" height="240" poster="<?php echo get_template_directory_uri(); ?>/assets/about-jason.jpeg" controls>
             <source src="<?php echo get_template_directory_uri(); ?>/assets/movie.mp4" type="video/mp4">
             Your browser does not support the video tag.
-          </video>
+          </video> -->
+          <img class="js-lazyload aspect-video rounded-2xl w-full object-cover" data-src="<?php echo get_template_directory_uri(); ?>/assets/about-jason.jpeg" alt="Jason Potts outlines how we can help your organisation." width="320" height="240" />
           <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600 items-start">
             <?php include get_template_directory() . '/assets/comment.svg'; ?><span>Jason Potts outlines how we can help your organisation.</span></p>
         </div>
@@ -64,7 +65,7 @@
             if( !empty($image) ):
           ?>
           <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
-            <img class="js-lazyload aspect-video object-cover w-64" src="<?php echo $src; ?>" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="256" width="256" />
+            <img class="js-lazyload aspect-video object-cover w-64" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="256" width="256" />
           </a>
           <?php endif; ?>
           <h3 class="text-xl leading-relaxed text-midnight-500">
