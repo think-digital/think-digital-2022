@@ -22,7 +22,7 @@
 			$src = $image['sizes']['1600x900'];
       $alt = $image['alt'];
 		?>
-    <img class="aspect-video object-cover w-full lg:rounded-3xl" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
+    <img class="js-lazyload aspect-video object-cover w-full lg:rounded-3xl" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
     <?php endif; ?>
     <?php if (!empty($alt)) { ?>
     <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 px-6 lg:px-0 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></p>
