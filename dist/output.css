@@ -1642,6 +1642,10 @@ textarea.wpforms-field-medium {
   margin-bottom: 4rem;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
 .block {
   display: block;
 }
@@ -2037,6 +2041,10 @@ textarea.wpforms-field-medium {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
 }
 
 .text-center {

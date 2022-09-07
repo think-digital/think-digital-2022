@@ -16,3 +16,14 @@ function menuToggle() {
   });
 }
 menuToggle();
+
+// Scroll to anchor
+const anchors = document.querySelectorAll('a[href^="#"]:not(.is-static)');
+anchors.forEach((anchor) => {
+  anchor.addEventListener('click', () => {
+    const target = document.querySelector(anchor.hash);
+    event.preventDefault();
+    target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    document.addEventListener('touchstart', target, { passive: true });
+  });
+});

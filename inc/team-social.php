@@ -8,14 +8,14 @@
   <?php endif ;?>
   <?php if(get_field('twitter')): ?>
     <li>
-      <a class="share-link twitter" href="http://twitter.com/<?php the_field('twitter'); ?>" title="Tweet or Follow <?php the_field('twitter'); ?> on Twitter">
+      <a class="share-link twitter" href="http://twitter.com/<?php the_field('twitter'); ?>" target="_blank" title="Tweet or Follow <?php echo the_title(); ?> on Twitter">
         <?php include get_template_directory() . '/assets/twitter.svg'; ?>
       </a>
     </li>
   <?php endif ;?>
   <?php if(get_field('linkedin')): ?>
     <li>
-      <a class="share-link linkedin" href="http://linkedin.com/<?php the_field('linkedin'); ?>" title="Connect with <?php echo the_title(); ?> on LinkedIn">
+      <a class="share-link linkedin" href="http://linkedin.com/in/<?php the_field('linkedin'); ?>" target="_blank" title="Connect with <?php echo the_title(); ?> on LinkedIn">
         <?php include get_template_directory() . '/assets/linkedin.svg'; ?>
       </a>
     </li>
