@@ -34,6 +34,7 @@
   <?php endif; ?>
 
   <?php if( get_field('meta_description') ): ?>
+  <meta name="description" content="<?php the_field('meta_description'); ?>" />
   <meta itemprop="description" content="<?php the_field('meta_description'); ?>">
   <meta property="twitter:description" content="<?php the_field('meta_description'); ?>" />
   <meta property="og:description" content="<?php the_field('meta_description'); ?>" />
@@ -51,14 +52,12 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="" />
   <meta name="generator" content="" />
   <meta name="author" content="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
   <meta name="copyright"
     content='<?php echo date('Y'); ?>, <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' />
   <meta name="Geo.Country" content="GB" />
   <meta name="Geo.Region" content="GB-BST" />
-  <meta name="robots" content="all" />
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
