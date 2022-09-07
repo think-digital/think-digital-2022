@@ -33,16 +33,16 @@
             if( !empty($image) ):
           ?>
           <div class="team-avatar mb-6">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <a href="<?php the_permalink(); ?>?href=image" title="<?php the_title(); ?>">
               <img class="js-lazyload w-36 lg:w-64 object-cover rounded-2xl aspect-square" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
             </a>
           </div>
           <?php endif; ?>
           <div class="pr-6">
-            <h3 class="text-xl lg:text-2xl leading-relaxed lg:leading-relaxed text-midnight-500">
-              <a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h3>
-            <h4 class="lg:text-lg leading-relaxed lg:leading-relaxed mt-2 lg:mt-4 text-slate-500 uppercase font-bold"><?php the_field('role'); ?></h4>
+            <h2 class="text-xl lg:text-2xl leading-relaxed lg:leading-relaxed text-midnight-500">
+              <a class="link" href="<?php the_permalink(); ?>?href=title"><?php the_title(); ?></a>
+            </h2>
+            <h3 class="lg:text-lg leading-relaxed lg:leading-relaxed mt-2 lg:mt-4 text-slate-500 uppercase font-bold"><?php the_field('role'); ?></h3>
             <p class="lg:text-lg leading-relaxed lg:leading-relaxed mt-4 text-midnight-400">
               <?php the_field('excerpt'); ?>
             </p>

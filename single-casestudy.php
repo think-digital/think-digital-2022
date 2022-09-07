@@ -9,23 +9,23 @@
       <li class="truncate-text"><?php echo the_title(); ?></li>
     </ul>
     <h1><?php the_title(); ?></h1>
-    <h2 class="text-xl lg:text-2xl text-emerald-500 uppercase font-bold mb-8"><?php the_field('client'); ?></h2>
+    <h2 class="text-xl lg:text-2xl text-emerald-800 uppercase font-bold mb-8"><?php the_field('client'); ?></h2>
     <p><?php the_content(); ?></p>
   </section>
 
-  <section id="image" class="max-w-6xl mx-auto lg:px-6 lg:mb-16">
+  <figure id="image" class="max-w-6xl mx-auto lg:px-6 lg:mb-16">
     <?php
 			$image = get_field('hero_image');
 			if( !empty($image) ):
 			$src = $image['sizes']['1600x900'];
       $alt = $image['alt'];
 		?>
-    <img class="js-lazyload aspect-video object-cover w-full lg:rounded-3xl" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" />
+    <img class="js-lazyload aspect-video object-cover w-full lg:rounded-3xl" data-src="<?php echo $src; ?>" alt="" />
     <?php endif; ?>
     <?php if (!empty($alt)) { ?>
-    <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 px-6 lg:px-0 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></p>
+    <figcaption class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 px-6 lg:px-0 text-slate-600"><?php include get_template_directory() . '/assets/comment.svg'; ?><span><?php echo $alt; ?></span></figcaption>
     <?php } ?>
-  </section>
+  </figure>
 
   <section id="content" class="content-cms max-w-4xl mx-auto pt-8 lg:pt-4 pb-12 lg:pb-24 px-6">
     <?php if( get_field('the_aim') ): ?>

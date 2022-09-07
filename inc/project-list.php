@@ -21,7 +21,7 @@
           ?>
           <div class="image place-self-center col-span-5 md:col-span-2">
           <hr class="w-24	border-4 border-emerald-200 mb-9 md:hidden" />
-            <a href="<?php the_permalink(); ?>" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
+            <a href="<?php the_permalink(); ?>?href=image" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
               <img class="js-lazyload aspect-video object-cover w-full md:aspect-[4/3]" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
             </a>
           </div>
@@ -29,11 +29,11 @@
         <div class="content col-span-5 md:col-span-3">
           <hr class="w-24	border-4 border-emerald-200 mb-9 hidden md:block" />
           <h3 class="font-bold text-2xl text-midnight-500 mb-2"><?php the_title(); ?></h3>
-          <h4 class="font-bold uppercase mb-4 text-lg text-emerald-500"><?php the_field('client'); ?></h4>
+          <h4 class="font-bold uppercase mb-4 text-lg text-emerald-800"><?php the_field('client'); ?></h4>
           <div class="content-post mt-4 mb-6 text-midnight-400 leading-relaxed">
             <?php the_field('excerpt'); ?>
           </div>
-          <p><a class="link text-midnight-500 text-lg" href="<?php the_permalink(); ?>" title='Read "<?php the_title(); ?>" case study'>Read this case study</a></p>
+          <p><a class="link text-midnight-500 text-lg" href="<?php the_permalink(); ?>?href=title" title='Read "<?php the_title(); ?>" case study'>Read this case study</a></p>
         </div>
       </div>
       <?php endforeach; ?>

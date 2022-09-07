@@ -114,11 +114,7 @@
 
 <body <?php body_class(); ?>>
 
-  <!-- so:analytics -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ7SZG6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- eo:analytics -->
-
-  <a href="#main" class="sr-only" title="Skip to main content">Skip to main content</a>
+  <a href="#main" class="sr-only">Skip to main content</a>
 
   <div id="page">
 

@@ -129,7 +129,7 @@
     @apply rotate-[-90deg] stroke-emerald-500;
   }
   .parent-link.current-page {
-    @apply text-emerald-700 border-b-2 border-solid fill-emerald-700 border-emerald-200 hover:text-emerald-500;
+    @apply text-emerald-800 border-b-2 border-solid fill-emerald-700 border-emerald-200 hover:text-emerald-500;
   }
   .parent-link.current-page svg {
     @apply stroke-emerald-700;
@@ -166,7 +166,7 @@
     @apply inline-block;
   }
   .breadcrumbs a {
-    @apply text-emerald-700 font-medium underline hover:text-emerald-500;
+    @apply text-emerald-800 font-medium underline hover:text-emerald-500;
   }
   .breadcrumbs li.parent:after {
     @apply text-slate-400 px-2;
@@ -271,7 +271,7 @@
     @apply my-8;
   }
   .content-cms blockquote p {
-    @apply text-emerald-900 font-bold text-3xl italic leading-relaxed bg-emerald-200 box-decoration-clone inline py-2;
+    @apply text-emerald-900 leading-relaxed bg-emerald-200 box-decoration-clone inline py-2;
   }
   .content-cms blockquote cite {
     @apply block font-medium text-midnight-500 not-italic mt-4;
@@ -327,7 +327,7 @@
 
   }
   .wpforms-submit {
-    @apply inline-block text-lg bg-emerald-500 rounded-lg fill-white text-white font-bold py-4 px-8 hover:bg-emerald-600;
+    @apply inline-block text-lg bg-emerald-800 rounded-lg fill-white text-white font-bold py-4 px-8 hover:bg-emerald-600;
   }
   /* Menu */
   .menu {
