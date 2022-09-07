@@ -460,7 +460,7 @@ video {
 
 body {
   font-family: 'Poppins', system-ui, sans-serif;
-  font-display: optional;
+  font-display: swap;
 }
 
 *, ::before, ::after {
@@ -1999,12 +1999,20 @@ textarea.wpforms-field-medium {
   padding-right: 1.5rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
 }
 
 .pb-12 {
   padding-bottom: 3rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .pr-4 {
@@ -2029,18 +2037,6 @@ textarea.wpforms-field-medium {
 
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
 }
 
 .text-center {
@@ -2370,6 +2366,10 @@ textarea.wpforms-field-medium {
     margin-bottom: 4rem;
   }
 
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .lg\:mb-8 {
     margin-bottom: 2rem;
   }
@@ -2392,10 +2392,6 @@ textarea.wpforms-field-medium {
 
   .lg\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .lg\:mt-3 {
-    margin-top: 0.75rem;
   }
 
   .lg\:block {
