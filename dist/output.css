@@ -1635,12 +1635,12 @@ textarea.wpforms-field-medium {
   margin-bottom: 1.5rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
 }
 
 .mb-2 {
@@ -2008,10 +2008,6 @@ textarea.wpforms-field-medium {
   padding-right: 1.5rem;
 }
 
-.pt-7 {
-  padding-top: 1.75rem;
-}
-
 .pt-8 {
   padding-top: 2rem;
 }
@@ -2022,6 +2018,10 @@ textarea.wpforms-field-medium {
 
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
 }
 
 .pr-4 {
