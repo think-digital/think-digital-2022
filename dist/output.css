@@ -419,7 +419,7 @@ video {
 
   font-weight: 400;
 
-  font-display: optional;
+  font-display: swap;
 
   src: local(''),
         url('./fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -437,7 +437,7 @@ video {
 
   font-weight: 500;
 
-  font-display: optional;
+  font-display: swap;
 
   src: local(''),
         url('./fonts/poppins-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -455,7 +455,7 @@ video {
 
   font-weight: 700;
 
-  font-display: optional;
+  font-display: swap;
 
   src: local(''),
         url('./fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -2405,6 +2405,10 @@ textarea.wpforms-field-medium {
 
   .lg\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .lg\:mb-36 {
+    margin-bottom: 9rem;
   }
 
   .lg\:block {
