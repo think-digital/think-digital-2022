@@ -12,17 +12,17 @@
     ?>
     <div class="grid gap-y-16 md:gap-y-24 mt-12 mb-6 md:mt-0 md:mb-0">
       <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
-      <div class="post grid md:grid-cols-5 md:gap-x-16 gap-y-4 md:gap-y-24">
+      <div class="post grid md:grid-cols-5 lg:gap-x-16 gap-y-4 md:gap-y-24">
         <?php
             $image = get_field('hero');
             $src = $image['sizes']['512x512'];
             $alt = $image['alt'];
             if( !empty($image) ):
           ?>
-          <div class="image md:place-self-center col-span-5 md:col-span-2">
+          <div class="image md:place-self-start col-span-5 md:col-span-2">
           <hr class="w-24	border-4 border-emerald-200 mb-9 md:hidden" />
             <a href="<?php the_permalink(); ?>?href=image" class="inline-block rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
-              <span class="aspect-video md:aspect-orginal relative w-64 lg:w-96">
+              <span class="aspect-video md:aspect-orginal relative w-64 lg:w-full">
                 <img class="js-lazyload object-cover w-full h-full" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
               </span>
             </a>

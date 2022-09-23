@@ -20,7 +20,7 @@
           $alt = $image['alt'];
           if( !empty($image) ):
         ?>
-        <span class="aspect-video md:aspect-square relative">
+        <span class="aspect-video md:aspect-auto relative">
           <img class="js-lazyload w-full h-full object-cover rounded-t-2xl rounded-b-none md:rounded-r-none md:rounded-l-2xl" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
         </span>
       <div class="rounded-b-2xl rounded-t-none md:rounded-l-none md:rounded-r-2xl bg-midnight-500 text-white flex justify-center items-center">

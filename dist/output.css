@@ -1735,6 +1735,12 @@ textarea.wpforms-field-medium {
   height: 4rem;
 }
 
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -1765,10 +1771,6 @@ textarea.wpforms-field-medium {
 
 .max-w-7xl {
   max-width: 80rem;
-}
-
-.max-w-lg {
-  max-width: 32rem;
 }
 
 .max-w-6xl {
@@ -1865,10 +1867,6 @@ textarea.wpforms-field-medium {
   place-self: start;
 }
 
-.place-self-center {
-  place-self: center;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1889,16 +1887,6 @@ textarea.wpforms-field-medium {
   border-radius: 0.75rem;
 }
 
-.rounded-b-2xl {
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
-.rounded-t-none {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-}
-
 .rounded-t-2xl {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -1907,6 +1895,16 @@ textarea.wpforms-field-medium {
 .rounded-b-none {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+.rounded-b-2xl {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.rounded-t-none {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .border-4 {
@@ -2090,10 +2088,6 @@ textarea.wpforms-field-medium {
 
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .text-right {
@@ -2382,12 +2376,12 @@ textarea.wpforms-field-medium {
     grid-column: span 3 / span 3;
   }
 
-  .md\:mt-9 {
-    margin-top: 2.25rem;
-  }
-
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mt-9 {
+    margin-top: 2.25rem;
   }
 
   .md\:mb-0 {
@@ -2422,20 +2416,24 @@ textarea.wpforms-field-medium {
     aspect-ratio: 4 / 3;
   }
 
+  .md\:aspect-auto {
+    aspect-ratio: auto;
+  }
+
+  .md\:min-h-full {
+    min-height: 100%;
+  }
+
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:justify-end {
@@ -2450,16 +2448,8 @@ textarea.wpforms-field-medium {
     gap: 4rem;
   }
 
-  .md\:gap-4 {
-    gap: 1rem;
-  }
-
   .md\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
   }
 
   .md\:gap-y-24 {
@@ -2471,14 +2461,31 @@ textarea.wpforms-field-medium {
          column-gap: 4rem;
   }
 
+  .md\:gap-x-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:place-self-start {
+    place-self: start;
+  }
+
   .md\:place-self-center {
     place-self: center;
+  }
+
+  .md\:justify-self-end {
+    justify-self: end;
+  }
+
+  .md\:justify-self-center {
+    justify-self: center;
   }
 
   .md\:rounded-r-none {
@@ -2563,6 +2570,10 @@ textarea.wpforms-field-medium {
     margin-bottom: 0px;
   }
 
+  .lg\:mt-9 {
+    margin-top: 2.25rem;
+  }
+
   .lg\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -2599,20 +2610,12 @@ textarea.wpforms-field-medium {
     margin-top: 1rem;
   }
 
-  .lg\:mt-9 {
-    margin-top: 2.25rem;
-  }
-
   .lg\:block {
     display: block;
   }
 
   .lg\:flex {
     display: flex;
-  }
-
-  .lg\:grid {
-    display: grid;
   }
 
   .lg\:hidden {
@@ -2623,12 +2626,20 @@ textarea.wpforms-field-medium {
     height: 3.5rem;
   }
 
+  .lg\:min-h-full {
+    min-height: 100%;
+  }
+
   .lg\:w-96 {
     width: 24rem;
   }
 
   .lg\:w-64 {
     width: 16rem;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:max-w-lg {
@@ -2651,10 +2662,6 @@ textarea.wpforms-field-medium {
     align-items: center;
   }
 
-  .lg\:gap-6 {
-    gap: 1.5rem;
-  }
-
   .lg\:gap-20 {
     gap: 5rem;
   }
@@ -2663,8 +2670,9 @@ textarea.wpforms-field-medium {
     gap: 3rem;
   }
 
-  .lg\:gap-4 {
-    gap: 1rem;
+  .lg\:gap-x-16 {
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
   }
 
   .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
