@@ -3,7 +3,7 @@
 <!-- so:footer -->
 <footer class="bg-midnight-500">
   <!-- Links -->
-  <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-6 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-white">
     <!-- Pages -->
     <nav class="footer-nav">
       <ul class="">
@@ -26,7 +26,7 @@
     <!-- Services -->
     <nav class="footer-nav">
       <ul>
-        <li class="mt-8 lg:mt-6">
+        <li class="mt-8 md:mt-0 lg:mt-6">
           <a href="/services" class="link text-xl">Services</a>
           <?php
             // Load 'posts' custom post type

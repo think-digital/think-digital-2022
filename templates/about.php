@@ -32,7 +32,7 @@
   </section>
 
   <section id="content" class="max-w-6xl mx-auto px-6 mb-8 lg:mb-16">
-    <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+    <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
       <div class="panel">
         <?php the_field('panel_one'); ?>
       </div>

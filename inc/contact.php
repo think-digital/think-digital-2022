@@ -2,7 +2,7 @@
   <div class="relative">
     <h2 class="text-2xl lg:text-3xl font-bold text-emerald-900 mb-6">Contact us</h2>
     <p class="text-lg max-w-3xl mx-auto text-emerald-900 mb-12">If you’d like to find out more about what we do and how we might be able to help your organisation, please contact us at:</p>
-    <div class="lg:grid lg:gap-6 lg:grid-cols-4 text-center">
+    <div class="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-4 text-center">
       <!-- Email -->
       <div class="rounded-xl p-6 bg-white mb-6 lg:mb-0">
         <div class="flex justify-center	space-x-4 svg-icon-6 font-bold text-emerald-800 fill-emerald-800 uppercase mb-4 stroke-svg">

@@ -26,7 +26,7 @@
           <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600 items-start">
             <?php include get_template_directory() . '/assets/comment.svg'; ?><span>Jason Potts outlines how we can help your organisation.</span></p>
         </div>
-        <div class="item max-w-lg text-midnight-500 text-lg lg:text-xl pb-9">
+        <div class="item lg:max-w-lg text-midnight-500 text-lg lg:text-xl pb-9">
           <p class="font-medium mb-6">THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
           <p class="mb-6 text-midnight-400">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
           <ul class="flex space-x-6 text-midnight-500">
@@ -55,7 +55,7 @@
       ?>
       <hr class="w-24	border-4 border-emerald-200 mb-4" />
       <h2 class="text-3xl font-bold text-midnight-500 mb-12">Recent blog posts</h2>
-      <div class="grid md:grid-cols-3 gap-12">
+      <div class="grid lg:grid-cols-3 gap-12">
         <?php foreach( $posts as $post ): setup_postdata( $post ) ?>
         <div class="pr-6">
           <hr class="w-12	border-2 border-slate-100 mb-4" />
@@ -94,7 +94,7 @@
         </div>
         <?php endforeach; ?>
       </div>
-      <p class="mt-12 md:absolute md:mt-9 md:top-0 md:right-0 text-midnight-500">
+      <p class="mt-12 lg:absolute lg:mt-9 lg:top-0 lg:right-0 text-midnight-500">
         <a href="/blog" class="link text-l">View all blog posts</a>
       </p>
       <?php wp_reset_postdata(); ?>
