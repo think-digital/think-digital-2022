@@ -2442,6 +2442,10 @@ textarea.wpforms-field-medium {
     justify-content: flex-end;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:gap-16 {
     gap: 4rem;
   }
@@ -2473,6 +2477,10 @@ textarea.wpforms-field-medium {
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:place-self-center {
+    place-self: center;
+  }
+
   .md\:rounded-r-none {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -2501,6 +2509,10 @@ textarea.wpforms-field-medium {
   .md\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 }
 

@@ -13,7 +13,7 @@
 
   <section id="content" class="content-cms max-w-4xl mx-auto pt-4 pb-24 px-6">
     <div class="grid lg:gap-12 lg:grid-cols-3">
-      <div class="lg:order-2 mb-12 md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-1">
+      <div class="lg:order-2 mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-1">
         <!-- Email -->
         <div class="rounded-xl p-6 bg-slate-100">
           <div class="flex space-x-4 svg-icon-6 font-bold text-midnight-400 fill-midnight-400 uppercase mb-4 stroke-svg">

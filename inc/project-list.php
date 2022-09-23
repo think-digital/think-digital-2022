@@ -19,7 +19,7 @@
             $alt = $image['alt'];
             if( !empty($image) ):
           ?>
-          <div class="image place-self-center col-span-5 md:col-span-2">
+          <div class="image md:place-self-center col-span-5 md:col-span-2">
           <hr class="w-24	border-4 border-emerald-200 mb-9 md:hidden" />
             <a href="<?php the_permalink(); ?>?href=image" class="inline-block rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
               <span class="aspect-video md:aspect-orginal relative w-64 lg:w-96">
