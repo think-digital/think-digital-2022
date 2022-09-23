@@ -672,14 +672,17 @@ body {
 /* SVG */
 
 .svg-icon-4 svg {
+  height: 100%;
   width: 1rem;
 }
 
 .svg-icon-6 svg {
+  height: 100%;
   width: 1.5rem;
 }
 
 .svg-icon-12 svg {
+  height: 100%;
   width: 3rem;
 }
 
@@ -937,8 +940,7 @@ ul.child-list > li {
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(27 122 67 / var(--tw-text-opacity));
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .breadcrumbs a:hover {
@@ -1542,6 +1544,48 @@ textarea.wpforms-field-medium {
   opacity: 0;
 }
 
+.aspect-square,
+  .aspect-orginal,
+  .aspect-video {
+  display: block;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  .aspect-square img {
+    position: absolute;
+  }
+
+  .aspect-square::before {
+    float: left;
+    padding-top: 100%;
+    content: '';
+  }
+
+  .aspect-square:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+@supports not (aspect-ratio: 16 / 9) {
+  .aspect-video img {
+    position: absolute;
+  }
+
+  .aspect-video::before {
+    float: left;
+    padding-top: 56.25%;
+    content: '';
+  }
+
+  .aspect-video:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1679,16 +1723,16 @@ textarea.wpforms-field-medium {
   aspect-ratio: 1 / 1;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-12 {
   height: 3rem;
 }
 
 .h-16 {
   height: 4rem;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .w-24 {
@@ -1737,6 +1781,10 @@ textarea.wpforms-field-medium {
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .grow {
@@ -1845,8 +1893,14 @@ textarea.wpforms-field-medium {
   border-radius: 0.75rem;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem;
+.rounded-b-2xl {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.rounded-t-none {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .rounded-t-2xl {
@@ -1857,16 +1911,6 @@ textarea.wpforms-field-medium {
 .rounded-b-none {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
-}
-
-.rounded-b-2xl {
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
-.rounded-t-none {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
 }
 
 .border-4 {
@@ -2202,6 +2246,118 @@ textarea.wpforms-field-medium {
 }
 
 @media (min-width: 768px) {
+  .md\:aspect-square {
+    display: block;
+  }
+
+  .md\:aspect-orginal {
+    display: block;
+  }
+
+  @supports not (aspect-ratio: 1 / 1) {
+    .md\:aspect-square img {
+      position: absolute;
+    }
+
+    .md\:aspect-square::before {
+      float: left;
+      padding-top: 100%;
+      content: '';
+    }
+
+    .md\:aspect-square:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .md\:aspect-square img {
+      position: absolute;
+    }
+
+    .md\:aspect-square::before {
+      float: left;
+      padding-top: 100%;
+      content: '';
+    }
+
+    .md\:aspect-square:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .md\:aspect-square img {
+      position: absolute;
+    }
+
+    .md\:aspect-square::before {
+      float: left;
+      padding-top: 100%;
+      content: '';
+    }
+
+    .md\:aspect-square:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+
+  .md\:aspect-orginal {
+    display: block;
+  }
+
+  @supports not (aspect-ratio: 4 / 3) {
+    .md\:aspect-orginal img {
+      position: absolute;
+    }
+
+    .md\:aspect-orginal::before {
+      float: left;
+      padding-top: 75%;
+      content: '';
+    }
+
+    .md\:aspect-orginal:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .md\:aspect-orginal img {
+      position: absolute;
+    }
+
+    .md\:aspect-orginal::before {
+      float: left;
+      padding-top: 75%;
+      content: '';
+    }
+
+    .md\:aspect-orginal:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .md\:aspect-orginal img {
+      position: absolute;
+    }
+
+    .md\:aspect-orginal::before {
+      float: left;
+      padding-top: 75%;
+      content: '';
+    }
+
+    .md\:aspect-orginal:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+
   .md\:absolute {
     position: absolute;
   }
@@ -2262,12 +2418,12 @@ textarea.wpforms-field-medium {
     display: none;
   }
 
-  .md\:aspect-4\/3 {
-    aspect-ratio: 4 / 3;
+  .md\:aspect-square {
+    aspect-ratio: 1 / 1;
   }
 
-  .md\:aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
+  .md\:aspect-orginal {
+    aspect-ratio: 4 / 3;
   }
 
   .md\:grid-cols-5 {
@@ -2309,16 +2465,6 @@ textarea.wpforms-field-medium {
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:rounded-l-none {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-
-  .md\:rounded-r-2xl {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
-
   .md\:rounded-r-none {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -2327,6 +2473,16 @@ textarea.wpforms-field-medium {
   .md\:rounded-l-2xl {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+  }
+
+  .md\:rounded-l-none {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .md\:rounded-r-2xl {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
 
   .md\:px-12 {
@@ -2403,12 +2559,12 @@ textarea.wpforms-field-medium {
     margin-top: 3rem;
   }
 
-  .lg\:mt-4 {
-    margin-top: 1rem;
-  }
-
   .lg\:mb-36 {
     margin-bottom: 9rem;
+  }
+
+  .lg\:mt-4 {
+    margin-top: 1rem;
   }
 
   .lg\:block {
@@ -2437,6 +2593,10 @@ textarea.wpforms-field-medium {
 
   .lg\:w-64 {
     width: 16rem;
+  }
+
+  .lg\:w-96 {
+    width: 24rem;
   }
 
   .lg\:max-w-lg {
@@ -2510,9 +2670,9 @@ textarea.wpforms-field-medium {
     padding-bottom: 4rem;
   }
 
-  .lg\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+  .lg\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .lg\:py-9 {

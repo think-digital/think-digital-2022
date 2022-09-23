@@ -20,11 +20,10 @@
           $alt = $image['alt'];
           if( !empty($image) ):
         ?>
-      <img
-        class="js-lazyload w-full h-full aspect-video object-cover rounded-t-2xl rounded-b-none md:rounded-l-none md:rounded-r-2xl md:order-2 md:aspect-4/3"
-        data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
-      <div
-        class="rounded-b-2xl rounded-t-none md:rounded-r-none md:rounded-l-2xl md:order-1 bg-midnight-500 text-white flex justify-center items-center">
+        <span class="aspect-video md:aspect-square relative">
+          <img class="js-lazyload w-full h-full object-cover rounded-b-2xl rounded-t-none md:rounded-r-none md:rounded-l-2xl" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="512" width="512" />
+        </span>
+      <div class="rounded-t-2xl rounded-b-none md:rounded-l-none md:rounded-r-2xl bg-midnight-500 text-white flex justify-center items-center">
         <div class="lg:max-w-lg px-6 py-6 pb-8 md:px-12 md:py-12 lg:py-24">
           <h3 class="text-xl lg:text-2xl font-bold mb-2 leading-relaxed"><?php the_title(); ?></h3>
           <h4 class="font-bold uppercase mb-4 text-lg text-emerald-500 lg:mb-6"><?php the_field('client'); ?></h4>

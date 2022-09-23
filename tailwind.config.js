@@ -1,4 +1,8 @@
 module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
   content: [
     './*.{php,html,js}',
     './inc/*.{php,html,js}',
@@ -23,7 +27,7 @@ module.exports = {
         '25%': '25%',
       },
       aspectRatio: {
-        '4/3': '4 / 3',
+        'orginal': '4 / 3',
       },
       colors: {
         current: 'currentColor',

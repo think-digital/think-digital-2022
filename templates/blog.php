@@ -37,7 +37,9 @@
             ?>
           <div class="image place-self-start col-span-2 md:order-2">
             <a href="<?php the_permalink(); ?>?href=image" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
-              <img class="js-lazyload aspect-video object-cover w-64 lg:w-full" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
+              <span class="aspect-video relative w-64 lg:w-96">
+                <img class="js-lazyload object-cover w-full h-full" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="320" width="320" />
+              </span>
             </a>
           </div>
           <?php endif; ?>

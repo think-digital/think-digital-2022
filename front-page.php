@@ -20,7 +20,9 @@
             <source src="<?php echo get_template_directory_uri(); ?>/assets/movie.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video> -->
-          <img class="js-lazyload aspect-video rounded-2xl w-full object-cover" data-src="<?php echo get_template_directory_uri(); ?>/assets/about-jason.jpeg" alt="Jason Potts outlines how we can help your organisation." width="320" height="240" />
+          <span class="aspect-video relative">
+            <img class="js-lazyload rounded-2xl w-full h-full object-cover" data-src="<?php echo get_template_directory_uri(); ?>/assets/about-jason.jpeg" alt="Jason Potts outlines how we can help your organisation." width="320" height="240" />
+          </span>
           <p class="flex space-x-2 svg-icon-4 text-sm opacity-80 mt-4 text-slate-600 items-start">
             <?php include get_template_directory() . '/assets/comment.svg'; ?><span>Jason Potts outlines how we can help your organisation.</span></p>
         </div>
@@ -65,7 +67,9 @@
             if( !empty($image) ):
           ?>
           <a href="<?php the_permalink(); ?>?href=image" class="inline-block mb-4 rounded-2xl border border-solid border-slate-200 hover:border-emerald-500 hover:outline hover:outline-2 hover:outline-emerald-500 overflow-hidden">
-            <img class="js-lazyload aspect-video object-cover w-64" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="256" width="256" />
+            <span class="aspect-video relative w-64">
+              <img class="js-lazyload object-cover w-full h-full" data-src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" height="256" width="256" />
+            </span>
           </a>
           <?php endif; ?>
           <h3 class="text-xl leading-relaxed text-midnight-500">
