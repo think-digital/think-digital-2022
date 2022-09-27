@@ -1735,12 +1735,6 @@ textarea.wpforms-field-medium {
   height: 4rem;
 }
 
-.h-fit {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .w-24 {
   width: 6rem;
 }
@@ -2236,64 +2230,6 @@ textarea.wpforms-field-medium {
 }
 
 @media (min-width: 768px) {
-  .md\:aspect-square {
-    display: block;
-  }
-
-  .md\:aspect-orginal {
-    display: block;
-  }
-
-  @supports not (aspect-ratio: 1 / 1) {
-    .md\:aspect-square img {
-      position: absolute;
-    }
-
-    .md\:aspect-square::before {
-      float: left;
-      padding-top: 100%;
-      content: '';
-    }
-
-    .md\:aspect-square:after {
-      display: block;
-      content: '';
-      clear: both;
-    }
-
-    .md\:aspect-square img {
-      position: absolute;
-    }
-
-    .md\:aspect-square::before {
-      float: left;
-      padding-top: 100%;
-      content: '';
-    }
-
-    .md\:aspect-square:after {
-      display: block;
-      content: '';
-      clear: both;
-    }
-
-    .md\:aspect-square img {
-      position: absolute;
-    }
-
-    .md\:aspect-square::before {
-      float: left;
-      padding-top: 100%;
-      content: '';
-    }
-
-    .md\:aspect-square:after {
-      display: block;
-      content: '';
-      clear: both;
-    }
-  }
-
   .md\:aspect-orginal {
     display: block;
   }
@@ -2408,20 +2344,12 @@ textarea.wpforms-field-medium {
     display: none;
   }
 
-  .md\:aspect-square {
-    aspect-ratio: 1 / 1;
-  }
-
-  .md\:aspect-orginal {
-    aspect-ratio: 4 / 3;
-  }
-
   .md\:aspect-auto {
     aspect-ratio: auto;
   }
 
-  .md\:min-h-full {
-    min-height: 100%;
+  .md\:aspect-orginal {
+    aspect-ratio: 4 / 3;
   }
 
   .md\:grid-cols-5 {
@@ -2456,16 +2384,6 @@ textarea.wpforms-field-medium {
     row-gap: 6rem;
   }
 
-  .md\:gap-x-16 {
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-  }
-
-  .md\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -2474,18 +2392,6 @@ textarea.wpforms-field-medium {
 
   .md\:place-self-start {
     place-self: start;
-  }
-
-  .md\:place-self-center {
-    place-self: center;
-  }
-
-  .md\:justify-self-end {
-    justify-self: end;
-  }
-
-  .md\:justify-self-center {
-    justify-self: center;
   }
 
   .md\:rounded-r-none {
@@ -2626,20 +2532,16 @@ textarea.wpforms-field-medium {
     height: 3.5rem;
   }
 
-  .lg\:min-h-full {
-    min-height: 100%;
-  }
-
   .lg\:w-96 {
     width: 24rem;
   }
 
-  .lg\:w-64 {
-    width: 16rem;
-  }
-
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-64 {
+    width: 16rem;
   }
 
   .lg\:max-w-lg {

@@ -27,7 +27,7 @@
             <?php include get_template_directory() . '/assets/comment.svg'; ?><span>Jason Potts outlines how we can help your organisation.</span></p>
         </div>
         <div class="item lg:max-w-lg text-midnight-500 text-lg lg:text-xl pb-9">
-          <p class="font-medium mb-6">THINK Digital was founded in 2012 by Jason Potts, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
+          <p class="font-medium mb-6">THINK Digital was founded in 2012 by <a href="/about/team/jason-potts" class="link">Jason Potts</a>, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
           <p class="mb-6 text-midnight-400">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
           <ul class="flex space-x-6 text-midnight-500">
             <li>
