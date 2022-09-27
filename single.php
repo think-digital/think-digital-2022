@@ -21,13 +21,13 @@
     <div class="grid md:grid-cols-2 items-center">
       <div class="author flex items-center">
         <div class="avatar lg:avatar-featured mt-7 mr-4">
-          <a href="/about/team/<?php the_author_meta('nickname'); ?>?href=image" title="Find out more about <?php the_author(); ?>">
+          <a href="/team/<?php the_author_meta('nickname'); ?>?href=image" title="Find out more about <?php the_author(); ?>">
             <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
           </a>
         </div>
         <div class="text text-sm lg:text-base">
           <h2 class="font-bold text-midnight-500 contains-link">
-          <a href="/about/team/<?php the_author_meta('nickname'); ?>?href=title" title="Find out more about <?php the_author(); ?>"  class="inline-block pt-7"><?php the_author(); ?></a>
+          <a href="/team/<?php the_author_meta('nickname'); ?>?href=title" title="Find out more about <?php the_author(); ?>"  class="inline-block pt-7"><?php the_author(); ?></a>
           </h2>
           <p class="text-slate-500"><span class="font-medium"><?php the_date(); ?></span> &bull; <span><?php echo do_shortcode("[wtr-time]"); ?></span></p>
         </div>

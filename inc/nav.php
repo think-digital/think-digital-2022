@@ -61,7 +61,7 @@
             <a href="/about" class="parent-link<?php if (is_page('about') || 'about' == get_post_type() ) echo ' current-page'; ?>"><span>About</span></a>
           </li>
           <li>
-            <a href="/about/team" class="parent-link<?php if (is_page('team') || 'team' == get_post_type() ) echo ' current-page'; ?>"><span>Team</span></a>
+            <a href="/team" class="parent-link<?php if (is_page('team') || 'team' == get_post_type() ) echo ' current-page'; ?>"><span>Team</span></a>
           </li>
           <li>
             <a href="/blog" class="parent-link<?php if (is_page('blog') || 'post' == get_post_type() ) echo ' current-page'; ?>"><span>Blog</span></a>

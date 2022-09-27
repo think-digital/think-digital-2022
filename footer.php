@@ -13,8 +13,19 @@
         <li class="mt-8 lg:mt-6">
           <a href="/about" class="link text-xl">About</a>
           <ul class="">
-            <li class="mt-6">
-              <a href="/about/team" class="link font-medium">Our team</a>
+            <li class="mt-6 ml-4">
+              <a href="/about/clients" class="link font-medium">Clients</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mt-8 lg:mt-6">
+          <a href="/team" class="link text-xl">Team</a>
+          <ul class="">
+            <li class="mt-6 ml-4">
+              <a href="/team/jason-potts" class="link font-medium">Jason Potts</a>
+            </li>
+            <li class="mt-6 ml-4">
+              <a href="/team/aroon-dougan" class="link font-medium">Aroon Dougan</a>
             </li>
           </ul>
         </li>

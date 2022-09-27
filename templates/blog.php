@@ -52,13 +52,13 @@
             </p>
             <div class="flex items-center">
               <div class="avatar mt-7 mr-4">
-                <a href="/about/team/<?php the_author_meta('nickname'); ?>?href=image" title="Find out more about <?php the_author(); ?>">
+                <a href="/team/<?php the_author_meta('nickname'); ?>?href=image" title="Find out more about <?php the_author(); ?>">
                   <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
                 </a>
               </div>
               <div class="text text-sm">
                 <h4 class="font-bold text-midnight-500 contains-link">
-                  <a href="/about/team/<?php the_author_meta('nickname'); ?>?href=title" title="Find out more about <?php the_author(); ?>" class="inline-block pt-7"><?php the_author(); ?></a>
+                  <a href="/team/<?php the_author_meta('nickname'); ?>?href=title" title="Find out more about <?php the_author(); ?>" class="inline-block pt-7"><?php the_author(); ?></a>
                 </h4>
                 <p class="font-medium text-slate-500"><?php the_date(); ?></p>
               </div>

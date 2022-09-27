@@ -5,7 +5,6 @@
   <section id="intro" class="content-intro">
     <ul class="breadcrumbs">
       <li class="parent"><a href="/">Home</a></li>
-      <li class="parent"><a href="/about">About</a></li>
       <li><?php echo the_title(); ?></li>
     </ul>
     <h1>Meet the team</h1>

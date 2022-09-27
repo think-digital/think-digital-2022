@@ -97,7 +97,7 @@
             <a href="/about" class="svg-icon-4 flex space-x-2 parent-link<?php if (is_page('about') || is_page('team') || 'team' == get_post_type() ) echo ' current-page'; ?>" title="About"><span>About</span><?php include get_template_directory() . '/assets/arrow-down.svg'; ?></a>
             <ul class="child-list">
               <li>
-                <a href="/about/team" class="child-link" title="Our team">Our team</a>
+                <a href="/team" class="child-link" title="Our team">Our team</a>
               </li>
             </ul>
           </li>

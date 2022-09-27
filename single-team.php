@@ -5,8 +5,7 @@
   <section id="intro" class="content-intro">
     <ul class="breadcrumbs">
       <li class="parent"><a href="/">Home</a></li>
-      <li class="parent"><a href="/about">About</a></li>
-      <li class="parent"><a href="/about/team">Our team</a></li>
+      <li class="parent"><a href="/team">Team</a></li>
       <li class="truncate-text"><?php echo the_title(); ?></li>
     </ul>
     <h1><?php the_title(); ?></h1>

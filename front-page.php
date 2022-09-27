@@ -27,14 +27,14 @@
             <?php include get_template_directory() . '/assets/comment.svg'; ?><span>Jason Potts outlines how we can help your organisation.</span></p>
         </div>
         <div class="item lg:max-w-lg text-midnight-500 text-lg lg:text-xl pb-9">
-          <p class="font-medium mb-6">THINK Digital was founded in 2012 by <a href="/about/team/jason-potts" class="link">Jason Potts</a>, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
+          <p class="font-medium mb-6">THINK Digital was founded in 2012 by <a href="/team/jason-potts" class="link">Jason Potts</a>, who was formerly a Director of THINK Consulting, and who has worked in the digital non-profit space for over 20 years. </p>
           <p class="mb-6 text-midnight-400">We work with non-profit organisations globally to help them build and grow their digital fundraising and marketing programmes through a mixture of strategic consultancy and project delivery. </p>
           <ul class="flex space-x-6 text-midnight-500">
             <li>
-              <a href="/about" class="link">Our story</a>
+              <a href="/about" class="link">About us</a>
             </li>
             <li>
-              <a href="/about/team" class="link">Meet the team</a>
+              <a href="/team" class="link">Meet the team</a>
             </li>
           </ul>
         </div>
@@ -80,13 +80,13 @@
           </p>
           <div class="flex items-center space-x-4 mt-8">
             <div class="avatar">
-              <a href="/about/team/<?php the_author_meta('nickname'); ?>?href=image" title="Find out more about <?php the_author(); ?>">
+              <a href="/team/<?php the_author_meta('nickname'); ?>?href=image" title="Find out more about <?php the_author(); ?>">
                 <?php echo get_wp_user_avatar($user_id, 96,'file'); ?>
               </a>
             </div>
             <div class="text text-sm">
               <h4 class="font-bold text-midnight-500 contains-link">
-                <a href="/about/team/<?php the_author_meta('nickname'); ?>?href=title" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
+                <a href="/team/<?php the_author_meta('nickname'); ?>?href=title" title="Find out more about <?php the_author(); ?>"><?php the_author(); ?></a>
               </h4>
               <p class="font-medium text-slate-500"><?php the_date(); ?></p>
             </div>
