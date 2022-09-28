@@ -26,7 +26,7 @@
           <div class="flex	space-x-4 svg-icon-6 font-bold text-midnight-400 fill-midnight-400 uppercase mb-4 stroke-svg">
           <?php include get_template_directory() . '/assets/mobile.svg'; ?><span>Phone</span>
           </div>
-          <a href="tel:+44(0)1234567890" class="link text-lg break-words" title="Call or Text THINK Digital on +44 (0)1234 567890">+44 (0)1234 567890</a>
+          <a href="tel:+447740483795" class="link text-lg break-words" title="Call or Text THINK Digital on +44 (0)7740 483 795">+44 (0)7740 483 795</a>
         </div>
         <!-- Twitter -->
         <div class="rounded-xl p-6 bg-slate-100">
