@@ -5,14 +5,14 @@
   <?php while ( have_posts() ) : the_post(); ?>
   <?php endwhile; ?>
 
-  <section id="intro" class="content-intro pb-3 overflow-hidden">
+  <section id="intro" class="content-intro pb-4 overflow-hidden">
     <ul class="breadcrumbs">
       <li class="parent"><a href="/">Home</a></li>
       <li class="parent"><a href="/blog">Blog</a></li>
       <li class="parent"><?php the_category( ', ' ); ?></li>
       <li class="truncate-text"><?php echo the_title(); ?></li>
     </ul>
-    <p class="strapline"><?php the_category( ', ' ); ?></p>
+    <p class="strapline pt-4"><?php the_category( ', ' ); ?></p>
     <h1><?php the_title(); ?></h1>
     <p><?php the_field('excerpt'); ?></p>
   </section>
