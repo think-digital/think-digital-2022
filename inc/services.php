@@ -1,4 +1,4 @@
-<section id="services" class="<?php if( is_front_page() && ! is_home() ) { ?>max-w-7xl mt-12<?php } else { ?>max-w-6xl<?php } ?> mx-auto px-6 lg:pt-16 pb-12">
+<section id="services" class="<?php if( is_front_page() && ! is_home() ) { ?>max-w-7xl mt-12<?php } else { ?>max-w-6xl<?php } ?> mx-auto px-6 lg:pt-16 pb-12 lg:pb-28">
   <div class="relative">
     <?php
       // Load 'posts' custom post type

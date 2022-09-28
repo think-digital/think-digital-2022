@@ -15,7 +15,7 @@
 
   <?php include get_template_directory() . '/inc/project-list.php'; ?>
 
-  <section id="content" class="max-w-6xl mx-auto px-6 mb-16">
+  <section id="content" class="max-w-6xl mx-auto px-6 mb-8 lg:mb-16">
     <div class="grid lg:grid-cols-3 gap-12">
       <div class="panel">
         <?php the_field('panel_one'); ?>

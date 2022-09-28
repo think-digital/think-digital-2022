@@ -967,7 +967,6 @@ ul.child-list > li {
 /* Pagination */
 
 .pagination {
-  margin-bottom: 6rem;
   display: flex;
 }
 
@@ -975,6 +974,12 @@ ul.child-list > li {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+@media (min-width: 1024px) {
+  .pagination {
+    margin-bottom: 6rem;
+  }
 }
 
 .pagination a {
@@ -1663,6 +1668,10 @@ textarea.wpforms-field-medium {
   margin-top: 2rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1693,10 +1702,6 @@ textarea.wpforms-field-medium {
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .block {
@@ -2044,16 +2049,16 @@ textarea.wpforms-field-medium {
   padding-bottom: 2.25rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pr-6 {
   padding-right: 1.5rem;
 }
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .pb-3 {
@@ -2512,6 +2517,10 @@ textarea.wpforms-field-medium {
     margin-top: 3rem;
   }
 
+  .lg\:mb-28 {
+    margin-bottom: 7rem;
+  }
+
   .lg\:mb-36 {
     margin-bottom: 9rem;
   }
@@ -2642,6 +2651,10 @@ textarea.wpforms-field-medium {
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:pb-28 {
+    padding-bottom: 7rem;
   }
 
   .lg\:pt-4 {

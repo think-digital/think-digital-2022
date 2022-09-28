@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <section id="blog" class="max-w-7xl mx-auto px-6 pt-12 pb-24">
+  <section id="blog" class="max-w-7xl mx-auto px-6 pt-12 pb-12 lg:pb-28">
     <div class="relative">
       <?php
         // Load 'posts' custom post type

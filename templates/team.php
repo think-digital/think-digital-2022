@@ -11,7 +11,7 @@
     <?php the_content(); ?>
   </section>
 
-  <section id="team" class="max-w-6xl mx-auto px-6 lg:pt-16 pb-12">
+  <section id="team" class="max-w-6xl mx-auto px-6 pb-12 lg:pt-16 lg:pb-28">
     <div class="relative">
       <?php
         // Load 'posts' custom post type

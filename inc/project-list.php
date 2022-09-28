@@ -1,4 +1,4 @@
-<section id="projects" class="max-w-5xl mx-auto px-6 mb-24">
+<section id="projects" class="max-w-5xl mx-auto px-6 mb-12 lg:mb-28">
   <div class="relative">
     <?php
       // Load 'posts' custom post type
