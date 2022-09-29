@@ -32,6 +32,7 @@ function theme_setup() {
 	add_image_size( '512x512', 512, 512, true );
 	add_image_size( '1080x1080', 1080, 1080, true );
 	add_image_size( '1600x900', 1600, 900, true );
+	add_image_size( '1200x630', 1200, 630, true );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 

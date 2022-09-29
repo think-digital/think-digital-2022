@@ -16,7 +16,11 @@
 
   <!-- so:meta -->
   <?php if( get_field('meta_title') ): ?>
-  <title><?php the_field('meta_title'); ?> | THINK Digital</title>
+  <?php if( is_front_page() && ! is_home() ) { ?>
+    <title>THINK Digital | A digital agency that helps non-profits around the world</title>
+  <?php } else { ?>
+    <title><?php the_field('meta_title'); ?> | THINK Digital</title>
+  <?php } ?>
   <meta itemprop="name" content="<?php the_field('meta_title'); ?>">
   <meta property="twitter:title" content="<?php the_field('meta_title'); ?>" />
   <meta property="og:title" content="<?php the_field('meta_title'); ?>" />
